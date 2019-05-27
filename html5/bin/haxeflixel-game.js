@@ -5245,7 +5245,7 @@ ManifestResources.init = function(config) {
 	lime_utils_Assets.defaultRootPath = ManifestResources.rootPath;
 	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf);
 	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf);
-	var data = "{\"name\":null,\"assets\":\"aoy4:pathy34:assets%2Fdata%2Fdata-goes-here.txty4:sizezy4:typey4:TEXTy2:idR1y7:preloadtgoR0y25:assets%2Fimages%2F320.pngR2i75411R3y5:IMAGER5R7R6tgoR0y25:assets%2Fimages%2F640.pngR2i239826R3R8R5R9R6tgoR0y36:assets%2Fimages%2Fimages-go-here.txtR2zR3R4R5R10R6tgoR0y39:assets%2Fimages%2FspritesIndustrial.pngR2i10300R3R8R5R11R6tgoR0y34:assets%2Fimages%2FspritesProto.pngR2i61155R3R8R5R12R6tgoR0y35:assets%2Fimages%2FspritesProto2.pngR2i50909R3R8R5R13R6tgoR0y35:assets%2Fimages%2FspritesProto3.pngR2i50909R3R8R5R14R6tgoR0y35:assets%2Fimages%2FspritesProto4.pngR2i56548R3R8R5R15R6tgoR0y35:assets%2Fimages%2FspritesProto5.pngR2i52096R3R8R5R16R6tgoR0y28:assets%2Fimages%2FsProto.pngR2i50508R3R8R5R17R6tgoR0y32:assets%2Fimages%2FtilesProto.pngR2i4659R3R8R5R18R6tgoR0y33:assets%2Fimages%2FtilesProto2.pngR2i16509R3R8R5R19R6tgoR0y36:assets%2Fmusic%2Fmusic-goes-here.txtR2zR3R4R5R20R6tgoR0y36:assets%2Fsounds%2Fsounds-go-here.txtR2zR3R4R5R21R6tgoR2i2114R3y5:MUSICR5y26:flixel%2Fsounds%2Fbeep.mp3y9:pathGroupaR23y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R22R5y28:flixel%2Fsounds%2Fflixel.mp3R24aR26y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3y5:SOUNDR5R25R24aR23R25hgoR2i33629R3R28R5R27R24aR26R27hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R29R30y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R8R5R35R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R8R5R36R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
+	var data = "{\"name\":null,\"assets\":\"aoy4:pathy34:assets%2Fdata%2Fdata-goes-here.txty4:sizezy4:typey4:TEXTy2:idR1y7:preloadtgoR0y25:assets%2Fimages%2F320.pngR2i75411R3y5:IMAGER5R7R6tgoR0y25:assets%2Fimages%2F640.pngR2i239826R3R8R5R9R6tgoR0y36:assets%2Fimages%2Fimages-go-here.txtR2zR3R4R5R10R6tgoR0y39:assets%2Fimages%2FspritesIndustrial.pngR2i10300R3R8R5R11R6tgoR0y34:assets%2Fimages%2FspritesProto.pngR2i61155R3R8R5R12R6tgoR0y35:assets%2Fimages%2FspritesProto2.pngR2i50909R3R8R5R13R6tgoR0y35:assets%2Fimages%2FspritesProto3.pngR2i50909R3R8R5R14R6tgoR0y35:assets%2Fimages%2FspritesProto4.pngR2i56548R3R8R5R15R6tgoR0y35:assets%2Fimages%2FspritesProto5.pngR2i52096R3R8R5R16R6tgoR0y28:assets%2Fimages%2FsProto.pngR2i50508R3R8R5R17R6tgoR0y27:assets%2Fimages%2Ftiles.pngR2i5387R3R8R5R18R6tgoR0y32:assets%2Fimages%2FtilesProto.pngR2i4659R3R8R5R19R6tgoR0y33:assets%2Fimages%2FtilesProto2.pngR2i16509R3R8R5R20R6tgoR0y36:assets%2Fmusic%2Fmusic-goes-here.txtR2zR3R4R5R21R6tgoR0y36:assets%2Fsounds%2Fsounds-go-here.txtR2zR3R4R5R22R6tgoR2i2114R3y5:MUSICR5y26:flixel%2Fsounds%2Fbeep.mp3y9:pathGroupaR24y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R23R5y28:flixel%2Fsounds%2Fflixel.mp3R25aR27y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3y5:SOUNDR5R26R25aR24R26hgoR2i33629R3R29R5R28R25aR27R28hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R30R31y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R8R5R36R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R8R5R37R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
 	var manifest = lime_utils_AssetManifest.parse(data,ManifestResources.rootPath);
 	var library = lime_utils_AssetLibrary.fromManifest(manifest);
 	lime_utils_Assets.registerLibrary("default",library);
@@ -5640,7 +5640,7 @@ MenuState.prototype = $extend(flixel_FlxState.prototype,{
 	,__class__: MenuState
 });
 var PlayState = function(MaxSize) {
-	this.tiles = ["                                                                                                                                  ","                                                                                                                                  ","                                                                                                                                  ","                                                                                                                                  ","                                                    X      X      X                                                               ","                                                    X      X      X                                            XXX                ","                                                    X      X      X                                                               ","X                                                   X      X      X                                XXX    XXX                     ","X                                                   X      X      X                      XXXX                         XXX         ","X                                                                                              XX                                 ","X                X                     XXX                                         XXX                                            ","X             X  X    X    X   XXXX      X                                                                                        ","XXXXXXXXXXXXXXX  X    X    X    XX       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                                     XXX","XXXXXXXXXXXXXXX  X    X    X    XX       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                                     XXX","XXXXXXXXXXXXXXX  X    X    X    XX       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                                     XXX","XXXXXXXXXXXXXXX  X    X    X    XX       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                                     XXX"];
+	this.tiles = ["                                                                                                                                  ","                                                                                                                                  ","                                                                                                                                  ","                                                                                                                                  ","                                                    |      |      |                                                               ","                                                    |      |      |                                            -=-                ","                                                    |      |      |                                             |                 ","=                                                   |      |      |                                -=-    -=-   |                 ","|                                                   |      |      |                      -==-       |      |    |     -=-         ","|                                                                                         ||   ==   |      |    |      |          ","|                =                     --=                                         -=-    ||   ||   |      |    |      |          ","|             =  |    =    =   -==-      |                                          |     ||   ||   |      |    |      |          ","---------------  |    |    |    ||       ----------------------------------------------   ||   ||   |      |    |      |       ---","|||||||||||||||  |    |    |    ||       ||||||||||||||||||||||||||||||||||||||||||||||   ||   ||   |      |    |      |       |||","|||||||||||||||  |    |    |    ||       ||||||||||||||||||||||||||||||||||||||||||||||   ||   ||   |      |    |      |       |||","|||||||||||||||  |    |    |    ||       ||||||||||||||||||||||||||||||||||||||||||||||   ||   ||   |      |    |      |       |||"];
 	flixel_FlxState.call(this,MaxSize);
 };
 $hxClasses["PlayState"] = PlayState;
@@ -5666,10 +5666,13 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 					mapData.push(0);
 					break;
 				case "-":
+					mapData.push(1);
+					break;
+				case "=":
 					mapData.push(2);
 					break;
-				case "X":
-					mapData.push(1);
+				case "|":
+					mapData.push(5);
 					break;
 				default:
 					mapData.push(0);
@@ -5681,10 +5684,11 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 	,create: function() {
 		flixel_FlxState.prototype.create.call(this);
 		this.background = new flixel_addons_display_FlxBackdrop("assets/images/640.png");
-		this.background.scrollFactor.set_x(1);
+		this.background.scrollFactor.set_x(0.5);
+		this.background.scrollFactor.set_y(0.5);
 		this.add(this.background);
 		this.map = new flixel_tile_FlxTilemap();
-		this.map.loadMapFromArray(this.StringsToMapData(this.tiles),130,16,"assets/images/tilesProto2.png",32,32);
+		this.map.loadMapFromArray(this.StringsToMapData(this.tiles),130,16,"assets/images/tiles.png",32,32);
 		this.add(this.map);
 		this.player = new Player();
 		this.add(this.player);
@@ -69611,7 +69615,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 185801;
+	this.version = 669613;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
@@ -114569,6 +114573,7 @@ AssetPaths.spritesProto3__png = "assets/images/spritesProto3.png";
 AssetPaths.spritesProto4__png = "assets/images/spritesProto4.png";
 AssetPaths.spritesProto5__png = "assets/images/spritesProto5.png";
 AssetPaths.sProto__png = "assets/images/sProto.png";
+AssetPaths.tiles__png = "assets/images/tiles.png";
 AssetPaths.tilesProto__png = "assets/images/tilesProto.png";
 AssetPaths.tilesProto2__png = "assets/images/tilesProto2.png";
 AssetPaths.music_goes_here__txt = "assets/music/music-goes-here.txt";
