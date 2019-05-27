@@ -894,9 +894,9 @@ ApplicationMain.create = function(config) {
 	ManifestResources.init(config);
 	var _this = app.meta;
 	if(__map_reserved["build"] != null) {
-		_this.setReserved("build","250");
+		_this.setReserved("build","7");
 	} else {
-		_this.h["build"] = "250";
+		_this.h["build"] = "7";
 	}
 	var _this1 = app.meta;
 	if(__map_reserved["company"] != null) {
@@ -5078,8 +5078,8 @@ GameOverState.prototype = $extend(flixel_FlxState.prototype,{
 		flixel_FlxState.prototype.create.call(this);
 		flixel_FlxG.mouse.set_visible(true);
 		this.add(new flixel_text_FlxText(0,60,flixel_FlxG.width,"Game Over").setFormat(null,32,-65536,"center"));
-		this.add(new flixel_ui_FlxButton(280,200,"Retry",$bind(this,this.play)));
-		this.add(new flixel_ui_FlxButton(280,230,"Main Menu",$bind(this,this.reset)));
+		this.add(new flixel_ui_FlxButton(280,180,"Retry",$bind(this,this.play)));
+		this.add(new flixel_ui_FlxButton(280,210,"Main Menu",$bind(this,this.reset)));
 	}
 	,update: function(elapsed) {
 		flixel_FlxState.prototype.update.call(this,elapsed);
@@ -5177,6 +5177,43 @@ IntIterator.prototype = {
 	}
 	,__class__: IntIterator
 };
+var KeyboardState = function(MaxSize) {
+	flixel_FlxState.call(this,MaxSize);
+};
+$hxClasses["KeyboardState"] = KeyboardState;
+KeyboardState.__name__ = "KeyboardState";
+KeyboardState.__super__ = flixel_FlxState;
+KeyboardState.prototype = $extend(flixel_FlxState.prototype,{
+	create: function() {
+		flixel_FlxState.prototype.create.call(this);
+		flixel_FlxG.mouse.set_visible(true);
+		this.add(new flixel_text_FlxText(0,60,flixel_FlxG.width,"Keyboard").setFormat(null,32,-65536,"center"));
+		this.add(new flixel_text_FlxText(180,120,flixel_FlxG.width,"Up").setFormat(null,16,-1,"left"));
+		this.add(new flixel_text_FlxText(100,120,flixel_FlxG.width,"up").setFormat(null,16,-1,"center"));
+		this.add(new flixel_text_FlxText(180,140,flixel_FlxG.width,"Down").setFormat(null,16,-1,"left"));
+		this.add(new flixel_text_FlxText(100,140,flixel_FlxG.width,"down").setFormat(null,16,-1,"center"));
+		this.add(new flixel_text_FlxText(180,160,flixel_FlxG.width,"Left").setFormat(null,16,-1,"left"));
+		this.add(new flixel_text_FlxText(100,160,flixel_FlxG.width,"left").setFormat(null,16,-1,"center"));
+		this.add(new flixel_text_FlxText(180,180,flixel_FlxG.width,"Right").setFormat(null,16,-1,"left"));
+		this.add(new flixel_text_FlxText(100,180,flixel_FlxG.width,"right").setFormat(null,16,-1,"center"));
+		this.add(new flixel_text_FlxText(180,200,flixel_FlxG.width,"Jump").setFormat(null,16,-1,"left"));
+		this.add(new flixel_text_FlxText(100,200,flixel_FlxG.width,"up").setFormat(null,16,-1,"center"));
+		this.add(new flixel_text_FlxText(180,220,flixel_FlxG.width,"Action").setFormat(null,16,-1,"left"));
+		this.add(new flixel_text_FlxText(100,220,flixel_FlxG.width,"Left-Ctrl").setFormat(null,16,-1,"center"));
+		this.add(new flixel_text_FlxText(180,240,flixel_FlxG.width,"Reset to default").setFormat(null,16,-1,"left"));
+		this.add(new flixel_ui_FlxButton(220,270,"Back",$bind(this,this.reset)));
+	}
+	,update: function(elapsed) {
+		flixel_FlxState.prototype.update.call(this,elapsed);
+	}
+	,reset: function() {
+		var nextState = new SettingsState();
+		if(flixel_FlxG.game._state.switchTo(nextState)) {
+			flixel_FlxG.game._requestedState = nextState;
+		}
+	}
+	,__class__: KeyboardState
+});
 var Lambda = function() { };
 $hxClasses["Lambda"] = Lambda;
 Lambda.__name__ = "Lambda";
@@ -5555,6 +5592,12 @@ _$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf.prototype = $extend(openfl
 	__class__: _$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf
 });
 Math.__name__ = "Math";
+var Menu = $hxEnums["Menu"] = { __ename__ : "Menu", __constructs__ : ["PLAY","LOAD","SETTINGS","QUIT"]
+	,PLAY: {_hx_index:0,__enum__:"Menu",toString:$estr}
+	,LOAD: {_hx_index:1,__enum__:"Menu",toString:$estr}
+	,SETTINGS: {_hx_index:2,__enum__:"Menu",toString:$estr}
+	,QUIT: {_hx_index:3,__enum__:"Menu",toString:$estr}
+};
 var MenuState = function(MaxSize) {
 	flixel_FlxState.call(this,MaxSize);
 };
@@ -5563,13 +5606,12 @@ MenuState.__name__ = "MenuState";
 MenuState.__super__ = flixel_FlxState;
 MenuState.prototype = $extend(flixel_FlxState.prototype,{
 	create: function() {
-		flixel_FlxState.prototype.create.call(this);
+		flixel_FlxG.mouse.set_visible(true);
 		this.add(new flixel_text_FlxText(0,60,flixel_FlxG.width,"Buddha Breath").setFormat(null,64,-65536,"center"));
-		this.add(new flixel_text_FlxText(0,270,flixel_FlxG.width,"Walk : <- ->").setFormat(null,16,-1,"center"));
-		this.add(new flixel_text_FlxText(0,290,flixel_FlxG.width,"Run : W").setFormat(null,16,-1,"center"));
-		this.add(new flixel_text_FlxText(0,310,flixel_FlxG.width,"Jump : SPACE").setFormat(null,16,-1,"center"));
-		this.add(new flixel_ui_FlxButton(280,200,"New game",$bind(this,this.play)));
+		this.add(new flixel_ui_FlxButton(280,180,"New game",$bind(this,this.play)));
+		this.add(new flixel_ui_FlxButton(280,200,"Settings",$bind(this,this.settings)));
 		this.add(new flixel_ui_FlxButton(280,220,"Quit",$bind(this,this.quit)));
+		flixel_FlxState.prototype.create.call(this);
 	}
 	,update: function(elapsed) {
 		flixel_FlxState.prototype.update.call(this,elapsed);
@@ -5583,15 +5625,22 @@ MenuState.prototype = $extend(flixel_FlxState.prototype,{
 			flixel_FlxG.game._requestedState = nextState;
 		}
 	}
+	,settings: function() {
+		var nextState = new SettingsState();
+		if(flixel_FlxG.game._state.switchTo(nextState)) {
+			flixel_FlxG.game._requestedState = nextState;
+		}
+	}
 	,quit: function() {
-		flixel_FlxG.camera.fade(-16777216,0.5,false,function() {
-			openfl_system_System.exit(0);
-		});
+		var nextState = new QuitState();
+		if(flixel_FlxG.game._state.switchTo(nextState)) {
+			flixel_FlxG.game._requestedState = nextState;
+		}
 	}
 	,__class__: MenuState
 });
 var PlayState = function(MaxSize) {
-	this.tiles = ["                                                                                                                                  ","                                                                                                                                  ","                                                                                                                                  ","                                                                                                                                  ","                                                                                                                                  ","                                                                                                                                  ","                 X                      XX                                                                                        ","              X  X    X    X   XXXX      X                                                                                        ","XXXXXXXXXXXXXXX  X    X    X    XX       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","XXXXXXXXXXXXXXX  X    X    X    XX       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","XXXXXXXXXXXXXXX  X    X    X    XX       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","XXXXXXXXXXXXXXX  X    X    X    XX       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"];
+	this.tiles = ["                                                                                                                                  ","                                                                                                                                  ","                                                                                                                                  ","                                                                                                                                  ","                                                    X      X      X                                                               ","                                                    X      X      X                                            XXX                ","                                                    X      X      X                                                               ","X                                                   X      X      X                                XXX    XXX                     ","X                                                   X      X      X                      XXXX                         XXX         ","X                                                                                              XX                                 ","X                X                     XXX                                         XXX                                            ","X             X  X    X    X   XXXX      X                                                                                        ","XXXXXXXXXXXXXXX  X    X    X    XX       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                                     XXX","XXXXXXXXXXXXXXX  X    X    X    XX       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                                     XXX","XXXXXXXXXXXXXXX  X    X    X    XX       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                                     XXX","XXXXXXXXXXXXXXX  X    X    X    XX       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                                     XXX"];
 	flixel_FlxState.call(this,MaxSize);
 };
 $hxClasses["PlayState"] = PlayState;
@@ -5635,7 +5684,7 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 		this.background.scrollFactor.set_x(1);
 		this.add(this.background);
 		this.map = new flixel_tile_FlxTilemap();
-		this.map.loadMapFromArray(this.StringsToMapData(this.tiles),130,12,"assets/images/tilesProto2.png",32,32);
+		this.map.loadMapFromArray(this.StringsToMapData(this.tiles),130,16,"assets/images/tilesProto2.png",32,32);
 		this.add(this.map);
 		this.player = new Player();
 		this.add(this.player);
@@ -5650,7 +5699,7 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 			this.map.set_visible(!this.map.visible);
 		}
 		flixel_FlxG.overlap(this.player,this.map,null,flixel_FlxObject.separate);
-		if(this.player.y > flixel_FlxG.height) {
+		if(this.player.y + this.player.get_height() > flixel_FlxG.height + this.player.starty) {
 			flixel_FlxG.camera.fade(-16777216,.33,false,$bind(this,this.death));
 		}
 		if(this.player.x > this.map.get_width()) {
@@ -7785,6 +7834,8 @@ flixel_FlxSprite.prototype = $extend(flixel_FlxObject.prototype,{
 	,__properties__: $extend(flixel_FlxObject.prototype.__properties__,{set_clipRect:"set_clipRect",set_color:"set_color",set_blend:"set_blend",set_flipY:"set_flipY",set_flipX:"set_flipX",set_facing:"set_facing",set_alpha:"set_alpha",set_graphic:"set_graphic",set_frames:"set_frames",set_frame:"set_frame",set_pixels:"set_pixels",get_pixels:"get_pixels",set_antialiasing:"set_antialiasing",set_useFramePixels:"set_useFramePixels"})
 });
 var Player = function() {
+	this.starty = 310;
+	this.startx = 100;
 	this.direction = 1;
 	flixel_FlxSprite.call(this);
 	this.loadGraphic("assets/images/spritesProto.png",true,68,80);
@@ -7793,17 +7844,21 @@ var Player = function() {
 	this.animation.add("skid",[0]);
 	this.animation.add("jump",[0]);
 	this.animation.add("fall",[0]);
-	this.setSize(68,76);
-	this.offset.set(4,4);
+	this.setSize(40,76);
+	this.offset.set(24,4);
 	this.drag.set_x(320);
 	this.acceleration.set_y(600);
-	this.maxVelocity.set(120,300);
+	this.maxVelocity.set(150,300);
+	this.set_x(this.startx);
+	this.set_y(this.starty);
 };
 $hxClasses["Player"] = Player;
 Player.__name__ = "Player";
 Player.__super__ = flixel_FlxSprite;
 Player.prototype = $extend(flixel_FlxSprite.prototype,{
 	direction: null
+	,startx: null
+	,starty: null
 	,update: function(elapsed) {
 		this.move();
 		this.animate();
@@ -7814,6 +7869,8 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 		var _this = flixel_FlxG.keys.pressed;
 		if(_this.keyManager.checkStatus(37,_this.status)) {
 			this.set_flipX(true);
+			this.setSize(40,76);
+			this.offset.set(4,4);
 			this.direction = -1;
 			var _g = this.acceleration;
 			_g.set_x(_g.x - 320);
@@ -7821,6 +7878,8 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			var _this1 = flixel_FlxG.keys.pressed;
 			if(_this1.keyManager.checkStatus(39,_this1.status)) {
 				this.set_flipX(false);
+				this.setSize(40,76);
+				this.offset.set(24,4);
 				this.direction = 1;
 				var _g1 = this.acceleration;
 				_g1.set_x(_g1.x + 320);
@@ -7828,20 +7887,20 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 		}
 		if(this.velocity.y == 0) {
 			var _this2 = flixel_FlxG.keys.justPressed;
-			if(_this2.keyManager.checkStatus(32,_this2.status) && (this.touching & 4096) > 0) {
+			if(_this2.keyManager.checkStatus(38,_this2.status) && (this.touching & 4096) > 0) {
 				this.velocity.set_y(-280);
 			}
 			var _this3 = flixel_FlxG.keys.pressed;
 			if(_this3.keyManager.checkStatus(87,_this3.status)) {
-				this.maxVelocity.set_x(200);
+				this.maxVelocity.set_x(100);
 			} else {
-				this.maxVelocity.set_x(120);
+				this.maxVelocity.set_x(150);
 			}
 		}
 		var tmp;
 		if(this.velocity.y < 0) {
 			var _this4 = flixel_FlxG.keys.justReleased;
-			tmp = _this4.keyManager.checkStatus(32,_this4.status);
+			tmp = _this4.keyManager.checkStatus(38,_this4.status);
 		} else {
 			tmp = false;
 		}
@@ -7863,6 +7922,36 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 		}
 	}
 	,__class__: Player
+});
+var QuitState = function(MaxSize) {
+	flixel_FlxState.call(this,MaxSize);
+};
+$hxClasses["QuitState"] = QuitState;
+QuitState.__name__ = "QuitState";
+QuitState.__super__ = flixel_FlxState;
+QuitState.prototype = $extend(flixel_FlxState.prototype,{
+	create: function() {
+		flixel_FlxState.prototype.create.call(this);
+		flixel_FlxG.mouse.set_visible(true);
+		this.add(new flixel_text_FlxText(0,60,flixel_FlxG.width,"Are you sure ?").setFormat(null,32,-65536,"center"));
+		this.add(new flixel_ui_FlxButton(280,180,"Main Menu",$bind(this,this.menu)));
+		this.add(new flixel_ui_FlxButton(280,210,"Quit",$bind(this,this.quit)));
+	}
+	,update: function(elapsed) {
+		flixel_FlxState.prototype.update.call(this,elapsed);
+	}
+	,quit: function() {
+		flixel_FlxG.camera.fade(-16777216,0.5,false,function() {
+			openfl_system_System.exit(0);
+		});
+	}
+	,menu: function() {
+		var nextState = new MenuState();
+		if(flixel_FlxG.game._state.switchTo(nextState)) {
+			flixel_FlxG.game._requestedState = nextState;
+		}
+	}
+	,__class__: QuitState
 });
 var Reflect = function() { };
 $hxClasses["Reflect"] = Reflect;
@@ -7986,6 +8075,40 @@ Reflect.makeVarArgs = function(f) {
 		return f(a);
 	};
 };
+var SettingsState = function(MaxSize) {
+	flixel_FlxState.call(this,MaxSize);
+};
+$hxClasses["SettingsState"] = SettingsState;
+SettingsState.__name__ = "SettingsState";
+SettingsState.__super__ = flixel_FlxState;
+SettingsState.prototype = $extend(flixel_FlxState.prototype,{
+	create: function() {
+		flixel_FlxState.prototype.create.call(this);
+		flixel_FlxG.mouse.set_visible(true);
+		this.add(new flixel_text_FlxText(0,60,flixel_FlxG.width,"Settings").setFormat(null,32,-65536,"center"));
+		this.add(new flixel_ui_FlxButton(220,180,"Graphics",$bind(this,this.keyboard)));
+		this.add(new flixel_ui_FlxButton(220,200,"Keyboard",$bind(this,this.keyboard)));
+		this.add(new flixel_ui_FlxButton(220,220,"Joypad",$bind(this,this.keyboard)));
+		this.add(new flixel_ui_FlxButton(220,240,"Volume",$bind(this,this.keyboard)));
+		this.add(new flixel_ui_FlxButton(220,270,"Back",$bind(this,this.back)));
+	}
+	,update: function(elapsed) {
+		flixel_FlxState.prototype.update.call(this,elapsed);
+	}
+	,keyboard: function() {
+		var nextState = new KeyboardState();
+		if(flixel_FlxG.game._state.switchTo(nextState)) {
+			flixel_FlxG.game._requestedState = nextState;
+		}
+	}
+	,back: function() {
+		var nextState = new MenuState();
+		if(flixel_FlxG.game._state.switchTo(nextState)) {
+			flixel_FlxG.game._requestedState = nextState;
+		}
+	}
+	,__class__: SettingsState
+});
 var Std = function() { };
 $hxClasses["Std"] = Std;
 Std.__name__ = "Std";
@@ -8294,8 +8417,8 @@ WinState.prototype = $extend(flixel_FlxState.prototype,{
 		flixel_FlxState.prototype.create.call(this);
 		flixel_FlxG.mouse.set_visible(true);
 		this.add(new flixel_text_FlxText(0,60,flixel_FlxG.width,"You Won !").setFormat(null,32,-65536,"center"));
-		this.add(new flixel_ui_FlxButton(280,200,"Continue",$bind(this,this.play)));
-		this.add(new flixel_ui_FlxButton(280,230,"Main Menu",$bind(this,this.reset)));
+		this.add(new flixel_ui_FlxButton(280,180,"Continue",$bind(this,this.play)));
+		this.add(new flixel_ui_FlxButton(280,210,"Main Menu",$bind(this,this.reset)));
 	}
 	,update: function(elapsed) {
 		flixel_FlxState.prototype.update.call(this,elapsed);
@@ -69488,7 +69611,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 30206;
+	this.version = 185801;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
@@ -114492,8 +114615,8 @@ Player.ACCELERATION = 320;
 Player.DRAG = 320;
 Player.GRAVITY = 600;
 Player.JUMP_FORCE = -280;
-Player.WALK_SPEED = 120;
-Player.RUN_SPEED = 200;
+Player.WALK_SPEED = 100;
+Player.RUN_SPEED = 150;
 Player.FALLING_SPEED = 300;
 Xml.Element = 0;
 Xml.PCData = 1;
