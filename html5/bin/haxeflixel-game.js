@@ -7845,6 +7845,8 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 		flixel_FlxG.camera.follow(this.player,flixel_FlxCameraFollowStyle.LOCKON,1);
 		this.map.follow();
 		flixel_FlxG.mouse.set_visible(false);
+		var virtualPad = new flixel_ui_FlxVirtualPad(flixel_ui_FlxDPadMode.FULL,flixel_ui_FlxActionMode.A_B);
+		this.add(virtualPad);
 	}
 	,update: function(elapsed) {
 		flixel_FlxState.prototype.update.call(this,elapsed);
@@ -41853,6 +41855,129 @@ flixel_ui__$FlxButton_FlxButtonEvent.prototype = {
 	}
 	,__class__: flixel_ui__$FlxButton_FlxButtonEvent
 };
+var flixel_ui_FlxVirtualPad = function(DPad,Action) {
+	flixel_group_FlxTypedSpriteGroup.call(this);
+	this.scrollFactor.set();
+	if(DPad == null) {
+		DPad = flixel_ui_FlxDPadMode.FULL;
+	}
+	if(Action == null) {
+		Action = flixel_ui_FlxActionMode.A_B_C;
+	}
+	this.dPad = new flixel_group_FlxTypedSpriteGroup();
+	this.dPad.scrollFactor.set();
+	this.actions = new flixel_group_FlxTypedSpriteGroup();
+	this.actions.scrollFactor.set();
+	switch(DPad._hx_index) {
+	case 0:
+		break;
+	case 1:
+		this.dPad.add(this.add(this.buttonUp = this.createButton(0,flixel_FlxG.height - 85,44,45,"up")));
+		this.dPad.add(this.add(this.buttonDown = this.createButton(0,flixel_FlxG.height - 45,44,45,"down")));
+		break;
+	case 2:
+		this.dPad.add(this.add(this.buttonLeft = this.createButton(0,flixel_FlxG.height - 45,44,45,"left")));
+		this.dPad.add(this.add(this.buttonRight = this.createButton(42,flixel_FlxG.height - 45,44,45,"right")));
+		break;
+	case 3:
+		this.dPad.add(this.add(this.buttonUp = this.createButton(35,flixel_FlxG.height - 81,44,45,"up")));
+		this.dPad.add(this.add(this.buttonLeft = this.createButton(0,flixel_FlxG.height - 45,44,45,"left")));
+		this.dPad.add(this.add(this.buttonRight = this.createButton(69,flixel_FlxG.height - 45,44,45,"right")));
+		break;
+	case 4:
+		this.dPad.add(this.add(this.buttonUp = this.createButton(35,flixel_FlxG.height - 116,44,45,"up")));
+		this.dPad.add(this.add(this.buttonLeft = this.createButton(0,flixel_FlxG.height - 81,44,45,"left")));
+		this.dPad.add(this.add(this.buttonRight = this.createButton(69,flixel_FlxG.height - 81,44,45,"right")));
+		this.dPad.add(this.add(this.buttonDown = this.createButton(35,flixel_FlxG.height - 45,44,45,"down")));
+		break;
+	}
+	switch(Action._hx_index) {
+	case 0:
+		break;
+	case 1:
+		this.actions.add(this.add(this.buttonA = this.createButton(flixel_FlxG.width - 44,flixel_FlxG.height - 45,44,45,"a")));
+		break;
+	case 2:
+		this.actions.add(this.add(this.buttonA = this.createButton(flixel_FlxG.width - 44,flixel_FlxG.height - 45,44,45,"a")));
+		this.actions.add(this.add(this.buttonB = this.createButton(flixel_FlxG.width - 86,flixel_FlxG.height - 45,44,45,"b")));
+		break;
+	case 3:
+		this.actions.add(this.add(this.buttonA = this.createButton(flixel_FlxG.width - 128,flixel_FlxG.height - 45,44,45,"a")));
+		this.actions.add(this.add(this.buttonB = this.createButton(flixel_FlxG.width - 86,flixel_FlxG.height - 45,44,45,"b")));
+		this.actions.add(this.add(this.buttonC = this.createButton(flixel_FlxG.width - 44,flixel_FlxG.height - 45,44,45,"c")));
+		break;
+	case 4:
+		this.actions.add(this.add(this.buttonY = this.createButton(flixel_FlxG.width - 86,flixel_FlxG.height - 85,44,45,"y")));
+		this.actions.add(this.add(this.buttonX = this.createButton(flixel_FlxG.width - 44,flixel_FlxG.height - 85,44,45,"x")));
+		this.actions.add(this.add(this.buttonB = this.createButton(flixel_FlxG.width - 86,flixel_FlxG.height - 45,44,45,"b")));
+		this.actions.add(this.add(this.buttonA = this.createButton(flixel_FlxG.width - 44,flixel_FlxG.height - 45,44,45,"a")));
+		break;
+	}
+};
+$hxClasses["flixel.ui.FlxVirtualPad"] = flixel_ui_FlxVirtualPad;
+flixel_ui_FlxVirtualPad.__name__ = "flixel.ui.FlxVirtualPad";
+flixel_ui_FlxVirtualPad.__super__ = flixel_group_FlxTypedSpriteGroup;
+flixel_ui_FlxVirtualPad.prototype = $extend(flixel_group_FlxTypedSpriteGroup.prototype,{
+	buttonA: null
+	,buttonB: null
+	,buttonC: null
+	,buttonY: null
+	,buttonX: null
+	,buttonLeft: null
+	,buttonUp: null
+	,buttonRight: null
+	,buttonDown: null
+	,dPad: null
+	,actions: null
+	,destroy: function() {
+		flixel_group_FlxTypedSpriteGroup.prototype.destroy.call(this);
+		this.dPad = flixel_util_FlxDestroyUtil.destroy(this.dPad);
+		this.actions = flixel_util_FlxDestroyUtil.destroy(this.actions);
+		this.dPad = null;
+		this.actions = null;
+		this.buttonA = null;
+		this.buttonB = null;
+		this.buttonC = null;
+		this.buttonY = null;
+		this.buttonX = null;
+		this.buttonLeft = null;
+		this.buttonUp = null;
+		this.buttonDown = null;
+		this.buttonRight = null;
+	}
+	,createButton: function(X,Y,Width,Height,Graphic,OnClick) {
+		var button = new flixel_ui_FlxButton(X,Y);
+		var _this = flixel_system_FlxAssets.getVirtualInputFrames().framesHash;
+		var frame = __map_reserved[Graphic] != null ? _this.getReserved(Graphic) : _this.h[Graphic];
+		var point = flixel_math_FlxPoint._pool.get().set(Width,Height);
+		point._inPool = false;
+		button.set_frames(flixel_graphics_frames_FlxTileFrames.fromFrame(frame,point));
+		button.set_width(button.frameWidth);
+		button.set_height(button.frameHeight);
+		button.set_solid(false);
+		button.set_immovable(true);
+		button.scrollFactor.set();
+		if(OnClick != null) {
+			button.onDown.callback = OnClick;
+		}
+		return button;
+	}
+	,__class__: flixel_ui_FlxVirtualPad
+});
+var flixel_ui_FlxDPadMode = $hxEnums["flixel.ui.FlxDPadMode"] = { __ename__ : "flixel.ui.FlxDPadMode", __constructs__ : ["NONE","UP_DOWN","LEFT_RIGHT","UP_LEFT_RIGHT","FULL"]
+	,NONE: {_hx_index:0,__enum__:"flixel.ui.FlxDPadMode",toString:$estr}
+	,UP_DOWN: {_hx_index:1,__enum__:"flixel.ui.FlxDPadMode",toString:$estr}
+	,LEFT_RIGHT: {_hx_index:2,__enum__:"flixel.ui.FlxDPadMode",toString:$estr}
+	,UP_LEFT_RIGHT: {_hx_index:3,__enum__:"flixel.ui.FlxDPadMode",toString:$estr}
+	,FULL: {_hx_index:4,__enum__:"flixel.ui.FlxDPadMode",toString:$estr}
+};
+var flixel_ui_FlxActionMode = $hxEnums["flixel.ui.FlxActionMode"] = { __ename__ : "flixel.ui.FlxActionMode", __constructs__ : ["NONE","A","A_B","A_B_C","A_B_X_Y"]
+	,NONE: {_hx_index:0,__enum__:"flixel.ui.FlxActionMode",toString:$estr}
+	,A: {_hx_index:1,__enum__:"flixel.ui.FlxActionMode",toString:$estr}
+	,A_B: {_hx_index:2,__enum__:"flixel.ui.FlxActionMode",toString:$estr}
+	,A_B_C: {_hx_index:3,__enum__:"flixel.ui.FlxActionMode",toString:$estr}
+	,A_B_X_Y: {_hx_index:4,__enum__:"flixel.ui.FlxActionMode",toString:$estr}
+};
 var flixel_util_FlxArrayUtil = function() { };
 $hxClasses["flixel.util.FlxArrayUtil"] = flixel_util_FlxArrayUtil;
 flixel_util_FlxArrayUtil.__name__ = "flixel.util.FlxArrayUtil";
@@ -69658,7 +69783,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 888338;
+	this.version = 193850;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
