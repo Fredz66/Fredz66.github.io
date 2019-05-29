@@ -7856,6 +7856,7 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 		this.foreground.scrollFactor.set_y(1.25);
 		this.foreground.offset.set_y(10);
 		this.plonk = new Plonk();
+		this.plonk.set_visible(false);
 		this.add(this.plonk);
 		this.add(this.foreground);
 		flixel_FlxG.camera.follow(this.player,flixel_FlxCameraFollowStyle.LOCKON,1);
@@ -7926,6 +7927,7 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 		flixel_FlxG.sound.play("assets/sounds/watersplash.ogg",1);
 		this.plonk.set_x(this.player.x);
 		this.plonk.set_y(flixel_FlxG.height + this.player.get_height());
+		this.plonk.set_visible(true);
 		this.plonk.velocity.set_y(-300);
 		this.plonk.acceleration.set_y(400);
 		new flixel_util_FlxTimer().start(2,$bind(this,this.hitdeath));
@@ -70048,7 +70050,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 938390;
+	this.version = 99937;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
