@@ -5245,7 +5245,7 @@ ManifestResources.init = function(config) {
 	lime_utils_Assets.defaultRootPath = ManifestResources.rootPath;
 	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf);
 	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf);
-	var data = "{\"name\":null,\"assets\":\"aoy4:pathy34:assets%2Fdata%2Fdata-goes-here.txty4:sizezy4:typey4:TEXTy2:idR1y7:preloadtgoR0y25:assets%2Fimages%2F320.pngR2i75411R3y5:IMAGER5R7R6tgoR0y25:assets%2Fimages%2F640.pngR2i239826R3R8R5R9R6tgoR0y36:assets%2Fimages%2Fimages-go-here.txtR2zR3R4R5R10R6tgoR0y28:assets%2Fimages%2Fmobile.pngR2i630R3R8R5R11R6tgoR0y27:assets%2Fimages%2Fplonk.pngR2i3982R3R8R5R12R6tgoR0y27:assets%2Fimages%2Fspiky.pngR2i945R3R8R5R13R6tgoR0y29:assets%2Fimages%2Fsprites.pngR2i82121R3R8R5R14R6tgoR0y39:assets%2Fimages%2FspritesIndustrial.pngR2i10300R3R8R5R15R6tgoR0y34:assets%2Fimages%2FspritesProto.pngR2i61155R3R8R5R16R6tgoR0y35:assets%2Fimages%2FspritesProto2.pngR2i50909R3R8R5R17R6tgoR0y35:assets%2Fimages%2FspritesProto3.pngR2i50909R3R8R5R18R6tgoR0y35:assets%2Fimages%2FspritesProto4.pngR2i56548R3R8R5R19R6tgoR0y35:assets%2Fimages%2FspritesProto5.pngR2i52096R3R8R5R20R6tgoR0y28:assets%2Fimages%2FsProto.pngR2i50508R3R8R5R21R6tgoR0y27:assets%2Fimages%2Ftiles.pngR2i5549R3R8R5R22R6tgoR0y32:assets%2Fimages%2FtilesProto.pngR2i4659R3R8R5R23R6tgoR0y33:assets%2Fimages%2FtilesProto2.pngR2i16509R3R8R5R24R6tgoR0y31:assets%2Fimages%2Fwater-640.pngR2i2878R3R8R5R25R6tgoR0y37:assets%2Fimages%2Fwater-beige-640.pngR2i5718R3R8R5R26R6tgoR2i3111078R3y5:MUSICR5y36:assets%2Fmusic%2Fasian%20mystery.oggy9:pathGroupaR28hR6tgoR2i2106598R3R27R5y45:assets%2Fmusic%2Fasian-mystery-nometadata.oggR29aR30hR6tgoR0y36:assets%2Fmusic%2Fmusic-goes-here.txtR2zR3R4R5R31R6tgoR2i5644844R3y5:SOUNDR5y38:assets%2Fmusic%2Ftemple-nometadata.wavR29aR33hR6tgoR2i11289746R3R32R5y27:assets%2Fmusic%2Ftemple.wavR29aR34hR6tgoR2i11689R3R32R5y27:assets%2Fsounds%2Fdeath.oggR29aR35hR6tgoR2i9318R3R32R5y26:assets%2Fsounds%2Fjump.oggR29aR36hR6tgoR0y36:assets%2Fsounds%2Fsounds-go-here.txtR2zR3R4R5R37R6tgoR2i52494R3R32R5y26:assets%2Fsounds%2Ftree.oggR29aR38hR6tgoR0y34:assets%2Fsounds%2Fwatersplash.flacR2i185209R3y6:BINARYR5R39R6tgoR2i28546R3R32R5y33:assets%2Fsounds%2Fwatersplash.oggR29aR41hR6tgoR0y35:assets%2Fsounds%2Fwatersplash2.flacR2i136214R3R40R5R42R6tgoR2i2114R3R27R5y26:flixel%2Fsounds%2Fbeep.mp3R29aR43y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R27R5y28:flixel%2Fsounds%2Fflixel.mp3R29aR45y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3R32R5R44R29aR43R44hgoR2i33629R3R32R5R46R29aR45R46hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R47R48y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R8R5R53R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R8R5R54R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
+	var data = "{\"name\":null,\"assets\":\"aoy4:pathy34:assets%2Fdata%2Fdata-goes-here.txty4:sizezy4:typey4:TEXTy2:idR1y7:preloadtgoR0y25:assets%2Fimages%2F320.pngR2i75411R3y5:IMAGER5R7R6tgoR0y25:assets%2Fimages%2F640.pngR2i239826R3R8R5R9R6tgoR0y36:assets%2Fimages%2Fimages-go-here.txtR2zR3R4R5R10R6tgoR0y28:assets%2Fimages%2Fmobile.pngR2i630R3R8R5R11R6tgoR0y27:assets%2Fimages%2Fplonk.pngR2i3982R3R8R5R12R6tgoR0y27:assets%2Fimages%2Fspiky.pngR2i945R3R8R5R13R6tgoR0y29:assets%2Fimages%2Fsprites.pngR2i82121R3R8R5R14R6tgoR0y39:assets%2Fimages%2FspritesIndustrial.pngR2i10300R3R8R5R15R6tgoR0y34:assets%2Fimages%2FspritesProto.pngR2i61155R3R8R5R16R6tgoR0y35:assets%2Fimages%2FspritesProto2.pngR2i50909R3R8R5R17R6tgoR0y35:assets%2Fimages%2FspritesProto3.pngR2i50909R3R8R5R18R6tgoR0y35:assets%2Fimages%2FspritesProto4.pngR2i56548R3R8R5R19R6tgoR0y35:assets%2Fimages%2FspritesProto5.pngR2i52096R3R8R5R20R6tgoR0y28:assets%2Fimages%2FsProto.pngR2i50508R3R8R5R21R6tgoR0y27:assets%2Fimages%2Ftiles.pngR2i5549R3R8R5R22R6tgoR0y32:assets%2Fimages%2FtilesProto.pngR2i4659R3R8R5R23R6tgoR0y33:assets%2Fimages%2FtilesProto2.pngR2i16509R3R8R5R24R6tgoR0y31:assets%2Fimages%2Fwater-640.pngR2i2878R3R8R5R25R6tgoR0y37:assets%2Fimages%2Fwater-beige-640.pngR2i5718R3R8R5R26R6tgoR2i2106598R3y5:MUSICR5y45:assets%2Fmusic%2Fasian-mystery-nometadata.oggy9:pathGroupaR28hR6tgoR2i542898R3y5:SOUNDR5y38:assets%2Fmusic%2Ftemple-nometadata.oggR29aR31hR6tgoR2i11689R3R30R5y27:assets%2Fsounds%2Fdeath.oggR29aR32hR6tgoR2i9318R3R30R5y26:assets%2Fsounds%2Fjump.oggR29aR33hR6tgoR2i52494R3R30R5y26:assets%2Fsounds%2Ftree.oggR29aR34hR6tgoR2i28546R3R30R5y33:assets%2Fsounds%2Fwatersplash.oggR29aR35hR6tgoR2i2114R3R27R5y26:flixel%2Fsounds%2Fbeep.mp3R29aR36y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R27R5y28:flixel%2Fsounds%2Fflixel.mp3R29aR38y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3R30R5R37R29aR36R37hgoR2i33629R3R30R5R39R29aR38R39hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R40R41y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R8R5R46R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R8R5R47R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
 	var manifest = lime_utils_AssetManifest.parse(data,ManifestResources.rootPath);
 	var library = lime_utils_AssetLibrary.fromManifest(manifest);
 	lime_utils_Assets.registerLibrary("default",library);
@@ -5612,7 +5612,7 @@ MenuState.prototype = $extend(flixel_FlxState.prototype,{
 		this.add(new flixel_ui_FlxButton(280,200,"Settings",$bind(this,this.settings)));
 		this.add(new flixel_ui_FlxButton(280,220,"Quit",$bind(this,this.quit)));
 		flixel_FlxState.prototype.create.call(this);
-		flixel_FlxG.sound.playMusic("assets/music/temple-nometadata.wav",1,true);
+		flixel_FlxG.sound.playMusic("assets/music/temple-nometadata.ogg",1,true);
 	}
 	,update: function(elapsed) {
 		flixel_FlxState.prototype.update.call(this,elapsed);
@@ -70048,7 +70048,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 935800;
+	this.version = 938390;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
@@ -115016,16 +115016,11 @@ AssetPaths.tilesProto2__png = "assets/images/tilesProto2.png";
 AssetPaths.water_640__png = "assets/images/water-640.png";
 AssetPaths.water_beige_640__png = "assets/images/water-beige-640.png";
 AssetPaths.asian_mystery_nometadata__ogg = "assets/music/asian-mystery-nometadata.ogg";
-AssetPaths.music_goes_here__txt = "assets/music/music-goes-here.txt";
-AssetPaths.temple_nometadata__wav = "assets/music/temple-nometadata.wav";
-AssetPaths.temple__wav = "assets/music/temple.wav";
+AssetPaths.temple_nometadata__ogg = "assets/music/temple-nometadata.ogg";
 AssetPaths.death__ogg = "assets/sounds/death.ogg";
 AssetPaths.jump__ogg = "assets/sounds/jump.ogg";
-AssetPaths.sounds_go_here__txt = "assets/sounds/sounds-go-here.txt";
 AssetPaths.tree__ogg = "assets/sounds/tree.ogg";
-AssetPaths.watersplash__flac = "assets/sounds/watersplash.flac";
 AssetPaths.watersplash__ogg = "assets/sounds/watersplash.ogg";
-AssetPaths.watersplash2__flac = "assets/sounds/watersplash2.flac";
 openfl_text_Font.__fontByName = new haxe_ds_StringMap();
 openfl_text_Font.__registeredFonts = [];
 flixel_math_FlxRect._pool = new flixel_util_FlxPool_$flixel_$math_$FlxRect(flixel_math_FlxRect);
