@@ -7889,6 +7889,11 @@ MenuState.prototype = $extend(flixel_FlxState.prototype,{
 		this.add(new flixel_ui_FlxButton(280,220,"Quit",$bind(this,this.quit)));
 		var platforms = "";
 		platforms += "html5 ";
+		if(flixel_FlxG.html5.onMobile) {
+			platforms += "(on mobile) ";
+		} else {
+			platforms += "(not mobile) ";
+		}
 		var button = new flixel_ui_FlxButton(570,290,"",function() {
 			flixel_FlxG.set_fullscreen(!flixel_FlxG.get_fullscreen());
 		});
@@ -70001,7 +70006,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 211230;
+	this.version = 343994;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
