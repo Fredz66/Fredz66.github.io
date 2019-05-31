@@ -7904,8 +7904,9 @@ MenuState.prototype = $extend(flixel_FlxState.prototype,{
 		controls += "keyboard ";
 		controls += "touch ";
 		controls += "gamepad ";
-		this.add(new flixel_text_FlxText(0,338,flixel_FlxG.width,platforms).setFormat(null,8));
-		this.add(new flixel_text_FlxText(0,348,flixel_FlxG.width,controls).setFormat(null,8));
+		this.add(new flixel_text_FlxText(0,328,flixel_FlxG.width,platforms).setFormat(null,8));
+		this.add(new flixel_text_FlxText(0,338,flixel_FlxG.width,controls).setFormat(null,8));
+		this.add(new flixel_text_FlxText(0,348,flixel_FlxG.width,"v0.3").setFormat(null,8));
 		flixel_FlxState.prototype.create.call(this);
 		flixel_FlxG.sound.playMusic("assets/music/temple-nometadata.ogg",1,true);
 	}
@@ -8077,7 +8078,7 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 		this.map.follow();
 		flixel_FlxG.mouse.set_visible(false);
 		if(flixel_FlxG.html5.onMobile) {
-			PlayState.virtualPad = new flixel_ui_FlxVirtualPad(flixel_ui_FlxDPadMode.FULL,flixel_ui_FlxActionMode.A_B);
+			PlayState.virtualPad = new flixel_ui_FlxVirtualPad(flixel_ui_FlxDPadMode.LEFT_RIGHT,flixel_ui_FlxActionMode.A_B);
 			PlayState.virtualPad.set_visible(true);
 			this.add(PlayState.virtualPad);
 		}
@@ -8302,7 +8303,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			var _this4 = flixel_FlxG.keys.justPressed;
 			if(!_this4.keyManager.checkStatus(38,_this4.status)) {
 				if(PlayState.virtualPad != null) {
-					var _this5 = PlayState.virtualPad.buttonUp.input;
+					var _this5 = PlayState.virtualPad.buttonA.input;
 					tmp2 = _this5.current == 1 || _this5.current == 2;
 				} else {
 					tmp2 = false;
@@ -8318,7 +8319,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			var _this6 = flixel_FlxG.keys.pressed;
 			if(!_this6.keyManager.checkStatus(40,_this6.status)) {
 				if(PlayState.virtualPad != null) {
-					var _this7 = PlayState.virtualPad.buttonDown.input;
+					var _this7 = PlayState.virtualPad.buttonB.input;
 					tmp3 = _this7.current == 1 || _this7.current == 2;
 				} else {
 					tmp3 = false;
@@ -8338,7 +8339,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			var _this8 = flixel_FlxG.keys.justPressed;
 			if(!_this8.keyManager.checkStatus(38,_this8.status)) {
 				if(PlayState.virtualPad != null) {
-					var _this9 = PlayState.virtualPad.buttonUp.input;
+					var _this9 = PlayState.virtualPad.buttonA.input;
 					tmp4 = _this9.current == 1 || _this9.current == 2;
 				} else {
 					tmp4 = false;
@@ -70180,7 +70181,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 808698;
+	this.version = 8988;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
