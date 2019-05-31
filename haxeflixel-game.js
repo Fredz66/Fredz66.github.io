@@ -894,9 +894,9 @@ ApplicationMain.create = function(config) {
 	ManifestResources.init(config);
 	var _this = app.meta;
 	if(__map_reserved["build"] != null) {
-		_this.setReserved("build","48");
+		_this.setReserved("build","49");
 	} else {
-		_this.h["build"] = "48";
+		_this.h["build"] = "49";
 	}
 	var _this1 = app.meta;
 	if(__map_reserved["company"] != null) {
@@ -7899,14 +7899,8 @@ MenuState.prototype = $extend(flixel_FlxState.prototype,{
 		});
 		button.loadGraphic("assets/images/fullscreen.png");
 		this.add(button);
-		var controls = "";
-		controls += "mouse ";
-		controls += "keyboard ";
-		controls += "touch ";
-		controls += "gamepad ";
-		this.add(new flixel_text_FlxText(0,328,flixel_FlxG.width,platforms).setFormat(null,8));
-		this.add(new flixel_text_FlxText(0,338,flixel_FlxG.width,controls).setFormat(null,8));
-		this.add(new flixel_text_FlxText(0,348,flixel_FlxG.width,"v0.4").setFormat(null,8));
+		this.add(new flixel_text_FlxText(0,338,flixel_FlxG.width,platforms).setFormat(null,8));
+		this.add(new flixel_text_FlxText(0,348,flixel_FlxG.width,"v0.5").setFormat(null,8));
 		flixel_FlxState.prototype.create.call(this);
 		flixel_FlxG.sound.playMusic("assets/music/temple-nometadata.ogg",1,true);
 	}
@@ -70181,7 +70175,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 14678;
+	this.version = 845723;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
