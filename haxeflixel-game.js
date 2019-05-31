@@ -7887,11 +7887,20 @@ MenuState.prototype = $extend(flixel_FlxState.prototype,{
 		this.add(new flixel_ui_FlxButton(280,180,"New game",$bind(this,this.play)));
 		this.add(new flixel_ui_FlxButton(280,200,"Settings",$bind(this,this.settings)));
 		this.add(new flixel_ui_FlxButton(280,220,"Quit",$bind(this,this.quit)));
+		var platforms = "";
+		platforms += "html5 ";
 		var button = new flixel_ui_FlxButton(570,290,"",function() {
 			flixel_FlxG.set_fullscreen(!flixel_FlxG.get_fullscreen());
 		});
 		button.loadGraphic("assets/images/fullscreen.png");
 		this.add(button);
+		var controls = "";
+		controls += "mouse ";
+		controls += "keyboard ";
+		controls += "touch ";
+		controls += "gamepad ";
+		this.add(new flixel_text_FlxText(0,338,flixel_FlxG.width,"desktop").setFormat(null,8));
+		this.add(new flixel_text_FlxText(0,348,flixel_FlxG.width,controls).setFormat(null,8));
 		flixel_FlxState.prototype.create.call(this);
 		flixel_FlxG.sound.playMusic("assets/music/temple-nometadata.ogg",1,true);
 	}
@@ -69992,7 +70001,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 581242;
+	this.version = 38872;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
@@ -106029,6 +106038,37 @@ openfl_events_RenderEvent.prototype = $extend(openfl_events_Event.prototype,{
 	}
 	,__class__: openfl_events_RenderEvent
 });
+var openfl_events_SampleDataEvent = function(type,bubbles,cancelable) {
+	if(cancelable == null) {
+		cancelable = false;
+	}
+	if(bubbles == null) {
+		bubbles = false;
+	}
+	openfl_events_Event.call(this,type,bubbles,cancelable);
+	var this1 = new openfl_utils_ByteArrayData(0);
+	this.data = this1;
+	this.data.__endian = 1;
+	this.position = 0.0;
+};
+$hxClasses["openfl.events.SampleDataEvent"] = openfl_events_SampleDataEvent;
+openfl_events_SampleDataEvent.__name__ = "openfl.events.SampleDataEvent";
+openfl_events_SampleDataEvent.__super__ = openfl_events_Event;
+openfl_events_SampleDataEvent.prototype = $extend(openfl_events_Event.prototype,{
+	data: null
+	,position: null
+	,clone: function() {
+		var event = new openfl_events_SampleDataEvent(this.type,this.bubbles,this.cancelable);
+		event.target = this.target;
+		event.currentTarget = this.currentTarget;
+		event.eventPhase = this.eventPhase;
+		return event;
+	}
+	,toString: function() {
+		return this.__formatToString("SampleDataEvent",["type","bubbles","cancelable"]);
+	}
+	,__class__: openfl_events_SampleDataEvent
+});
 var openfl_events_SecurityErrorEvent = function(type,bubbles,cancelable,text,id) {
 	if(id == null) {
 		id = 0;
@@ -118528,6 +118568,7 @@ openfl_events_RenderEvent.RENDER_CAIRO = "renderCairo";
 openfl_events_RenderEvent.RENDER_CANVAS = "renderCanvas";
 openfl_events_RenderEvent.RENDER_DOM = "renderDOM";
 openfl_events_RenderEvent.RENDER_OPENGL = "renderOpenGL";
+openfl_events_SampleDataEvent.SAMPLE_DATA = "sampleData";
 openfl_events_SecurityErrorEvent.SECURITY_ERROR = "securityError";
 openfl_events_TouchEvent.__meta__ = { fields : { delta : { SuppressWarnings : ["checkstyle:FieldDocComment"]}}};
 openfl_events_TouchEvent.TOUCH_BEGIN = "touchBegin";
