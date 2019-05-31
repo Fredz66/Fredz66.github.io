@@ -894,9 +894,9 @@ ApplicationMain.create = function(config) {
 	ManifestResources.init(config);
 	var _this = app.meta;
 	if(__map_reserved["build"] != null) {
-		_this.setReserved("build","46");
+		_this.setReserved("build","48");
 	} else {
-		_this.h["build"] = "46";
+		_this.h["build"] = "48";
 	}
 	var _this1 = app.meta;
 	if(__map_reserved["company"] != null) {
@@ -7906,7 +7906,7 @@ MenuState.prototype = $extend(flixel_FlxState.prototype,{
 		controls += "gamepad ";
 		this.add(new flixel_text_FlxText(0,328,flixel_FlxG.width,platforms).setFormat(null,8));
 		this.add(new flixel_text_FlxText(0,338,flixel_FlxG.width,controls).setFormat(null,8));
-		this.add(new flixel_text_FlxText(0,348,flixel_FlxG.width,"v0.3").setFormat(null,8));
+		this.add(new flixel_text_FlxText(0,348,flixel_FlxG.width,"v0.4").setFormat(null,8));
 		flixel_FlxState.prototype.create.call(this);
 		flixel_FlxG.sound.playMusic("assets/music/temple-nometadata.ogg",1,true);
 	}
@@ -8303,7 +8303,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			var _this4 = flixel_FlxG.keys.justPressed;
 			if(!_this4.keyManager.checkStatus(38,_this4.status)) {
 				if(PlayState.virtualPad != null) {
-					var _this5 = PlayState.virtualPad.buttonA.input;
+					var _this5 = PlayState.virtualPad.buttonB.input;
 					tmp2 = _this5.current == 1 || _this5.current == 2;
 				} else {
 					tmp2 = false;
@@ -8319,7 +8319,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			var _this6 = flixel_FlxG.keys.pressed;
 			if(!_this6.keyManager.checkStatus(40,_this6.status)) {
 				if(PlayState.virtualPad != null) {
-					var _this7 = PlayState.virtualPad.buttonB.input;
+					var _this7 = PlayState.virtualPad.buttonA.input;
 					tmp3 = _this7.current == 1 || _this7.current == 2;
 				} else {
 					tmp3 = false;
@@ -8339,7 +8339,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			var _this8 = flixel_FlxG.keys.justPressed;
 			if(!_this8.keyManager.checkStatus(38,_this8.status)) {
 				if(PlayState.virtualPad != null) {
-					var _this9 = PlayState.virtualPad.buttonA.input;
+					var _this9 = PlayState.virtualPad.buttonB.input;
 					tmp4 = _this9.current == 1 || _this9.current == 2;
 				} else {
 					tmp4 = false;
@@ -70181,7 +70181,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 8988;
+	this.version = 14678;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
