@@ -7899,7 +7899,7 @@ MenuState.prototype = $extend(flixel_FlxState.prototype,{
 		controls += "keyboard ";
 		controls += "touch ";
 		controls += "gamepad ";
-		this.add(new flixel_text_FlxText(0,338,flixel_FlxG.width,"desktop").setFormat(null,8));
+		this.add(new flixel_text_FlxText(0,338,flixel_FlxG.width,platforms).setFormat(null,8));
 		this.add(new flixel_text_FlxText(0,348,flixel_FlxG.width,controls).setFormat(null,8));
 		flixel_FlxState.prototype.create.call(this);
 		flixel_FlxG.sound.playMusic("assets/music/temple-nometadata.ogg",1,true);
@@ -70001,7 +70001,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 38872;
+	this.version = 211230;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
