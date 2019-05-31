@@ -7295,7 +7295,7 @@ ExitState.__super__ = flixel_FlxSubState;
 ExitState.prototype = $extend(flixel_FlxSubState.prototype,{
 	create: function() {
 		flixel_FlxSubState.prototype.create.call(this);
-		flixel_FlxG.mouse.set_visible(true);
+		flixel_FlxG.mouse.set_visible(!flixel_FlxG.html5.onMobile);
 		var background = new flixel_FlxSprite();
 		background.loadGraphic("assets/images/popup.png");
 		background.setPosition(flixel_FlxG.camera.scroll.x + (flixel_FlxG.camera.width - background.get_width()) / 2,flixel_FlxG.camera.scroll.y + (flixel_FlxG.camera.height - background.get_height()) / 2);
@@ -7352,7 +7352,7 @@ GameOverState.__super__ = flixel_FlxState;
 GameOverState.prototype = $extend(flixel_FlxState.prototype,{
 	create: function() {
 		flixel_FlxState.prototype.create.call(this);
-		flixel_FlxG.mouse.set_visible(true);
+		flixel_FlxG.mouse.set_visible(!flixel_FlxG.html5.onMobile);
 		this.add(new flixel_text_FlxText(0,60,flixel_FlxG.width,"Game Over").setFormat(null,32,-65536,"center"));
 		this.add(new flixel_ui_FlxButton(280,180,"Retry",$bind(this,this.play)));
 		this.add(new flixel_ui_FlxButton(280,210,"Main Menu",$bind(this,this.reset)));
@@ -7462,7 +7462,7 @@ KeyboardState.__super__ = flixel_FlxState;
 KeyboardState.prototype = $extend(flixel_FlxState.prototype,{
 	create: function() {
 		flixel_FlxState.prototype.create.call(this);
-		flixel_FlxG.mouse.set_visible(true);
+		flixel_FlxG.mouse.set_visible(!flixel_FlxG.html5.onMobile);
 		this.add(new flixel_text_FlxText(0,60,flixel_FlxG.width,"Keyboard").setFormat(null,32,-65536,"center"));
 		this.add(new flixel_text_FlxText(180,120,flixel_FlxG.width,"Up").setFormat(null,16,-1,"left"));
 		this.add(new flixel_text_FlxText(100,120,flixel_FlxG.width,"up").setFormat(null,16,-1,"center"));
@@ -7882,7 +7882,7 @@ MenuState.__name__ = "MenuState";
 MenuState.__super__ = flixel_FlxState;
 MenuState.prototype = $extend(flixel_FlxState.prototype,{
 	create: function() {
-		flixel_FlxG.mouse.set_visible(true);
+		flixel_FlxG.mouse.set_visible(!flixel_FlxG.html5.onMobile);
 		this.add(new flixel_text_FlxText(0,60,flixel_FlxG.width,"Buddha Breath").setFormat(null,64,-65536,"center"));
 		this.add(new flixel_ui_FlxButton(280,180,"New game",$bind(this,this.play)));
 		this.add(new flixel_ui_FlxButton(280,200,"Settings",$bind(this,this.settings)));
@@ -7890,9 +7890,9 @@ MenuState.prototype = $extend(flixel_FlxState.prototype,{
 		var platforms = "";
 		platforms += "html5 ";
 		if(flixel_FlxG.html5.onMobile) {
-			platforms += "(on mobile) ";
+			platforms += "(mobile) ";
 		} else {
-			platforms += "(not mobile) ";
+			platforms += "(desktop) ";
 		}
 		var button = new flixel_ui_FlxButton(570,290,"",function() {
 			flixel_FlxG.set_fullscreen(!flixel_FlxG.get_fullscreen());
@@ -7964,6 +7964,7 @@ var PlayState = function(MaxSize) {
 };
 $hxClasses["PlayState"] = PlayState;
 PlayState.__name__ = "PlayState";
+PlayState.virtualPad = null;
 PlayState.__super__ = flixel_FlxState;
 PlayState.prototype = $extend(flixel_FlxState.prototype,{
 	background: null
@@ -8075,6 +8076,11 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 		flixel_FlxG.camera.follow(this.player,flixel_FlxCameraFollowStyle.LOCKON,1);
 		this.map.follow();
 		flixel_FlxG.mouse.set_visible(false);
+		if(flixel_FlxG.html5.onMobile) {
+			PlayState.virtualPad = new flixel_ui_FlxVirtualPad(flixel_ui_FlxDPadMode.FULL,flixel_ui_FlxActionMode.A_B);
+			PlayState.virtualPad.set_visible(true);
+			this.add(PlayState.virtualPad);
+		}
 	}
 	,releaseBirds: function(count,x,y,speed,height) {
 		var _g = 0;
@@ -8250,8 +8256,19 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 	}
 	,move: function() {
 		this.acceleration.set_x(0);
+		var tmp;
 		var _this = flixel_FlxG.keys.pressed;
-		if(_this.keyManager.checkStatus(37,_this.status)) {
+		if(!_this.keyManager.checkStatus(37,_this.status)) {
+			if(PlayState.virtualPad != null) {
+				var _this1 = PlayState.virtualPad.buttonLeft.input;
+				tmp = _this1.current == 1 || _this1.current == 2;
+			} else {
+				tmp = false;
+			}
+		} else {
+			tmp = true;
+		}
+		if(tmp) {
 			this.set_flipX(true);
 			this.setSize(30,76);
 			this.offset.set(14,4);
@@ -8259,8 +8276,19 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			var _g = this.acceleration;
 			_g.set_x(_g.x - 320);
 		} else {
-			var _this1 = flixel_FlxG.keys.pressed;
-			if(_this1.keyManager.checkStatus(39,_this1.status)) {
+			var tmp1;
+			var _this2 = flixel_FlxG.keys.pressed;
+			if(!_this2.keyManager.checkStatus(39,_this2.status)) {
+				if(PlayState.virtualPad != null) {
+					var _this3 = PlayState.virtualPad.buttonRight.input;
+					tmp1 = _this3.current == 1 || _this3.current == 2;
+				} else {
+					tmp1 = false;
+				}
+			} else {
+				tmp1 = true;
+			}
+			if(tmp1) {
 				this.set_flipX(false);
 				this.setSize(30,76);
 				this.offset.set(24,4);
@@ -8270,13 +8298,35 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			}
 		}
 		if(this.velocity.y == 0) {
-			var _this2 = flixel_FlxG.keys.justPressed;
-			if(_this2.keyManager.checkStatus(38,_this2.status) && (this.touching & 4096) > 0) {
+			var tmp2;
+			var _this4 = flixel_FlxG.keys.justPressed;
+			if(!_this4.keyManager.checkStatus(38,_this4.status)) {
+				if(PlayState.virtualPad != null) {
+					var _this5 = PlayState.virtualPad.buttonUp.input;
+					tmp2 = _this5.current == 1 || _this5.current == 2;
+				} else {
+					tmp2 = false;
+				}
+			} else {
+				tmp2 = true;
+			}
+			if(tmp2 && (this.touching & 4096) > 0) {
 				flixel_FlxG.sound.play("assets/sounds/jump.ogg",1);
 				this.velocity.set_y(-280);
 			}
-			var _this3 = flixel_FlxG.keys.pressed;
-			if(_this3.keyManager.checkStatus(40,_this3.status) && (this.touching & 4096) > 0) {
+			var tmp3;
+			var _this6 = flixel_FlxG.keys.pressed;
+			if(!_this6.keyManager.checkStatus(40,_this6.status)) {
+				if(PlayState.virtualPad != null) {
+					var _this7 = PlayState.virtualPad.buttonDown.input;
+					tmp3 = _this7.current == 1 || _this7.current == 2;
+				} else {
+					tmp3 = false;
+				}
+			} else {
+				tmp3 = true;
+			}
+			if(tmp3 && (this.touching & 4096) > 0) {
 				this.crouch = true;
 				this.maxVelocity.set_x(50);
 			} else {
@@ -8284,21 +8334,22 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 				this.maxVelocity.set_x(150);
 			}
 		} else {
-			var _this4 = flixel_FlxG.keys.justPressed;
-			if(_this4.keyManager.checkStatus(38,_this4.status) && (this.touching & 4096) > 0) {
+			var tmp4;
+			var _this8 = flixel_FlxG.keys.justPressed;
+			if(!_this8.keyManager.checkStatus(38,_this8.status)) {
+				if(PlayState.virtualPad != null) {
+					var _this9 = PlayState.virtualPad.buttonUp.input;
+					tmp4 = _this9.current == 1 || _this9.current == 2;
+				} else {
+					tmp4 = false;
+				}
+			} else {
+				tmp4 = true;
+			}
+			if(tmp4 && (this.touching & 4096) > 0) {
 				flixel_FlxG.sound.play("assets/sounds/jump.ogg",1);
 				this.velocity.set_y(-280);
 			}
-		}
-		var tmp;
-		if(this.velocity.y < 0) {
-			var _this5 = flixel_FlxG.keys.justReleased;
-			tmp = _this5.keyManager.checkStatus(38,_this5.status);
-		} else {
-			tmp = false;
-		}
-		if(tmp) {
-			this.velocity.set_y(this.velocity.y * 0.5);
 		}
 	}
 	,animate: function() {
@@ -8348,7 +8399,7 @@ QuitState.__super__ = flixel_FlxState;
 QuitState.prototype = $extend(flixel_FlxState.prototype,{
 	create: function() {
 		flixel_FlxState.prototype.create.call(this);
-		flixel_FlxG.mouse.set_visible(true);
+		flixel_FlxG.mouse.set_visible(!flixel_FlxG.html5.onMobile);
 		this.add(new flixel_text_FlxText(0,60,flixel_FlxG.width,"Are you sure ?").setFormat(null,32,-65536,"center"));
 		this.add(new flixel_ui_FlxButton(280,180,"Main Menu",$bind(this,this.menu)));
 		this.add(new flixel_ui_FlxButton(280,210,"Quit",$bind(this,this.quit)));
@@ -8500,7 +8551,7 @@ SettingsState.__super__ = flixel_FlxState;
 SettingsState.prototype = $extend(flixel_FlxState.prototype,{
 	create: function() {
 		flixel_FlxState.prototype.create.call(this);
-		flixel_FlxG.mouse.set_visible(true);
+		flixel_FlxG.mouse.set_visible(!flixel_FlxG.html5.onMobile);
 		this.add(new flixel_text_FlxText(0,60,flixel_FlxG.width,"Settings").setFormat(null,32,-65536,"center"));
 		this.add(new flixel_ui_FlxButton(220,180,"Graphics",$bind(this,this.keyboard)));
 		this.add(new flixel_ui_FlxButton(220,200,"Keyboard",$bind(this,this.keyboard)));
@@ -8870,7 +8921,7 @@ WinState.__super__ = flixel_FlxState;
 WinState.prototype = $extend(flixel_FlxState.prototype,{
 	create: function() {
 		flixel_FlxState.prototype.create.call(this);
-		flixel_FlxG.mouse.set_visible(true);
+		flixel_FlxG.mouse.set_visible(!flixel_FlxG.html5.onMobile);
 		this.add(new flixel_text_FlxText(0,60,flixel_FlxG.width,"You Won !").setFormat(null,32,-65536,"center"));
 		this.add(new flixel_ui_FlxButton(280,180,"Continue",$bind(this,this.play)));
 		this.add(new flixel_ui_FlxButton(280,210,"Main Menu",$bind(this,this.reset)));
@@ -19948,20 +19999,6 @@ flixel_group_FlxTypedSpriteGroup.prototype = $extend(flixel_FlxSprite.prototype,
 			}
 		}
 	}
-	,transformChildren_Bool: function(Function1,Value) {
-		if(this.group == null) {
-			return;
-		}
-		var _g = 0;
-		var _g1 = this._sprites;
-		while(_g < _g1.length) {
-			var sprite = _g1[_g];
-			++_g;
-			if(sprite != null) {
-				Function1(sprite,Value);
-			}
-		}
-	}
 	,transformChildren_Array_flixel_FlxCamera: function(Function1,Value) {
 		if(this.group == null) {
 			return;
@@ -20016,6 +20053,20 @@ flixel_group_FlxTypedSpriteGroup.prototype = $extend(flixel_FlxSprite.prototype,
 		}
 	}
 	,transformChildren_flixel_math_FlxPoint: function(Function1,Value) {
+		if(this.group == null) {
+			return;
+		}
+		var _g = 0;
+		var _g1 = this._sprites;
+		while(_g < _g1.length) {
+			var sprite = _g1[_g];
+			++_g;
+			if(sprite != null) {
+				Function1(sprite,Value);
+			}
+		}
+	}
+	,transformChildren_Bool: function(Function1,Value) {
 		if(this.group == null) {
 			return;
 		}
@@ -42200,6 +42251,129 @@ flixel_ui__$FlxButton_FlxButtonEvent.prototype = {
 		}
 	}
 	,__class__: flixel_ui__$FlxButton_FlxButtonEvent
+};
+var flixel_ui_FlxVirtualPad = function(DPad,Action) {
+	flixel_group_FlxTypedSpriteGroup.call(this);
+	this.scrollFactor.set();
+	if(DPad == null) {
+		DPad = flixel_ui_FlxDPadMode.FULL;
+	}
+	if(Action == null) {
+		Action = flixel_ui_FlxActionMode.A_B_C;
+	}
+	this.dPad = new flixel_group_FlxTypedSpriteGroup();
+	this.dPad.scrollFactor.set();
+	this.actions = new flixel_group_FlxTypedSpriteGroup();
+	this.actions.scrollFactor.set();
+	switch(DPad._hx_index) {
+	case 0:
+		break;
+	case 1:
+		this.dPad.add(this.add(this.buttonUp = this.createButton(0,flixel_FlxG.height - 85,44,45,"up")));
+		this.dPad.add(this.add(this.buttonDown = this.createButton(0,flixel_FlxG.height - 45,44,45,"down")));
+		break;
+	case 2:
+		this.dPad.add(this.add(this.buttonLeft = this.createButton(0,flixel_FlxG.height - 45,44,45,"left")));
+		this.dPad.add(this.add(this.buttonRight = this.createButton(42,flixel_FlxG.height - 45,44,45,"right")));
+		break;
+	case 3:
+		this.dPad.add(this.add(this.buttonUp = this.createButton(35,flixel_FlxG.height - 81,44,45,"up")));
+		this.dPad.add(this.add(this.buttonLeft = this.createButton(0,flixel_FlxG.height - 45,44,45,"left")));
+		this.dPad.add(this.add(this.buttonRight = this.createButton(69,flixel_FlxG.height - 45,44,45,"right")));
+		break;
+	case 4:
+		this.dPad.add(this.add(this.buttonUp = this.createButton(35,flixel_FlxG.height - 116,44,45,"up")));
+		this.dPad.add(this.add(this.buttonLeft = this.createButton(0,flixel_FlxG.height - 81,44,45,"left")));
+		this.dPad.add(this.add(this.buttonRight = this.createButton(69,flixel_FlxG.height - 81,44,45,"right")));
+		this.dPad.add(this.add(this.buttonDown = this.createButton(35,flixel_FlxG.height - 45,44,45,"down")));
+		break;
+	}
+	switch(Action._hx_index) {
+	case 0:
+		break;
+	case 1:
+		this.actions.add(this.add(this.buttonA = this.createButton(flixel_FlxG.width - 44,flixel_FlxG.height - 45,44,45,"a")));
+		break;
+	case 2:
+		this.actions.add(this.add(this.buttonA = this.createButton(flixel_FlxG.width - 44,flixel_FlxG.height - 45,44,45,"a")));
+		this.actions.add(this.add(this.buttonB = this.createButton(flixel_FlxG.width - 86,flixel_FlxG.height - 45,44,45,"b")));
+		break;
+	case 3:
+		this.actions.add(this.add(this.buttonA = this.createButton(flixel_FlxG.width - 128,flixel_FlxG.height - 45,44,45,"a")));
+		this.actions.add(this.add(this.buttonB = this.createButton(flixel_FlxG.width - 86,flixel_FlxG.height - 45,44,45,"b")));
+		this.actions.add(this.add(this.buttonC = this.createButton(flixel_FlxG.width - 44,flixel_FlxG.height - 45,44,45,"c")));
+		break;
+	case 4:
+		this.actions.add(this.add(this.buttonY = this.createButton(flixel_FlxG.width - 86,flixel_FlxG.height - 85,44,45,"y")));
+		this.actions.add(this.add(this.buttonX = this.createButton(flixel_FlxG.width - 44,flixel_FlxG.height - 85,44,45,"x")));
+		this.actions.add(this.add(this.buttonB = this.createButton(flixel_FlxG.width - 86,flixel_FlxG.height - 45,44,45,"b")));
+		this.actions.add(this.add(this.buttonA = this.createButton(flixel_FlxG.width - 44,flixel_FlxG.height - 45,44,45,"a")));
+		break;
+	}
+};
+$hxClasses["flixel.ui.FlxVirtualPad"] = flixel_ui_FlxVirtualPad;
+flixel_ui_FlxVirtualPad.__name__ = "flixel.ui.FlxVirtualPad";
+flixel_ui_FlxVirtualPad.__super__ = flixel_group_FlxTypedSpriteGroup;
+flixel_ui_FlxVirtualPad.prototype = $extend(flixel_group_FlxTypedSpriteGroup.prototype,{
+	buttonA: null
+	,buttonB: null
+	,buttonC: null
+	,buttonY: null
+	,buttonX: null
+	,buttonLeft: null
+	,buttonUp: null
+	,buttonRight: null
+	,buttonDown: null
+	,dPad: null
+	,actions: null
+	,destroy: function() {
+		flixel_group_FlxTypedSpriteGroup.prototype.destroy.call(this);
+		this.dPad = flixel_util_FlxDestroyUtil.destroy(this.dPad);
+		this.actions = flixel_util_FlxDestroyUtil.destroy(this.actions);
+		this.dPad = null;
+		this.actions = null;
+		this.buttonA = null;
+		this.buttonB = null;
+		this.buttonC = null;
+		this.buttonY = null;
+		this.buttonX = null;
+		this.buttonLeft = null;
+		this.buttonUp = null;
+		this.buttonDown = null;
+		this.buttonRight = null;
+	}
+	,createButton: function(X,Y,Width,Height,Graphic,OnClick) {
+		var button = new flixel_ui_FlxButton(X,Y);
+		var _this = flixel_system_FlxAssets.getVirtualInputFrames().framesHash;
+		var frame = __map_reserved[Graphic] != null ? _this.getReserved(Graphic) : _this.h[Graphic];
+		var point = flixel_math_FlxPoint._pool.get().set(Width,Height);
+		point._inPool = false;
+		button.set_frames(flixel_graphics_frames_FlxTileFrames.fromFrame(frame,point));
+		button.set_width(button.frameWidth);
+		button.set_height(button.frameHeight);
+		button.set_solid(false);
+		button.set_immovable(true);
+		button.scrollFactor.set();
+		if(OnClick != null) {
+			button.onDown.callback = OnClick;
+		}
+		return button;
+	}
+	,__class__: flixel_ui_FlxVirtualPad
+});
+var flixel_ui_FlxDPadMode = $hxEnums["flixel.ui.FlxDPadMode"] = { __ename__ : "flixel.ui.FlxDPadMode", __constructs__ : ["NONE","UP_DOWN","LEFT_RIGHT","UP_LEFT_RIGHT","FULL"]
+	,NONE: {_hx_index:0,__enum__:"flixel.ui.FlxDPadMode",toString:$estr}
+	,UP_DOWN: {_hx_index:1,__enum__:"flixel.ui.FlxDPadMode",toString:$estr}
+	,LEFT_RIGHT: {_hx_index:2,__enum__:"flixel.ui.FlxDPadMode",toString:$estr}
+	,UP_LEFT_RIGHT: {_hx_index:3,__enum__:"flixel.ui.FlxDPadMode",toString:$estr}
+	,FULL: {_hx_index:4,__enum__:"flixel.ui.FlxDPadMode",toString:$estr}
+};
+var flixel_ui_FlxActionMode = $hxEnums["flixel.ui.FlxActionMode"] = { __ename__ : "flixel.ui.FlxActionMode", __constructs__ : ["NONE","A","A_B","A_B_C","A_B_X_Y"]
+	,NONE: {_hx_index:0,__enum__:"flixel.ui.FlxActionMode",toString:$estr}
+	,A: {_hx_index:1,__enum__:"flixel.ui.FlxActionMode",toString:$estr}
+	,A_B: {_hx_index:2,__enum__:"flixel.ui.FlxActionMode",toString:$estr}
+	,A_B_C: {_hx_index:3,__enum__:"flixel.ui.FlxActionMode",toString:$estr}
+	,A_B_X_Y: {_hx_index:4,__enum__:"flixel.ui.FlxActionMode",toString:$estr}
 };
 var flixel_util_FlxArrayUtil = function() { };
 $hxClasses["flixel.util.FlxArrayUtil"] = flixel_util_FlxArrayUtil;
@@ -70006,7 +70180,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 343994;
+	this.version = 808698;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
@@ -106043,37 +106217,6 @@ openfl_events_RenderEvent.prototype = $extend(openfl_events_Event.prototype,{
 	}
 	,__class__: openfl_events_RenderEvent
 });
-var openfl_events_SampleDataEvent = function(type,bubbles,cancelable) {
-	if(cancelable == null) {
-		cancelable = false;
-	}
-	if(bubbles == null) {
-		bubbles = false;
-	}
-	openfl_events_Event.call(this,type,bubbles,cancelable);
-	var this1 = new openfl_utils_ByteArrayData(0);
-	this.data = this1;
-	this.data.__endian = 1;
-	this.position = 0.0;
-};
-$hxClasses["openfl.events.SampleDataEvent"] = openfl_events_SampleDataEvent;
-openfl_events_SampleDataEvent.__name__ = "openfl.events.SampleDataEvent";
-openfl_events_SampleDataEvent.__super__ = openfl_events_Event;
-openfl_events_SampleDataEvent.prototype = $extend(openfl_events_Event.prototype,{
-	data: null
-	,position: null
-	,clone: function() {
-		var event = new openfl_events_SampleDataEvent(this.type,this.bubbles,this.cancelable);
-		event.target = this.target;
-		event.currentTarget = this.currentTarget;
-		event.eventPhase = this.eventPhase;
-		return event;
-	}
-	,toString: function() {
-		return this.__formatToString("SampleDataEvent",["type","bubbles","cancelable"]);
-	}
-	,__class__: openfl_events_SampleDataEvent
-});
 var openfl_events_SecurityErrorEvent = function(type,bubbles,cancelable,text,id) {
 	if(id == null) {
 		id = 0;
@@ -118573,7 +118716,6 @@ openfl_events_RenderEvent.RENDER_CAIRO = "renderCairo";
 openfl_events_RenderEvent.RENDER_CANVAS = "renderCanvas";
 openfl_events_RenderEvent.RENDER_DOM = "renderDOM";
 openfl_events_RenderEvent.RENDER_OPENGL = "renderOpenGL";
-openfl_events_SampleDataEvent.SAMPLE_DATA = "sampleData";
 openfl_events_SecurityErrorEvent.SECURITY_ERROR = "securityError";
 openfl_events_TouchEvent.__meta__ = { fields : { delta : { SuppressWarnings : ["checkstyle:FieldDocComment"]}}};
 openfl_events_TouchEvent.TOUCH_BEGIN = "touchBegin";
