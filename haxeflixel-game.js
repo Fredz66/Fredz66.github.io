@@ -894,9 +894,9 @@ ApplicationMain.create = function(config) {
 	ManifestResources.init(config);
 	var _this = app.meta;
 	if(__map_reserved["build"] != null) {
-		_this.setReserved("build","49");
+		_this.setReserved("build","50");
 	} else {
-		_this.h["build"] = "49";
+		_this.h["build"] = "50";
 	}
 	var _this1 = app.meta;
 	if(__map_reserved["company"] != null) {
@@ -7521,7 +7521,7 @@ ManifestResources.init = function(config) {
 	lime_utils_Assets.defaultRootPath = ManifestResources.rootPath;
 	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf);
 	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf);
-	var data = "{\"name\":null,\"assets\":\"aoy4:pathy34:assets%2Fdata%2Fdata-goes-here.txty4:sizezy4:typey4:TEXTy2:idR1y7:preloadtgoR0y25:assets%2Fimages%2F640.pngR2i239826R3y5:IMAGER5R7R6tgoR0y31:assets%2Fimages%2Fbig-birds.pngR2i641R3R8R5R9R6tgoR0y26:assets%2Fimages%2Fbird.pngR2i640R3R8R5R10R6tgoR0y33:assets%2Fimages%2Fbtn-128x128.pngR2i1490R3R8R5R11R6tgoR0y35:assets%2Fimages%2Fbtn-3x128x128.pngR2i2356R3R8R5R12R6tgoR0y31:assets%2Fimages%2Fbtn-64x64.pngR2i743R3R8R5R13R6tgoR0y26:assets%2Fimages%2Fflag.pngR2i2708R3R8R5R14R6tgoR0y32:assets%2Fimages%2Ffullscreen.pngR2i1013R3R8R5R15R6tgoR0y28:assets%2Fimages%2Flitang.pngR2i113360R3R8R5R16R6tgoR0y28:assets%2Fimages%2Fmobile.pngR2i623R3R8R5R17R6tgoR0y27:assets%2Fimages%2Fplonk.pngR2i3982R3R8R5R18R6tgoR0y27:assets%2Fimages%2Fpopup.pngR2i2240R3R8R5R19R6tgoR0y26:assets%2Fimages%2Freed.pngR2i2978R3R8R5R20R6tgoR0y27:assets%2Fimages%2Fspiky.pngR2i945R3R8R5R21R6tgoR0y27:assets%2Fimages%2Ftiles.pngR2i6619R3R8R5R22R6tgoR0y28:assets%2Fimages%2Fwater1.pngR2i3591R3R8R5R23R6tgoR0y28:assets%2Fimages%2Fwater2.pngR2i3579R3R8R5R24R6tgoR0y28:assets%2Fimages%2Fwater3.pngR2i3569R3R8R5R25R6tgoR2i2106598R3y5:MUSICR5y45:assets%2Fmusic%2Fasian-mystery-nometadata.oggy9:pathGroupaR27hR6tgoR2i542898R3y5:SOUNDR5y38:assets%2Fmusic%2Ftemple-nometadata.oggR28aR30hR6tgoR2i11689R3R29R5y27:assets%2Fsounds%2Fdeath.oggR28aR31hR6tgoR2i9318R3R29R5y26:assets%2Fsounds%2Fjump.oggR28aR32hR6tgoR2i52494R3R29R5y26:assets%2Fsounds%2Ftree.oggR28aR33hR6tgoR2i28546R3R29R5y33:assets%2Fsounds%2Fwatersplash.oggR28aR34hR6tgoR2i2114R3R26R5y26:flixel%2Fsounds%2Fbeep.mp3R28aR35y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R26R5y28:flixel%2Fsounds%2Fflixel.mp3R28aR37y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3R29R5R36R28aR35R36hgoR2i33629R3R29R5R38R28aR37R38hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R39R40y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R8R5R45R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R8R5R46R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
+	var data = "{\"name\":null,\"assets\":\"aoy4:pathy34:assets%2Fdata%2Fdata-goes-here.txty4:sizezy4:typey4:TEXTy2:idR1y7:preloadtgoR0y25:assets%2Fimages%2F640.pngR2i239826R3y5:IMAGER5R7R6tgoR0y31:assets%2Fimages%2Fbig-birds.pngR2i641R3R8R5R9R6tgoR0y26:assets%2Fimages%2Fbird.pngR2i640R3R8R5R10R6tgoR0y33:assets%2Fimages%2Fbtn-128x128.pngR2i1490R3R8R5R11R6tgoR0y26:assets%2Fimages%2Fflag.pngR2i2708R3R8R5R12R6tgoR0y32:assets%2Fimages%2Ffullscreen.pngR2i1013R3R8R5R13R6tgoR0y28:assets%2Fimages%2Flitang.pngR2i113360R3R8R5R14R6tgoR0y28:assets%2Fimages%2Fmobile.pngR2i623R3R8R5R15R6tgoR0y27:assets%2Fimages%2Fplonk.pngR2i3982R3R8R5R16R6tgoR0y27:assets%2Fimages%2Fpopup.pngR2i2240R3R8R5R17R6tgoR0y26:assets%2Fimages%2Freed.pngR2i2978R3R8R5R18R6tgoR0y27:assets%2Fimages%2Fspiky.pngR2i945R3R8R5R19R6tgoR0y27:assets%2Fimages%2Ftiles.pngR2i6619R3R8R5R20R6tgoR0y28:assets%2Fimages%2Fwater1.pngR2i3591R3R8R5R21R6tgoR0y28:assets%2Fimages%2Fwater2.pngR2i3579R3R8R5R22R6tgoR0y28:assets%2Fimages%2Fwater3.pngR2i3569R3R8R5R23R6tgoR2i2106598R3y5:MUSICR5y45:assets%2Fmusic%2Fasian-mystery-nometadata.oggy9:pathGroupaR25hR6tgoR2i542898R3y5:SOUNDR5y38:assets%2Fmusic%2Ftemple-nometadata.oggR26aR28hR6tgoR2i11689R3R27R5y27:assets%2Fsounds%2Fdeath.oggR26aR29hR6tgoR2i9318R3R27R5y26:assets%2Fsounds%2Fjump.oggR26aR30hR6tgoR2i52494R3R27R5y26:assets%2Fsounds%2Ftree.oggR26aR31hR6tgoR2i28546R3R27R5y33:assets%2Fsounds%2Fwatersplash.oggR26aR32hR6tgoR2i2114R3R24R5y26:flixel%2Fsounds%2Fbeep.mp3R26aR33y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R24R5y28:flixel%2Fsounds%2Fflixel.mp3R26aR35y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3R27R5R34R26aR33R34hgoR2i33629R3R27R5R36R26aR35R36hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R37R38y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R8R5R43R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R8R5R44R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
 	var manifest = lime_utils_AssetManifest.parse(data,ManifestResources.rootPath);
 	var library = lime_utils_AssetLibrary.fromManifest(manifest);
 	lime_utils_Assets.registerLibrary("default",library);
@@ -7882,7 +7882,7 @@ MenuState.__name__ = "MenuState";
 MenuState.__super__ = flixel_FlxState;
 MenuState.prototype = $extend(flixel_FlxState.prototype,{
 	create: function() {
-		this.add(new flixel_text_FlxText(0,348,flixel_FlxG.width,"v0.14").setFormat(null,8));
+		this.add(new flixel_text_FlxText(0,348,flixel_FlxG.width,"v0.15").setFormat(null,8));
 		flixel_FlxG.mouse.set_visible(!flixel_FlxG.html5.onMobile);
 		this.add(new flixel_text_FlxText(0,60,flixel_FlxG.width,"Buddha Breath").setFormat(null,64,-65536,"center"));
 		this.add(new flixel_ui_FlxButton(280,180,"New game",$bind(this,this.play)));
@@ -7953,6 +7953,7 @@ var PlayState = function(MaxSize) {
 	this.tiles = ["                                                                                                                                  ","                                                                                                                                  ","                                                  |     |     |     |     |                                                       ","                                                  |     |     |     |     |                                                       ","                                                  |     |     |     |     |                                                       ","                                                  |     |     |     |     |                                    [-]                ",")                                                 |     |     |     |     |                                     |                (","|                                                 |     |     |     |     |                        [-]    [-]   |                |","|                                                                                        [--]       |      |    |     [-]        L","|                                                                                         ||   ()   |      |    |      |          ","|                =                     [_)                                         [-]    ||   ||   |      |    |      |          ","|             =  |    =        [--]      |                                          |     ||   ||   |      |    |      |          ","--------------)  |    |         ||       (--------------------------------------------)   ||   ||   |      |    |      |       (--","|||||||||||||||  |    |         ||       ||||||||||||||||||||||||||||||||||||||||||||||   ||   ||   |      |    |      |       |||","|||||||||||||||  |    |         ||       ||||||||||||||||||||||||||||||||||||||||||||||   ||   ||   |      |    |      |       |||","|||||||||||||||  |    |         ||       ||||||||||||||||||||||||||||||||||||||||||||||   ||   ||   |      |    |      |       |||"];
 	this.birdsReleased = false;
 	this.mobileFalling = false;
+	this.virtualPadOffset = 10;
 	this.frames = 0;
 	this.spikies = [];
 	flixel_FlxState.call(this,MaxSize);
@@ -7979,6 +7980,7 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 	,flagEnd: null
 	,bird: null
 	,frames: null
+	,virtualPadOffset: null
 	,mobileFalling: null
 	,birdsReleased: null
 	,tiles: null
@@ -8086,6 +8088,12 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 		PlayState.buttonCrouch = new flixel_ui_FlxButton(512,232,"");
 		PlayState.buttonCrouch.loadGraphic("assets/images/btn-128x128.png");
 		this.add(PlayState.buttonCrouch);
+		if(!flixel_FlxG.html5.onMobile) {
+			PlayState.buttonLeft.set_visible(false);
+			PlayState.buttonRight.set_visible(false);
+			PlayState.buttonJump.set_visible(false);
+			PlayState.buttonCrouch.set_visible(false);
+		}
 	}
 	,releaseBirds: function(count,x,y,speed,height) {
 		var _g = 0;
@@ -8099,12 +8107,13 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 	,update: function(elapsed) {
 		flixel_FlxState.prototype.update.call(this,elapsed);
 		this.frames++;
-		if(flixel_FlxG.mouse._leftButton.current == 2) {
-			if(flixel_FlxG.mouse.x - this.get_camera().scroll.x < flixel_FlxG.camera.width / 2) {
-				var position = new flixel_math_FlxPoint(flixel_FlxG.mouse.x - this.get_camera().scroll.x,flixel_FlxG.mouse.y - this.get_camera().scroll.y);
-				var halfOffset = 2;
-				PlayState.buttonLeft.setPosition(position.x - PlayState.buttonLeft.get_width() - halfOffset,position.y - PlayState.buttonLeft.get_height() / 2 - 1);
-				PlayState.buttonRight.setPosition(position.x + halfOffset,position.y - PlayState.buttonRight.get_height() / 2 - 1);
+		if(flixel_FlxG.html5.onMobile) {
+			if(flixel_FlxG.mouse._leftButton.current == 2) {
+				if(flixel_FlxG.mouse.x - this.get_camera().scroll.x < flixel_FlxG.camera.width / 2) {
+					var position = new flixel_math_FlxPoint(flixel_FlxG.mouse.x - this.get_camera().scroll.x,flixel_FlxG.mouse.y - this.get_camera().scroll.y);
+					PlayState.buttonLeft.setPosition(position.x - PlayState.buttonLeft.get_width() - this.virtualPadOffset,position.y - PlayState.buttonLeft.get_height() / 2 - 1);
+					PlayState.buttonRight.setPosition(position.x + this.virtualPadOffset,position.y - PlayState.buttonRight.get_height() / 2 - 1);
+				}
 			}
 		}
 		if(!this.birdsReleased && this.player.x > 3500) {
@@ -70043,7 +70052,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 433137;
+	this.version = 894240;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
@@ -114996,8 +115005,6 @@ AssetPaths.data_goes_here__txt = "assets/data/data-goes-here.txt";
 AssetPaths.big_birds__png = "assets/images/big-birds.png";
 AssetPaths.bird__png = "assets/images/bird.png";
 AssetPaths.btn_128x128__png = "assets/images/btn-128x128.png";
-AssetPaths.btn_3x128x128__png = "assets/images/btn-3x128x128.png";
-AssetPaths.btn_64x64__png = "assets/images/btn-64x64.png";
 AssetPaths.flag__png = "assets/images/flag.png";
 AssetPaths.fullscreen__png = "assets/images/fullscreen.png";
 AssetPaths.litang__png = "assets/images/litang.png";
