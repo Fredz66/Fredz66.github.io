@@ -7882,7 +7882,7 @@ MenuState.__name__ = "MenuState";
 MenuState.__super__ = flixel_FlxState;
 MenuState.prototype = $extend(flixel_FlxState.prototype,{
 	create: function() {
-		this.add(new flixel_text_FlxText(0,348,flixel_FlxG.width,"v0.11").setFormat(null,8));
+		this.add(new flixel_text_FlxText(0,348,flixel_FlxG.width,"v0.12").setFormat(null,8));
 		flixel_FlxG.mouse.set_visible(!flixel_FlxG.html5.onMobile);
 		this.add(new flixel_text_FlxText(0,60,flixel_FlxG.width,"Buddha Breath").setFormat(null,64,-65536,"center"));
 		this.add(new flixel_ui_FlxButton(280,180,"New game",$bind(this,this.play)));
@@ -8070,7 +8070,7 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 		this.add(this.foreground4);
 		flixel_FlxG.camera.follow(this.player,flixel_FlxCameraFollowStyle.LOCKON,1);
 		this.map.follow();
-		flixel_FlxG.mouse.set_visible(true);
+		flixel_FlxG.mouse.set_visible(false);
 		if(flixel_FlxG.html5.onMobile) {
 			PlayState.virtualPad = new flixel_ui_FlxVirtualPad(flixel_ui_FlxDPadMode.LEFT_RIGHT,flixel_ui_FlxActionMode.A_B);
 			PlayState.virtualPad.set_visible(true);
@@ -8159,6 +8159,16 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 		}
 		if(this.player.x > this.map.get_width()) {
 			flixel_FlxG.camera.fade(-16777216,.33,false,$bind(this,this.win));
+		}
+		if(flixel_FlxG.mouse._leftButton.current == 2) {
+			if(PlayState.virtualPad != null) {
+				var _this2 = new flixel_text_FlxText(flixel_FlxG.mouse.x,flixel_FlxG.mouse.y,flixel_FlxG.width,"m" + flixel_FlxG.mouse.x + "," + flixel_FlxG.mouse.y + " " + "c" + flixel_FlxG.camera.x + "," + flixel_FlxG.camera.y + " " + "s" + flixel_FlxG.camera.scroll.x + "," + flixel_FlxG.camera.scroll.y + " " + "v" + PlayState.virtualPad.x + "," + PlayState.virtualPad.x).setFormat(null,8,-65536);
+				_this2.set_borderStyle(flixel_text_FlxTextBorderStyle.OUTLINE);
+				_this2.set_borderColor(-16777216);
+				_this2.set_borderSize(1);
+				_this2.set_borderQuality(1);
+				this.add(_this2);
+			}
 		}
 	}
 	,hitMobile: function(Object1,Object2) {
@@ -8253,9 +8263,9 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 		this.acceleration.set_x(0);
 		if(PlayState.virtualPad != null) {
 			if(flixel_FlxG.mouse._leftButton.current == 2) {
-				if(flixel_FlxG.mouse.x < flixel_FlxG.camera.width / 2) {
-					PlayState.virtualPad.buttonLeft.setPosition(flixel_FlxG.mouse.x - 42,flixel_FlxG.mouse.y - 170);
-					PlayState.virtualPad.buttonRight.setPosition(flixel_FlxG.mouse.x,flixel_FlxG.mouse.y - 170);
+				if(flixel_FlxG.mouse.x - this.get_camera().scroll.x < flixel_FlxG.camera.width / 2) {
+					PlayState.virtualPad.buttonLeft.setPosition(flixel_FlxG.mouse.x - this.get_camera().scroll.x - PlayState.virtualPad.buttonLeft.get_width() + 1,flixel_FlxG.mouse.y - this.get_camera().scroll.y - PlayState.virtualPad.buttonLeft.get_height() / 2 - 1);
+					PlayState.virtualPad.buttonRight.setPosition(flixel_FlxG.mouse.x - this.get_camera().scroll.x,flixel_FlxG.mouse.y - this.get_camera().scroll.y - PlayState.virtualPad.buttonRight.get_height() / 2 - 1);
 				}
 			}
 		}
@@ -70183,7 +70193,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 949860;
+	this.version = 401538;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
