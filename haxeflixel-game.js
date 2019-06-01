@@ -8070,7 +8070,7 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 		this.add(this.foreground4);
 		flixel_FlxG.camera.follow(this.player,flixel_FlxCameraFollowStyle.LOCKON,1);
 		this.map.follow();
-		flixel_FlxG.mouse.set_visible(false);
+		flixel_FlxG.mouse.set_visible(true);
 		if(flixel_FlxG.html5.onMobile) {
 			PlayState.virtualPad = new flixel_ui_FlxVirtualPad(flixel_ui_FlxDPadMode.LEFT_RIGHT,flixel_ui_FlxActionMode.A_B);
 			PlayState.virtualPad.set_visible(true);
@@ -8159,24 +8159,6 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 		}
 		if(this.player.x > this.map.get_width()) {
 			flixel_FlxG.camera.fade(-16777216,.33,false,$bind(this,this.win));
-		}
-		if(PlayState.virtualPad != null) {
-			var _this2 = new flixel_text_FlxText(flixel_FlxG.camera.scroll.x,flixel_FlxG.camera.scroll.y,flixel_FlxG.width,"m" + flixel_FlxG.mouse.x + "," + flixel_FlxG.mouse.y + " " + "c" + flixel_FlxG.camera.width + "," + flixel_FlxG.camera.height + " " + "v" + PlayState.virtualPad.x + "," + PlayState.virtualPad.x).setFormat(null,8,-65536);
-			_this2.set_borderStyle(flixel_text_FlxTextBorderStyle.OUTLINE);
-			_this2.set_borderColor(-16777216);
-			_this2.set_borderSize(1);
-			_this2.set_borderQuality(1);
-			this.add(_this2);
-		} else {
-			var _this3 = flixel_FlxG.mouse._leftButton;
-			if(_this3.current == 1 || _this3.current == 2) {
-				var _this4 = new flixel_text_FlxText(flixel_FlxG.camera.scroll.x,flixel_FlxG.camera.scroll.y,flixel_FlxG.width,"m" + flixel_FlxG.mouse.x + "," + flixel_FlxG.mouse.y + " " + "c" + flixel_FlxG.camera.width + "," + flixel_FlxG.camera.height).setFormat(null,8,-65536);
-				_this4.set_borderStyle(flixel_text_FlxTextBorderStyle.OUTLINE);
-				_this4.set_borderColor(-16777216);
-				_this4.set_borderSize(1);
-				_this4.set_borderQuality(1);
-				this.add(_this4);
-			}
 		}
 	}
 	,hitMobile: function(Object1,Object2) {
@@ -8269,6 +8251,14 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 	}
 	,move: function() {
 		this.acceleration.set_x(0);
+		if(PlayState.virtualPad != null) {
+			if(flixel_FlxG.mouse._leftButton.current == 2) {
+				if(flixel_FlxG.mouse.x < flixel_FlxG.camera.width / 2) {
+					PlayState.virtualPad.buttonLeft.setPosition(flixel_FlxG.mouse.x - 42,flixel_FlxG.mouse.y - 170);
+					PlayState.virtualPad.buttonRight.setPosition(flixel_FlxG.mouse.x,flixel_FlxG.mouse.y - 170);
+				}
+			}
+		}
 		var tmp;
 		var _this = flixel_FlxG.keys.pressed;
 		if(!_this.keyManager.checkStatus(37,_this.status)) {
@@ -70193,7 +70183,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 689819;
+	this.version = 527219;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
