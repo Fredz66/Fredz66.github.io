@@ -7882,7 +7882,7 @@ MenuState.__name__ = "MenuState";
 MenuState.__super__ = flixel_FlxState;
 MenuState.prototype = $extend(flixel_FlxState.prototype,{
 	create: function() {
-		this.add(new flixel_text_FlxText(0,348,flixel_FlxG.width,"v0.12").setFormat(null,8));
+		this.add(new flixel_text_FlxText(0,348,flixel_FlxG.width,"v0.13").setFormat(null,8));
 		flixel_FlxG.mouse.set_visible(!flixel_FlxG.html5.onMobile);
 		this.add(new flixel_text_FlxText(0,60,flixel_FlxG.width,"Buddha Breath").setFormat(null,64,-65536,"center"));
 		this.add(new flixel_ui_FlxButton(280,180,"New game",$bind(this,this.play)));
@@ -8159,16 +8159,6 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 		}
 		if(this.player.x > this.map.get_width()) {
 			flixel_FlxG.camera.fade(-16777216,.33,false,$bind(this,this.win));
-		}
-		if(flixel_FlxG.mouse._leftButton.current == 2) {
-			if(PlayState.virtualPad != null) {
-				var _this2 = new flixel_text_FlxText(flixel_FlxG.mouse.x,flixel_FlxG.mouse.y,flixel_FlxG.width,"m" + flixel_FlxG.mouse.x + "," + flixel_FlxG.mouse.y + " " + "c" + flixel_FlxG.camera.x + "," + flixel_FlxG.camera.y + " " + "s" + flixel_FlxG.camera.scroll.x + "," + flixel_FlxG.camera.scroll.y + " " + "v" + PlayState.virtualPad.x + "," + PlayState.virtualPad.x).setFormat(null,8,-65536);
-				_this2.set_borderStyle(flixel_text_FlxTextBorderStyle.OUTLINE);
-				_this2.set_borderColor(-16777216);
-				_this2.set_borderSize(1);
-				_this2.set_borderQuality(1);
-				this.add(_this2);
-			}
 		}
 	}
 	,hitMobile: function(Object1,Object2) {
@@ -70193,7 +70183,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 401538;
+	this.version = 352594;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
