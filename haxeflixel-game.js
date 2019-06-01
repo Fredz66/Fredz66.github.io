@@ -894,9 +894,9 @@ ApplicationMain.create = function(config) {
 	ManifestResources.init(config);
 	var _this = app.meta;
 	if(__map_reserved["build"] != null) {
-		_this.setReserved("build","50");
+		_this.setReserved("build","51");
 	} else {
-		_this.h["build"] = "50";
+		_this.h["build"] = "51";
 	}
 	var _this1 = app.meta;
 	if(__map_reserved["company"] != null) {
@@ -7882,7 +7882,7 @@ MenuState.__name__ = "MenuState";
 MenuState.__super__ = flixel_FlxState;
 MenuState.prototype = $extend(flixel_FlxState.prototype,{
 	create: function() {
-		this.add(new flixel_text_FlxText(0,348,flixel_FlxG.width,"v0.15").setFormat(null,8));
+		this.add(new flixel_text_FlxText(0,348,flixel_FlxG.width,"v0.3-alpha").setFormat(null,8));
 		flixel_FlxG.mouse.set_visible(!flixel_FlxG.html5.onMobile);
 		this.add(new flixel_text_FlxText(0,60,flixel_FlxG.width,"Buddha Breath").setFormat(null,64,-65536,"center"));
 		this.add(new flixel_ui_FlxButton(280,180,"New game",$bind(this,this.play)));
@@ -8403,6 +8403,8 @@ QuitState.prototype = $extend(flixel_FlxState.prototype,{
 		flixel_FlxState.prototype.update.call(this,elapsed);
 	}
 	,quit: function() {
+		var _this = flixel_FlxG.sound.music;
+		_this.cleanup(_this.autoDestroy,true);
 		flixel_FlxG.camera.fade(-16777216,0.5,false,function() {
 			openfl_system_System.exit(0);
 		});
@@ -70052,7 +70054,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 894240;
+	this.version = 159826;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
