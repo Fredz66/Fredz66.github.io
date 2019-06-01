@@ -7521,7 +7521,7 @@ ManifestResources.init = function(config) {
 	lime_utils_Assets.defaultRootPath = ManifestResources.rootPath;
 	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf);
 	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf);
-	var data = "{\"name\":null,\"assets\":\"aoy4:pathy34:assets%2Fdata%2Fdata-goes-here.txty4:sizezy4:typey4:TEXTy2:idR1y7:preloadtgoR0y25:assets%2Fimages%2F640.pngR2i239826R3y5:IMAGER5R7R6tgoR0y31:assets%2Fimages%2Fbig-birds.pngR2i641R3R8R5R9R6tgoR0y26:assets%2Fimages%2Fbird.pngR2i640R3R8R5R10R6tgoR0y26:assets%2Fimages%2Fflag.pngR2i2708R3R8R5R11R6tgoR0y32:assets%2Fimages%2Ffullscreen.pngR2i1013R3R8R5R12R6tgoR0y28:assets%2Fimages%2Flitang.pngR2i113360R3R8R5R13R6tgoR0y28:assets%2Fimages%2Fmobile.pngR2i623R3R8R5R14R6tgoR0y27:assets%2Fimages%2Fplonk.pngR2i3982R3R8R5R15R6tgoR0y27:assets%2Fimages%2Fpopup.pngR2i2240R3R8R5R16R6tgoR0y26:assets%2Fimages%2Freed.pngR2i2978R3R8R5R17R6tgoR0y27:assets%2Fimages%2Fspiky.pngR2i945R3R8R5R18R6tgoR0y27:assets%2Fimages%2Ftiles.pngR2i6619R3R8R5R19R6tgoR0y28:assets%2Fimages%2Fwater1.pngR2i3591R3R8R5R20R6tgoR0y28:assets%2Fimages%2Fwater2.pngR2i3579R3R8R5R21R6tgoR0y28:assets%2Fimages%2Fwater3.pngR2i3569R3R8R5R22R6tgoR2i2106598R3y5:MUSICR5y45:assets%2Fmusic%2Fasian-mystery-nometadata.oggy9:pathGroupaR24hR6tgoR2i542898R3y5:SOUNDR5y38:assets%2Fmusic%2Ftemple-nometadata.oggR25aR27hR6tgoR2i11689R3R26R5y27:assets%2Fsounds%2Fdeath.oggR25aR28hR6tgoR2i9318R3R26R5y26:assets%2Fsounds%2Fjump.oggR25aR29hR6tgoR2i52494R3R26R5y26:assets%2Fsounds%2Ftree.oggR25aR30hR6tgoR2i28546R3R26R5y33:assets%2Fsounds%2Fwatersplash.oggR25aR31hR6tgoR2i2114R3R23R5y26:flixel%2Fsounds%2Fbeep.mp3R25aR32y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R23R5y28:flixel%2Fsounds%2Fflixel.mp3R25aR34y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3R26R5R33R25aR32R33hgoR2i33629R3R26R5R35R25aR34R35hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R36R37y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R8R5R42R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R8R5R43R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
+	var data = "{\"name\":null,\"assets\":\"aoy4:pathy34:assets%2Fdata%2Fdata-goes-here.txty4:sizezy4:typey4:TEXTy2:idR1y7:preloadtgoR0y25:assets%2Fimages%2F640.pngR2i239826R3y5:IMAGER5R7R6tgoR0y31:assets%2Fimages%2Fbig-birds.pngR2i641R3R8R5R9R6tgoR0y26:assets%2Fimages%2Fbird.pngR2i640R3R8R5R10R6tgoR0y33:assets%2Fimages%2Fbtn-128x128.pngR2i1490R3R8R5R11R6tgoR0y35:assets%2Fimages%2Fbtn-3x128x128.pngR2i2356R3R8R5R12R6tgoR0y31:assets%2Fimages%2Fbtn-64x64.pngR2i743R3R8R5R13R6tgoR0y26:assets%2Fimages%2Fflag.pngR2i2708R3R8R5R14R6tgoR0y32:assets%2Fimages%2Ffullscreen.pngR2i1013R3R8R5R15R6tgoR0y28:assets%2Fimages%2Flitang.pngR2i113360R3R8R5R16R6tgoR0y28:assets%2Fimages%2Fmobile.pngR2i623R3R8R5R17R6tgoR0y27:assets%2Fimages%2Fplonk.pngR2i3982R3R8R5R18R6tgoR0y27:assets%2Fimages%2Fpopup.pngR2i2240R3R8R5R19R6tgoR0y26:assets%2Fimages%2Freed.pngR2i2978R3R8R5R20R6tgoR0y27:assets%2Fimages%2Fspiky.pngR2i945R3R8R5R21R6tgoR0y27:assets%2Fimages%2Ftiles.pngR2i6619R3R8R5R22R6tgoR0y28:assets%2Fimages%2Fwater1.pngR2i3591R3R8R5R23R6tgoR0y28:assets%2Fimages%2Fwater2.pngR2i3579R3R8R5R24R6tgoR0y28:assets%2Fimages%2Fwater3.pngR2i3569R3R8R5R25R6tgoR2i2106598R3y5:MUSICR5y45:assets%2Fmusic%2Fasian-mystery-nometadata.oggy9:pathGroupaR27hR6tgoR2i542898R3y5:SOUNDR5y38:assets%2Fmusic%2Ftemple-nometadata.oggR28aR30hR6tgoR2i11689R3R29R5y27:assets%2Fsounds%2Fdeath.oggR28aR31hR6tgoR2i9318R3R29R5y26:assets%2Fsounds%2Fjump.oggR28aR32hR6tgoR2i52494R3R29R5y26:assets%2Fsounds%2Ftree.oggR28aR33hR6tgoR2i28546R3R29R5y33:assets%2Fsounds%2Fwatersplash.oggR28aR34hR6tgoR2i2114R3R26R5y26:flixel%2Fsounds%2Fbeep.mp3R28aR35y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R26R5y28:flixel%2Fsounds%2Fflixel.mp3R28aR37y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3R29R5R36R28aR35R36hgoR2i33629R3R29R5R38R28aR37R38hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R39R40y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R8R5R45R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R8R5R46R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
 	var manifest = lime_utils_AssetManifest.parse(data,ManifestResources.rootPath);
 	var library = lime_utils_AssetLibrary.fromManifest(manifest);
 	lime_utils_Assets.registerLibrary("default",library);
@@ -7882,7 +7882,7 @@ MenuState.__name__ = "MenuState";
 MenuState.__super__ = flixel_FlxState;
 MenuState.prototype = $extend(flixel_FlxState.prototype,{
 	create: function() {
-		this.add(new flixel_text_FlxText(0,348,flixel_FlxG.width,"v0.13").setFormat(null,8));
+		this.add(new flixel_text_FlxText(0,348,flixel_FlxG.width,"v0.14").setFormat(null,8));
 		flixel_FlxG.mouse.set_visible(!flixel_FlxG.html5.onMobile);
 		this.add(new flixel_text_FlxText(0,60,flixel_FlxG.width,"Buddha Breath").setFormat(null,64,-65536,"center"));
 		this.add(new flixel_ui_FlxButton(280,180,"New game",$bind(this,this.play)));
@@ -7959,7 +7959,10 @@ var PlayState = function(MaxSize) {
 };
 $hxClasses["PlayState"] = PlayState;
 PlayState.__name__ = "PlayState";
-PlayState.virtualPad = null;
+PlayState.buttonLeft = null;
+PlayState.buttonRight = null;
+PlayState.buttonJump = null;
+PlayState.buttonCrouch = null;
 PlayState.__super__ = flixel_FlxState;
 PlayState.prototype = $extend(flixel_FlxState.prototype,{
 	background: null
@@ -8071,11 +8074,18 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 		flixel_FlxG.camera.follow(this.player,flixel_FlxCameraFollowStyle.LOCKON,1);
 		this.map.follow();
 		flixel_FlxG.mouse.set_visible(false);
-		if(flixel_FlxG.html5.onMobile) {
-			PlayState.virtualPad = new flixel_ui_FlxVirtualPad(flixel_ui_FlxDPadMode.LEFT_RIGHT,flixel_ui_FlxActionMode.A_B);
-			PlayState.virtualPad.set_visible(true);
-			this.add(PlayState.virtualPad);
-		}
+		PlayState.buttonLeft = new flixel_ui_FlxButton(0,232,"");
+		PlayState.buttonLeft.loadGraphic("assets/images/btn-128x128.png");
+		this.add(PlayState.buttonLeft);
+		PlayState.buttonRight = new flixel_ui_FlxButton(128,232,"");
+		PlayState.buttonRight.loadGraphic("assets/images/btn-128x128.png");
+		this.add(PlayState.buttonRight);
+		PlayState.buttonJump = new flixel_ui_FlxButton(512,104,"");
+		PlayState.buttonJump.loadGraphic("assets/images/btn-128x128.png");
+		this.add(PlayState.buttonJump);
+		PlayState.buttonCrouch = new flixel_ui_FlxButton(512,232,"");
+		PlayState.buttonCrouch.loadGraphic("assets/images/btn-128x128.png");
+		this.add(PlayState.buttonCrouch);
 	}
 	,releaseBirds: function(count,x,y,speed,height) {
 		var _g = 0;
@@ -8089,6 +8099,14 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 	,update: function(elapsed) {
 		flixel_FlxState.prototype.update.call(this,elapsed);
 		this.frames++;
+		if(flixel_FlxG.mouse._leftButton.current == 2) {
+			if(flixel_FlxG.mouse.x - this.get_camera().scroll.x < flixel_FlxG.camera.width / 2) {
+				var position = new flixel_math_FlxPoint(flixel_FlxG.mouse.x - this.get_camera().scroll.x,flixel_FlxG.mouse.y - this.get_camera().scroll.y);
+				var halfOffset = 2;
+				PlayState.buttonLeft.setPosition(position.x - PlayState.buttonLeft.get_width() - halfOffset,position.y - PlayState.buttonLeft.get_height() / 2 - 1);
+				PlayState.buttonRight.setPosition(position.x + halfOffset,position.y - PlayState.buttonRight.get_height() / 2 - 1);
+			}
+		}
 		if(!this.birdsReleased && this.player.x > 3500) {
 			this.birdsReleased = true;
 			this.releaseBirds(15,this.map.get_width() | 0,0,-300,100);
@@ -8251,23 +8269,11 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 	}
 	,move: function() {
 		this.acceleration.set_x(0);
-		if(PlayState.virtualPad != null) {
-			if(flixel_FlxG.mouse._leftButton.current == 2) {
-				if(flixel_FlxG.mouse.x - this.get_camera().scroll.x < flixel_FlxG.camera.width / 2) {
-					PlayState.virtualPad.buttonLeft.setPosition(flixel_FlxG.mouse.x - this.get_camera().scroll.x - PlayState.virtualPad.buttonLeft.get_width() + 1,flixel_FlxG.mouse.y - this.get_camera().scroll.y - PlayState.virtualPad.buttonLeft.get_height() / 2 - 1);
-					PlayState.virtualPad.buttonRight.setPosition(flixel_FlxG.mouse.x - this.get_camera().scroll.x,flixel_FlxG.mouse.y - this.get_camera().scroll.y - PlayState.virtualPad.buttonRight.get_height() / 2 - 1);
-				}
-			}
-		}
 		var tmp;
 		var _this = flixel_FlxG.keys.pressed;
 		if(!_this.keyManager.checkStatus(37,_this.status)) {
-			if(PlayState.virtualPad != null) {
-				var _this1 = PlayState.virtualPad.buttonLeft.input;
-				tmp = _this1.current == 1 || _this1.current == 2;
-			} else {
-				tmp = false;
-			}
+			var _this1 = PlayState.buttonLeft.input;
+			tmp = _this1.current == 1 || _this1.current == 2;
 		} else {
 			tmp = true;
 		}
@@ -8282,12 +8288,8 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			var tmp1;
 			var _this2 = flixel_FlxG.keys.pressed;
 			if(!_this2.keyManager.checkStatus(39,_this2.status)) {
-				if(PlayState.virtualPad != null) {
-					var _this3 = PlayState.virtualPad.buttonRight.input;
-					tmp1 = _this3.current == 1 || _this3.current == 2;
-				} else {
-					tmp1 = false;
-				}
+				var _this3 = PlayState.buttonRight.input;
+				tmp1 = _this3.current == 1 || _this3.current == 2;
 			} else {
 				tmp1 = true;
 			}
@@ -8304,12 +8306,8 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			var tmp2;
 			var _this4 = flixel_FlxG.keys.justPressed;
 			if(!_this4.keyManager.checkStatus(38,_this4.status)) {
-				if(PlayState.virtualPad != null) {
-					var _this5 = PlayState.virtualPad.buttonB.input;
-					tmp2 = _this5.current == 1 || _this5.current == 2;
-				} else {
-					tmp2 = false;
-				}
+				var _this5 = PlayState.buttonJump.input;
+				tmp2 = _this5.current == 1 || _this5.current == 2;
 			} else {
 				tmp2 = true;
 			}
@@ -8320,12 +8318,8 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			var tmp3;
 			var _this6 = flixel_FlxG.keys.pressed;
 			if(!_this6.keyManager.checkStatus(40,_this6.status)) {
-				if(PlayState.virtualPad != null) {
-					var _this7 = PlayState.virtualPad.buttonA.input;
-					tmp3 = _this7.current == 1 || _this7.current == 2;
-				} else {
-					tmp3 = false;
-				}
+				var _this7 = PlayState.buttonCrouch.input;
+				tmp3 = _this7.current == 1 || _this7.current == 2;
 			} else {
 				tmp3 = true;
 			}
@@ -8337,19 +8331,8 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 				this.maxVelocity.set_x(150);
 			}
 		} else {
-			var tmp4;
 			var _this8 = flixel_FlxG.keys.justPressed;
-			if(!_this8.keyManager.checkStatus(38,_this8.status)) {
-				if(PlayState.virtualPad != null) {
-					var _this9 = PlayState.virtualPad.buttonB.input;
-					tmp4 = _this9.current == 1 || _this9.current == 2;
-				} else {
-					tmp4 = false;
-				}
-			} else {
-				tmp4 = true;
-			}
-			if(tmp4 && (this.touching & 4096) > 0) {
+			if((_this8.keyManager.checkStatus(38,_this8.status) || PlayState.buttonJump.input.current == 2) && (this.touching & 4096) > 0) {
 				flixel_FlxG.sound.play("assets/sounds/jump.ogg",1);
 				this.velocity.set_y(-280);
 			}
@@ -20002,6 +19985,20 @@ flixel_group_FlxTypedSpriteGroup.prototype = $extend(flixel_FlxSprite.prototype,
 			}
 		}
 	}
+	,transformChildren_Bool: function(Function1,Value) {
+		if(this.group == null) {
+			return;
+		}
+		var _g = 0;
+		var _g1 = this._sprites;
+		while(_g < _g1.length) {
+			var sprite = _g1[_g];
+			++_g;
+			if(sprite != null) {
+				Function1(sprite,Value);
+			}
+		}
+	}
 	,transformChildren_Array_flixel_FlxCamera: function(Function1,Value) {
 		if(this.group == null) {
 			return;
@@ -20056,20 +20053,6 @@ flixel_group_FlxTypedSpriteGroup.prototype = $extend(flixel_FlxSprite.prototype,
 		}
 	}
 	,transformChildren_flixel_math_FlxPoint: function(Function1,Value) {
-		if(this.group == null) {
-			return;
-		}
-		var _g = 0;
-		var _g1 = this._sprites;
-		while(_g < _g1.length) {
-			var sprite = _g1[_g];
-			++_g;
-			if(sprite != null) {
-				Function1(sprite,Value);
-			}
-		}
-	}
-	,transformChildren_Bool: function(Function1,Value) {
 		if(this.group == null) {
 			return;
 		}
@@ -42254,129 +42237,6 @@ flixel_ui__$FlxButton_FlxButtonEvent.prototype = {
 		}
 	}
 	,__class__: flixel_ui__$FlxButton_FlxButtonEvent
-};
-var flixel_ui_FlxVirtualPad = function(DPad,Action) {
-	flixel_group_FlxTypedSpriteGroup.call(this);
-	this.scrollFactor.set();
-	if(DPad == null) {
-		DPad = flixel_ui_FlxDPadMode.FULL;
-	}
-	if(Action == null) {
-		Action = flixel_ui_FlxActionMode.A_B_C;
-	}
-	this.dPad = new flixel_group_FlxTypedSpriteGroup();
-	this.dPad.scrollFactor.set();
-	this.actions = new flixel_group_FlxTypedSpriteGroup();
-	this.actions.scrollFactor.set();
-	switch(DPad._hx_index) {
-	case 0:
-		break;
-	case 1:
-		this.dPad.add(this.add(this.buttonUp = this.createButton(0,flixel_FlxG.height - 85,44,45,"up")));
-		this.dPad.add(this.add(this.buttonDown = this.createButton(0,flixel_FlxG.height - 45,44,45,"down")));
-		break;
-	case 2:
-		this.dPad.add(this.add(this.buttonLeft = this.createButton(0,flixel_FlxG.height - 45,44,45,"left")));
-		this.dPad.add(this.add(this.buttonRight = this.createButton(42,flixel_FlxG.height - 45,44,45,"right")));
-		break;
-	case 3:
-		this.dPad.add(this.add(this.buttonUp = this.createButton(35,flixel_FlxG.height - 81,44,45,"up")));
-		this.dPad.add(this.add(this.buttonLeft = this.createButton(0,flixel_FlxG.height - 45,44,45,"left")));
-		this.dPad.add(this.add(this.buttonRight = this.createButton(69,flixel_FlxG.height - 45,44,45,"right")));
-		break;
-	case 4:
-		this.dPad.add(this.add(this.buttonUp = this.createButton(35,flixel_FlxG.height - 116,44,45,"up")));
-		this.dPad.add(this.add(this.buttonLeft = this.createButton(0,flixel_FlxG.height - 81,44,45,"left")));
-		this.dPad.add(this.add(this.buttonRight = this.createButton(69,flixel_FlxG.height - 81,44,45,"right")));
-		this.dPad.add(this.add(this.buttonDown = this.createButton(35,flixel_FlxG.height - 45,44,45,"down")));
-		break;
-	}
-	switch(Action._hx_index) {
-	case 0:
-		break;
-	case 1:
-		this.actions.add(this.add(this.buttonA = this.createButton(flixel_FlxG.width - 44,flixel_FlxG.height - 45,44,45,"a")));
-		break;
-	case 2:
-		this.actions.add(this.add(this.buttonA = this.createButton(flixel_FlxG.width - 44,flixel_FlxG.height - 45,44,45,"a")));
-		this.actions.add(this.add(this.buttonB = this.createButton(flixel_FlxG.width - 86,flixel_FlxG.height - 45,44,45,"b")));
-		break;
-	case 3:
-		this.actions.add(this.add(this.buttonA = this.createButton(flixel_FlxG.width - 128,flixel_FlxG.height - 45,44,45,"a")));
-		this.actions.add(this.add(this.buttonB = this.createButton(flixel_FlxG.width - 86,flixel_FlxG.height - 45,44,45,"b")));
-		this.actions.add(this.add(this.buttonC = this.createButton(flixel_FlxG.width - 44,flixel_FlxG.height - 45,44,45,"c")));
-		break;
-	case 4:
-		this.actions.add(this.add(this.buttonY = this.createButton(flixel_FlxG.width - 86,flixel_FlxG.height - 85,44,45,"y")));
-		this.actions.add(this.add(this.buttonX = this.createButton(flixel_FlxG.width - 44,flixel_FlxG.height - 85,44,45,"x")));
-		this.actions.add(this.add(this.buttonB = this.createButton(flixel_FlxG.width - 86,flixel_FlxG.height - 45,44,45,"b")));
-		this.actions.add(this.add(this.buttonA = this.createButton(flixel_FlxG.width - 44,flixel_FlxG.height - 45,44,45,"a")));
-		break;
-	}
-};
-$hxClasses["flixel.ui.FlxVirtualPad"] = flixel_ui_FlxVirtualPad;
-flixel_ui_FlxVirtualPad.__name__ = "flixel.ui.FlxVirtualPad";
-flixel_ui_FlxVirtualPad.__super__ = flixel_group_FlxTypedSpriteGroup;
-flixel_ui_FlxVirtualPad.prototype = $extend(flixel_group_FlxTypedSpriteGroup.prototype,{
-	buttonA: null
-	,buttonB: null
-	,buttonC: null
-	,buttonY: null
-	,buttonX: null
-	,buttonLeft: null
-	,buttonUp: null
-	,buttonRight: null
-	,buttonDown: null
-	,dPad: null
-	,actions: null
-	,destroy: function() {
-		flixel_group_FlxTypedSpriteGroup.prototype.destroy.call(this);
-		this.dPad = flixel_util_FlxDestroyUtil.destroy(this.dPad);
-		this.actions = flixel_util_FlxDestroyUtil.destroy(this.actions);
-		this.dPad = null;
-		this.actions = null;
-		this.buttonA = null;
-		this.buttonB = null;
-		this.buttonC = null;
-		this.buttonY = null;
-		this.buttonX = null;
-		this.buttonLeft = null;
-		this.buttonUp = null;
-		this.buttonDown = null;
-		this.buttonRight = null;
-	}
-	,createButton: function(X,Y,Width,Height,Graphic,OnClick) {
-		var button = new flixel_ui_FlxButton(X,Y);
-		var _this = flixel_system_FlxAssets.getVirtualInputFrames().framesHash;
-		var frame = __map_reserved[Graphic] != null ? _this.getReserved(Graphic) : _this.h[Graphic];
-		var point = flixel_math_FlxPoint._pool.get().set(Width,Height);
-		point._inPool = false;
-		button.set_frames(flixel_graphics_frames_FlxTileFrames.fromFrame(frame,point));
-		button.set_width(button.frameWidth);
-		button.set_height(button.frameHeight);
-		button.set_solid(false);
-		button.set_immovable(true);
-		button.scrollFactor.set();
-		if(OnClick != null) {
-			button.onDown.callback = OnClick;
-		}
-		return button;
-	}
-	,__class__: flixel_ui_FlxVirtualPad
-});
-var flixel_ui_FlxDPadMode = $hxEnums["flixel.ui.FlxDPadMode"] = { __ename__ : "flixel.ui.FlxDPadMode", __constructs__ : ["NONE","UP_DOWN","LEFT_RIGHT","UP_LEFT_RIGHT","FULL"]
-	,NONE: {_hx_index:0,__enum__:"flixel.ui.FlxDPadMode",toString:$estr}
-	,UP_DOWN: {_hx_index:1,__enum__:"flixel.ui.FlxDPadMode",toString:$estr}
-	,LEFT_RIGHT: {_hx_index:2,__enum__:"flixel.ui.FlxDPadMode",toString:$estr}
-	,UP_LEFT_RIGHT: {_hx_index:3,__enum__:"flixel.ui.FlxDPadMode",toString:$estr}
-	,FULL: {_hx_index:4,__enum__:"flixel.ui.FlxDPadMode",toString:$estr}
-};
-var flixel_ui_FlxActionMode = $hxEnums["flixel.ui.FlxActionMode"] = { __ename__ : "flixel.ui.FlxActionMode", __constructs__ : ["NONE","A","A_B","A_B_C","A_B_X_Y"]
-	,NONE: {_hx_index:0,__enum__:"flixel.ui.FlxActionMode",toString:$estr}
-	,A: {_hx_index:1,__enum__:"flixel.ui.FlxActionMode",toString:$estr}
-	,A_B: {_hx_index:2,__enum__:"flixel.ui.FlxActionMode",toString:$estr}
-	,A_B_C: {_hx_index:3,__enum__:"flixel.ui.FlxActionMode",toString:$estr}
-	,A_B_X_Y: {_hx_index:4,__enum__:"flixel.ui.FlxActionMode",toString:$estr}
 };
 var flixel_util_FlxArrayUtil = function() { };
 $hxClasses["flixel.util.FlxArrayUtil"] = flixel_util_FlxArrayUtil;
@@ -70183,7 +70043,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 352594;
+	this.version = 433137;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
@@ -115135,6 +114995,9 @@ openfl_display_DisplayObject.__tempStack = new lime_utils_ObjectPool(function() 
 AssetPaths.data_goes_here__txt = "assets/data/data-goes-here.txt";
 AssetPaths.big_birds__png = "assets/images/big-birds.png";
 AssetPaths.bird__png = "assets/images/bird.png";
+AssetPaths.btn_128x128__png = "assets/images/btn-128x128.png";
+AssetPaths.btn_3x128x128__png = "assets/images/btn-3x128x128.png";
+AssetPaths.btn_64x64__png = "assets/images/btn-64x64.png";
 AssetPaths.flag__png = "assets/images/flag.png";
 AssetPaths.fullscreen__png = "assets/images/fullscreen.png";
 AssetPaths.litang__png = "assets/images/litang.png";
