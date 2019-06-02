@@ -47085,7 +47085,7 @@ gui_MenuState.__name__ = "gui.MenuState";
 gui_MenuState.__super__ = flixel_FlxState;
 gui_MenuState.prototype = $extend(flixel_FlxState.prototype,{
 	create: function() {
-		this.add(new flixel_text_FlxText(0,1044,flixel_FlxG.width,"v0.6-alpha").setFormat(null,24));
+		this.add(new flixel_text_FlxText(0,1044,flixel_FlxG.width,"v0.7-alpha").setFormat(null,24));
 		flixel_FlxG.mouse.set_visible(!flixel_FlxG.html5.onMobile);
 		this.add(new flixel_text_FlxText(0,180,flixel_FlxG.width,"Buddha Breath").setFormat(null,192,-65536,"center"));
 		this.add(new FlxScaleButton(840,540,"New game",$bind(this,this.play)));
@@ -47098,7 +47098,7 @@ gui_MenuState.prototype = $extend(flixel_FlxState.prototype,{
 		} else {
 			platforms += "(desktop) ";
 		}
-		var button = new FlxScaleButton(1710,870,"",function() {
+		var button = new flixel_ui_FlxButton(1710,870,"",function() {
 			flixel_FlxG.set_fullscreen(!flixel_FlxG.get_fullscreen());
 		});
 		button.loadGraphic("assets/images/fullscreen.png");
@@ -70147,7 +70147,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 935957;
+	this.version = 755926;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
