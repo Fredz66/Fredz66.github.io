@@ -8288,11 +8288,11 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 		this.add(this.player);
 		this.pole = new Pole();
 		this.add(this.pole);
-		this.addSpiky(4779,740,33.5,120);
-		this.addSpiky(5355,740,0,150);
-		this.addSpiky(5931,740,50,102);
-		this.addSpiky(6507,740,0,150);
-		this.addSpiky(7083,740,50,102);
+		this.addSpiky(4779,720,33.5,120);
+		this.addSpiky(5355,720,0,150);
+		this.addSpiky(5931,720,50,102);
+		this.addSpiky(6507,720,0,150);
+		this.addSpiky(7083,720,50,102);
 		this.foreground1 = new flixel_addons_display_FlxBackdrop("assets/images/water3.png",1.25,1.25,true,false);
 		this.foreground1.offset.set_y(-1350);
 		this.foreground2 = new flixel_addons_display_FlxBackdrop("assets/images/water2.png",1.30,1.25,true,false);
@@ -70156,7 +70156,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 538248;
+	this.version = 9728;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
