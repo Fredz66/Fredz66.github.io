@@ -894,9 +894,9 @@ ApplicationMain.create = function(config) {
 	ManifestResources.init(config);
 	var _this = app.meta;
 	if(__map_reserved["build"] != null) {
-		_this.setReserved("build","59");
+		_this.setReserved("build","60");
 	} else {
-		_this.h["build"] = "59";
+		_this.h["build"] = "60";
 	}
 	var _this1 = app.meta;
 	if(__map_reserved["company"] != null) {
@@ -7205,7 +7205,7 @@ ManifestResources.init = function(config) {
 	lime_utils_Assets.defaultRootPath = ManifestResources.rootPath;
 	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf);
 	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf);
-	var data = "{\"name\":null,\"assets\":\"aoy4:pathy34:assets%2Fdata%2Fdata-goes-here.txty4:sizezy4:typey4:TEXTy2:idR1y7:preloadtgoR0y25:assets%2Fimages%2F640.pngR2i239826R3y5:IMAGER5R7R6tgoR0y32:assets%2Fimages%2Fbackground.pngR2i843302R3R8R5R9R6tgoR0y33:assets%2Fimages%2Fbackground1.pngR2i2111368R3R8R5R10R6tgoR0y31:assets%2Fimages%2Fbig-birds.pngR2i641R3R8R5R11R6tgoR0y26:assets%2Fimages%2Fbird.pngR2i3846R3R8R5R12R6tgoR0y33:assets%2Fimages%2Fbtn-128x128.pngR2i1490R3R8R5R13R6tgoR0y26:assets%2Fimages%2Ffish.pngR2i5373R3R8R5R14R6tgoR0y26:assets%2Fimages%2Fflag.pngR2i63780R3R8R5R15R6tgoR0y32:assets%2Fimages%2Ffullscreen.pngR2i6259R3R8R5R16R6tgoR0y28:assets%2Fimages%2Flitang.pngR2i381270R3R8R5R17R6tgoR0y30:assets%2Fimages%2Fold-bird.pngR2i640R3R8R5R18R6tgoR0y30:assets%2Fimages%2Fold-fish.pngR2i925R3R8R5R19R6tgoR0y30:assets%2Fimages%2Fold-flag.pngR2i2708R3R8R5R20R6tgoR0y32:assets%2Fimages%2Fold-litang.pngR2i113360R3R8R5R21R6tgoR0y31:assets%2Fimages%2Fold-plonk.pngR2i3982R3R8R5R22R6tgoR0y30:assets%2Fimages%2Fold-pole.pngR2i623R3R8R5R23R6tgoR0y30:assets%2Fimages%2Fold-reed.pngR2i2996R3R8R5R24R6tgoR0y31:assets%2Fimages%2Fold-spiky.pngR2i945R3R8R5R25R6tgoR0y31:assets%2Fimages%2Fold-tiles.pngR2i6619R3R8R5R26R6tgoR0y32:assets%2Fimages%2Fold-water1.pngR2i3591R3R8R5R27R6tgoR0y32:assets%2Fimages%2Fold-water2.pngR2i3579R3R8R5R28R6tgoR0y32:assets%2Fimages%2Fold-water3.pngR2i3569R3R8R5R29R6tgoR0y27:assets%2Fimages%2Fplonk.pngR2i25171R3R8R5R30R6tgoR0y26:assets%2Fimages%2Fpole.pngR2i12936R3R8R5R31R6tgoR0y27:assets%2Fimages%2Fpopup.pngR2i2240R3R8R5R32R6tgoR0y26:assets%2Fimages%2Freed.pngR2i19653R3R8R5R33R6tgoR0y27:assets%2Fimages%2Fspiky.pngR2i16349R3R8R5R34R6tgoR0y28:assets%2Fimages%2Fspiky1.pngR2i15661R3R8R5R35R6tgoR0y31:assets%2Fimages%2Fspikyball.pngR2i10961R3R8R5R36R6tgoR0y27:assets%2Fimages%2Ftiles.pngR2i43711R3R8R5R37R6tgoR0y36:assets%2Fimages%2Fvirtual-button.pngR2i7318R3R8R5R38R6tgoR0y28:assets%2Fimages%2Fwater1.pngR2i48014R3R8R5R39R6tgoR0y28:assets%2Fimages%2Fwater2.pngR2i46993R3R8R5R40R6tgoR0y28:assets%2Fimages%2Fwater3.pngR2i45365R3R8R5R41R6tgoR2i2106598R3y5:MUSICR5y45:assets%2Fmusic%2Fasian-mystery-nometadata.oggy9:pathGroupaR43hR6tgoR2i542898R3y5:SOUNDR5y38:assets%2Fmusic%2Ftemple-nometadata.oggR44aR46hR6tgoR2i11689R3R45R5y27:assets%2Fsounds%2Fdeath.oggR44aR47hR6tgoR2i9318R3R45R5y26:assets%2Fsounds%2Fjump.oggR44aR48hR6tgoR2i52494R3R45R5y26:assets%2Fsounds%2Ftree.oggR44aR49hR6tgoR2i28546R3R45R5y33:assets%2Fsounds%2Fwatersplash.oggR44aR50hR6tgoR2i2114R3R42R5y26:flixel%2Fsounds%2Fbeep.mp3R44aR51y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R42R5y28:flixel%2Fsounds%2Fflixel.mp3R44aR53y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3R45R5R52R44aR51R52hgoR2i33629R3R45R5R54R44aR53R54hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R55R56y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R8R5R61R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R8R5R62R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
+	var data = "{\"name\":null,\"assets\":\"aoy4:pathy34:assets%2Fdata%2Fdata-goes-here.txty4:sizezy4:typey4:TEXTy2:idR1y7:preloadtgoR0y25:assets%2Fimages%2F640.pngR2i239826R3y5:IMAGER5R7R6tgoR0y32:assets%2Fimages%2Fbackground.pngR2i843302R3R8R5R9R6tgoR0y33:assets%2Fimages%2Fbackground1.pngR2i2111368R3R8R5R10R6tgoR0y26:assets%2Fimages%2Fball.pngR2i11372R3R8R5R11R6tgoR0y31:assets%2Fimages%2Fbig-birds.pngR2i641R3R8R5R12R6tgoR0y26:assets%2Fimages%2Fbird.pngR2i3846R3R8R5R13R6tgoR0y33:assets%2Fimages%2Fbtn-128x128.pngR2i1490R3R8R5R14R6tgoR0y27:assets%2Fimages%2Fchain.pngR2i4449R3R8R5R15R6tgoR0y26:assets%2Fimages%2Ffish.pngR2i5373R3R8R5R16R6tgoR0y26:assets%2Fimages%2Fflag.pngR2i63780R3R8R5R17R6tgoR0y32:assets%2Fimages%2Ffullscreen.pngR2i6259R3R8R5R18R6tgoR0y28:assets%2Fimages%2Flitang.pngR2i381270R3R8R5R19R6tgoR0y30:assets%2Fimages%2Fold-bird.pngR2i640R3R8R5R20R6tgoR0y30:assets%2Fimages%2Fold-fish.pngR2i925R3R8R5R21R6tgoR0y30:assets%2Fimages%2Fold-flag.pngR2i2708R3R8R5R22R6tgoR0y32:assets%2Fimages%2Fold-litang.pngR2i113360R3R8R5R23R6tgoR0y31:assets%2Fimages%2Fold-plonk.pngR2i3982R3R8R5R24R6tgoR0y30:assets%2Fimages%2Fold-pole.pngR2i623R3R8R5R25R6tgoR0y30:assets%2Fimages%2Fold-reed.pngR2i2996R3R8R5R26R6tgoR0y31:assets%2Fimages%2Fold-spiky.pngR2i945R3R8R5R27R6tgoR0y31:assets%2Fimages%2Fold-tiles.pngR2i6619R3R8R5R28R6tgoR0y32:assets%2Fimages%2Fold-water1.pngR2i3591R3R8R5R29R6tgoR0y32:assets%2Fimages%2Fold-water2.pngR2i3579R3R8R5R30R6tgoR0y32:assets%2Fimages%2Fold-water3.pngR2i3569R3R8R5R31R6tgoR0y27:assets%2Fimages%2Fplonk.pngR2i25171R3R8R5R32R6tgoR0y26:assets%2Fimages%2Fpole.pngR2i12936R3R8R5R33R6tgoR0y27:assets%2Fimages%2Fpopup.pngR2i2240R3R8R5R34R6tgoR0y26:assets%2Fimages%2Freed.pngR2i19653R3R8R5R35R6tgoR0y27:assets%2Fimages%2Fspiky.pngR2i16349R3R8R5R36R6tgoR0y28:assets%2Fimages%2Fspiky1.pngR2i15661R3R8R5R37R6tgoR0y31:assets%2Fimages%2Fspikyball.pngR2i10961R3R8R5R38R6tgoR0y27:assets%2Fimages%2Ftiles.pngR2i43711R3R8R5R39R6tgoR0y36:assets%2Fimages%2Fvirtual-button.pngR2i7318R3R8R5R40R6tgoR0y28:assets%2Fimages%2Fwater1.pngR2i48014R3R8R5R41R6tgoR0y28:assets%2Fimages%2Fwater2.pngR2i46993R3R8R5R42R6tgoR0y28:assets%2Fimages%2Fwater3.pngR2i45365R3R8R5R43R6tgoR2i2106598R3y5:MUSICR5y45:assets%2Fmusic%2Fasian-mystery-nometadata.oggy9:pathGroupaR45hR6tgoR2i542898R3y5:SOUNDR5y38:assets%2Fmusic%2Ftemple-nometadata.oggR46aR48hR6tgoR2i11689R3R47R5y27:assets%2Fsounds%2Fdeath.oggR46aR49hR6tgoR2i9318R3R47R5y26:assets%2Fsounds%2Fjump.oggR46aR50hR6tgoR2i52494R3R47R5y26:assets%2Fsounds%2Ftree.oggR46aR51hR6tgoR2i28546R3R47R5y33:assets%2Fsounds%2Fwatersplash.oggR46aR52hR6tgoR2i2114R3R44R5y26:flixel%2Fsounds%2Fbeep.mp3R46aR53y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R44R5y28:flixel%2Fsounds%2Fflixel.mp3R46aR55y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3R47R5R54R46aR53R54hgoR2i33629R3R47R5R56R46aR55R56hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R57R58y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R8R5R63R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R8R5R64R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
 	var manifest = lime_utils_AssetManifest.parse(data,ManifestResources.rootPath);
 	var library = lime_utils_AssetLibrary.fromManifest(manifest);
 	lime_utils_Assets.registerLibrary("default",library);
@@ -8422,7 +8422,7 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 			}
 		}
 		if(this.player.alive || !this.player.drown) {
-			if(this.player.y + this.player.get_height() > flixel_FlxG.height + this.player.starty) {
+			if(this.player.y - this.player.get_height() > flixel_FlxG.height) {
 				this.player.set_alive(false);
 				this.player.drown = true;
 				this.player.acceleration.set_x(0);
@@ -8459,7 +8459,7 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 		flixel_FlxG.camera.shake(0.01,0.2);
 		this.player.animation.play("hit");
 		this.player.maxVelocity.set(1500,900);
-		this.player.velocity.set(-900,-600);
+		this.player.velocity.set(-1350,-600);
 		this.player.acceleration.set_x(0);
 	}
 	,hitdeath: function(Timer) {
@@ -8769,12 +8769,352 @@ Reflect.makeVarArgs = function(f) {
 		return f(a);
 	};
 };
+var flixel_addons_display_FlxNestedSprite = function(X,Y,SimpleGraphic) {
+	this._parentBlue = 1;
+	this._parentGreen = 1;
+	this._parentRed = 1;
+	this.children = [];
+	var point = flixel_math_FlxPoint._pool.get().set(0,0);
+	point._inPool = false;
+	this.relativeAcceleration = point;
+	var point1 = flixel_math_FlxPoint._pool.get().set(0,0);
+	point1._inPool = false;
+	this.relativeVelocity = point1;
+	var point2 = flixel_math_FlxPoint._pool.get().set(1,1);
+	point2._inPool = false;
+	this.relativeScale = point2;
+	this.relativeAlpha = 1;
+	this.relativeAngularAcceleration = 0;
+	this.relativeAngularVelocity = 0;
+	this.relativeAngle = 0;
+	this.relativeY = 0;
+	this.relativeX = 0;
+	flixel_FlxSprite.call(this,X,Y,SimpleGraphic);
+};
+$hxClasses["flixel.addons.display.FlxNestedSprite"] = flixel_addons_display_FlxNestedSprite;
+flixel_addons_display_FlxNestedSprite.__name__ = "flixel.addons.display.FlxNestedSprite";
+flixel_addons_display_FlxNestedSprite.__super__ = flixel_FlxSprite;
+flixel_addons_display_FlxNestedSprite.prototype = $extend(flixel_FlxSprite.prototype,{
+	relativeX: null
+	,relativeY: null
+	,relativeAngle: null
+	,relativeAngularVelocity: null
+	,relativeAngularAcceleration: null
+	,relativeAlpha: null
+	,relativeScale: null
+	,relativeVelocity: null
+	,relativeAcceleration: null
+	,children: null
+	,_parentRed: null
+	,_parentGreen: null
+	,_parentBlue: null
+	,destroy: function() {
+		flixel_FlxSprite.prototype.destroy.call(this);
+		this.relativeScale = flixel_util_FlxDestroyUtil.put(this.relativeScale);
+		this.relativeVelocity = flixel_util_FlxDestroyUtil.put(this.relativeVelocity);
+		this.relativeAcceleration = flixel_util_FlxDestroyUtil.put(this.relativeAcceleration);
+		this.children = flixel_util_FlxDestroyUtil.destroyArray(this.children);
+	}
+	,add: function(Child) {
+		if(this.children.indexOf(Child) != -1) {
+			return Child;
+		}
+		this.children.push(Child);
+		Child.velocity.set(0,0);
+		Child.acceleration.set(0,0);
+		var _this = Child.scrollFactor;
+		var point = this.scrollFactor;
+		_this.set_x(point.x);
+		_this.set_y(point.y);
+		if(point._weak) {
+			point.put();
+		}
+		Child.set_alpha(Child.relativeAlpha * this.alpha);
+		Child._parentRed = (this.color >> 16 & 255) / 255;
+		Child._parentGreen = (this.color >> 8 & 255) / 255;
+		Child._parentBlue = (this.color & 255) / 255;
+		Child.set_color(Child.color);
+		return Child;
+	}
+	,remove: function(Child) {
+		var index = this.children.indexOf(Child);
+		if(index >= 0) {
+			this.children.splice(index,1);
+		}
+		return Child;
+	}
+	,removeAt: function(Index) {
+		if(Index == null) {
+			Index = 0;
+		}
+		if(this.children.length < Index || Index < 0) {
+			return null;
+		}
+		return this.remove(this.children[Index]);
+	}
+	,removeAll: function() {
+		var _g = 0;
+		var _g1 = this.children;
+		while(_g < _g1.length) {
+			var child = _g1[_g];
+			++_g;
+			this.remove(child);
+		}
+	}
+	,preUpdate: function(elapsed) {
+		this.last.set(this.x,this.y);
+		var _g = 0;
+		var _g1 = this.children;
+		while(_g < _g1.length) {
+			var child = _g1[_g];
+			++_g;
+			if(child.active && child.exists) {
+				child.preUpdate(elapsed);
+			}
+		}
+	}
+	,update: function(elapsed) {
+		this.preUpdate(elapsed);
+		var _g = 0;
+		var _g1 = this.children;
+		while(_g < _g1.length) {
+			var child = _g1[_g];
+			++_g;
+			if(child.active && child.exists) {
+				child.update(elapsed);
+			}
+		}
+		this.postUpdate(elapsed);
+	}
+	,postUpdate: function(elapsed) {
+		if(this.moves) {
+			this.updateMotion(elapsed);
+		}
+		this.wasTouching = this.touching;
+		this.touching = 0;
+		this.animation.update(elapsed);
+		var velocityDelta = 0.5 * (flixel_math_FlxVelocity.computeVelocity(this.relativeAngularVelocity,this.relativeAngularAcceleration,this.angularDrag,this.maxAngular,elapsed) - this.relativeAngularVelocity);
+		this.relativeAngularVelocity += velocityDelta;
+		this.relativeAngle += this.relativeAngularVelocity * elapsed;
+		this.relativeAngularVelocity += velocityDelta;
+		velocityDelta = 0.5 * (flixel_math_FlxVelocity.computeVelocity(this.relativeVelocity.x,this.relativeAcceleration.x,this.drag.x,this.maxVelocity.x,elapsed) - this.relativeVelocity.x);
+		var _g = this.relativeVelocity;
+		_g.set_x(_g.x + velocityDelta);
+		var delta = this.relativeVelocity.x * elapsed;
+		var _g1 = this.relativeVelocity;
+		_g1.set_x(_g1.x + velocityDelta);
+		this.relativeX += delta;
+		velocityDelta = 0.5 * (flixel_math_FlxVelocity.computeVelocity(this.relativeVelocity.y,this.relativeAcceleration.y,this.drag.y,this.maxVelocity.y,elapsed) - this.relativeVelocity.y);
+		var _g2 = this.relativeVelocity;
+		_g2.set_y(_g2.y + velocityDelta);
+		delta = this.relativeVelocity.y * elapsed;
+		var _g3 = this.relativeVelocity;
+		_g3.set_y(_g3.y + velocityDelta);
+		this.relativeY += delta;
+		var _g4 = 0;
+		var _g11 = this.children;
+		while(_g4 < _g11.length) {
+			var child = _g11[_g4];
+			++_g4;
+			if(child.active && child.exists) {
+				child.velocity.set_x(child.velocity.set_y(0));
+				child.acceleration.set_x(child.acceleration.set_y(0));
+				child.angularVelocity = child.angularAcceleration = 0;
+				child.postUpdate(elapsed);
+				if(this.isSimpleRender(this.get_camera())) {
+					child.set_x(this.x + child.relativeX - this.offset.x);
+					child.set_y(this.y + child.relativeY - this.offset.y);
+				} else {
+					var radians = this.angle * (Math.PI / 180);
+					var cos = Math.cos(radians);
+					var sin = Math.sin(radians);
+					var dx = this.get_width() / 2 - child.get_width() / 2 - this.offset.x;
+					dx += this.scale.x * cos * (child.relativeX - this.get_width() / 2 + child.get_width() / 2);
+					dx -= this.scale.y * sin * (child.relativeY - this.get_height() / 2 + child.get_height() / 2);
+					var dy = this.get_height() / 2 - child.get_height() / 2 - this.offset.y;
+					dy += this.scale.y * cos * (child.relativeY - this.get_height() / 2 + child.get_height() / 2);
+					dy += this.scale.x * sin * (child.relativeX - this.get_width() / 2 + child.get_width() / 2);
+					child.set_x(this.x + dx);
+					child.set_y(this.y + dy);
+				}
+				child.set_angle(this.angle + child.relativeAngle);
+				child.scale.set_x(this.scale.x * child.relativeScale.x);
+				child.scale.set_y(this.scale.y * child.relativeScale.y);
+				child.velocity.set_x(this.velocity.x);
+				child.velocity.set_y(this.velocity.y);
+				child.acceleration.set_x(this.acceleration.x);
+				child.acceleration.set_y(this.acceleration.y);
+			}
+		}
+	}
+	,draw: function() {
+		flixel_FlxSprite.prototype.draw.call(this);
+		var _g = 0;
+		var _g1 = this.children;
+		while(_g < _g1.length) {
+			var child = _g1[_g];
+			++_g;
+			if(child.exists && child.visible) {
+				child.draw();
+			}
+		}
+	}
+	,set_alpha: function(Alpha) {
+		var lowerBound = Alpha < 0 ? 0 : Alpha;
+		Alpha = lowerBound > 1 ? 1 : lowerBound;
+		if(Alpha == this.alpha) {
+			return this.alpha;
+		}
+		this.alpha = Alpha * this.relativeAlpha;
+		if(this.alpha != 1 || this.color != 16777215) {
+			var red = (this.color >> 16) * this._parentRed / 255;
+			var green = (this.color >> 8 & 255) * this._parentGreen / 255;
+			var blue = (this.color & 255) * this._parentBlue / 255;
+			if(this.colorTransform == null) {
+				this.colorTransform = new openfl_geom_ColorTransform(red,green,blue,this.alpha);
+			} else {
+				this.colorTransform.redMultiplier = red;
+				this.colorTransform.greenMultiplier = green;
+				this.colorTransform.blueMultiplier = blue;
+				this.colorTransform.alphaMultiplier = this.alpha;
+			}
+			this.useColorTransform = true;
+		} else {
+			if(this.colorTransform != null) {
+				this.colorTransform.redMultiplier = 1;
+				this.colorTransform.greenMultiplier = 1;
+				this.colorTransform.blueMultiplier = 1;
+				this.colorTransform.alphaMultiplier = 1;
+			}
+			this.useColorTransform = false;
+		}
+		this.dirty = true;
+		if(this.children != null) {
+			var _g = 0;
+			var _g1 = this.children;
+			while(_g < _g1.length) {
+				var child = _g1[_g];
+				++_g;
+				child.set_alpha(this.alpha);
+			}
+		}
+		return this.alpha;
+	}
+	,set_color: function(Color) {
+		Color = Color & 16777215;
+		var combinedRed = (Color >> 16) * this._parentRed / 255;
+		var combinedGreen = (Color >> 8 & 255) * this._parentGreen / 255;
+		var combinedBlue = (Color & 255) * this._parentBlue / 255;
+		var color = flixel_util__$FlxColor_FlxColor_$Impl_$._new();
+		var Value = Math.round(combinedRed * 255);
+		color &= -16711681;
+		color |= (Value > 255 ? 255 : Value < 0 ? 0 : Value) << 16;
+		var Value1 = Math.round(combinedGreen * 255);
+		color &= -65281;
+		color |= (Value1 > 255 ? 255 : Value1 < 0 ? 0 : Value1) << 8;
+		var Value2 = Math.round(combinedBlue * 255);
+		color &= -256;
+		color |= Value2 > 255 ? 255 : Value2 < 0 ? 0 : Value2;
+		var Value3 = Math.round(0);
+		color &= 16777215;
+		color |= (Value3 > 255 ? 255 : Value3 < 0 ? 0 : Value3) << 24;
+		var combinedColor = color;
+		if(this.color == combinedColor) {
+			return this.color;
+		}
+		this.color = combinedColor;
+		if(this.alpha != 1 || this.color != 16777215) {
+			if(this.colorTransform == null) {
+				this.colorTransform = new openfl_geom_ColorTransform(combinedRed,combinedGreen,combinedBlue,this.alpha);
+			} else {
+				this.colorTransform.redMultiplier = combinedRed;
+				this.colorTransform.greenMultiplier = combinedGreen;
+				this.colorTransform.blueMultiplier = combinedBlue;
+				this.colorTransform.alphaMultiplier = this.alpha;
+			}
+			this.useColorTransform = true;
+		} else {
+			if(this.colorTransform != null) {
+				this.colorTransform.redMultiplier = 1;
+				this.colorTransform.greenMultiplier = 1;
+				this.colorTransform.blueMultiplier = 1;
+				this.colorTransform.alphaMultiplier = 1;
+			}
+			this.useColorTransform = false;
+		}
+		this.dirty = true;
+		if(flixel_FlxG.renderTile) {
+			var Value4 = Math.round(combinedRed * 255);
+			this.color &= -16711681;
+			this.color |= (Value4 > 255 ? 255 : Value4 < 0 ? 0 : Value4) << 16;
+			var Value5 = Math.round(combinedGreen * 255);
+			this.color &= -65281;
+			this.color |= (Value5 > 255 ? 255 : Value5 < 0 ? 0 : Value5) << 8;
+			var Value6 = Math.round(combinedBlue * 255);
+			this.color &= -256;
+			this.color |= Value6 > 255 ? 255 : Value6 < 0 ? 0 : Value6;
+		}
+		var _g = 0;
+		var _g1 = this.children;
+		while(_g < _g1.length) {
+			var child = _g1[_g];
+			++_g;
+			var childColor = child.color;
+			var childRed = (childColor >> 16) / (255 * child._parentRed);
+			var childGreen = (childColor >> 8 & 255) / (255 * child._parentGreen);
+			var childBlue = (childColor & 255) / (255 * child._parentBlue);
+			var color1 = flixel_util__$FlxColor_FlxColor_$Impl_$._new();
+			var Value7 = Math.round(childRed * 255);
+			color1 &= -16711681;
+			color1 |= (Value7 > 255 ? 255 : Value7 < 0 ? 0 : Value7) << 16;
+			var Value8 = Math.round(childGreen * 255);
+			color1 &= -65281;
+			color1 |= (Value8 > 255 ? 255 : Value8 < 0 ? 0 : Value8) << 8;
+			var Value9 = Math.round(childBlue * 255);
+			color1 &= -256;
+			color1 |= Value9 > 255 ? 255 : Value9 < 0 ? 0 : Value9;
+			var Value10 = Math.round(0);
+			color1 &= 16777215;
+			color1 |= (Value10 > 255 ? 255 : Value10 < 0 ? 0 : Value10) << 24;
+			combinedColor = color1;
+			child.set_color(combinedColor);
+			child._parentRed = combinedRed;
+			child._parentGreen = combinedGreen;
+			child._parentBlue = combinedBlue;
+		}
+		return this.color;
+	}
+	,set_facing: function(Direction) {
+		flixel_FlxSprite.prototype.set_facing.call(this,Direction);
+		if(this.children != null) {
+			var _g = 0;
+			var _g1 = this.children;
+			while(_g < _g1.length) {
+				var child = _g1[_g];
+				++_g;
+				if(child.exists && child.active) {
+					child.set_facing(Direction);
+				}
+			}
+		}
+		return Direction;
+	}
+	,get_count: function() {
+		return this.children.length;
+	}
+	,__class__: flixel_addons_display_FlxNestedSprite
+	,__properties__: $extend(flixel_FlxSprite.prototype.__properties__,{get_count:"get_count"})
+});
 var Spiky = function(X,Y,Angle,Velocity) {
 	this.myLength = 214;
 	this.direction = 1;
 	this.speed = 2;
-	flixel_FlxSprite.call(this);
-	this.loadGraphic("assets/images/spikyball.png");
+	flixel_addons_display_FlxNestedSprite.call(this);
+	this.chain = new flixel_addons_display_FlxNestedSprite();
+	this.chain.loadGraphic("assets/images/chain.png");
+	this.chain.set_allowCollisions(0);
+	this.add(this.chain);
+	this.loadGraphic("assets/images/ball.png");
 	this.myAngle = Angle;
 	this.myAngularVelocity = Velocity;
 	this.xcenter = X;
@@ -8782,8 +9122,8 @@ var Spiky = function(X,Y,Angle,Velocity) {
 };
 $hxClasses["Spiky"] = Spiky;
 Spiky.__name__ = "Spiky";
-Spiky.__super__ = flixel_FlxSprite;
-Spiky.prototype = $extend(flixel_FlxSprite.prototype,{
+Spiky.__super__ = flixel_addons_display_FlxNestedSprite;
+Spiky.prototype = $extend(flixel_addons_display_FlxNestedSprite.prototype,{
 	speed: null
 	,direction: null
 	,myAngularVelocity: null
@@ -8791,6 +9131,7 @@ Spiky.prototype = $extend(flixel_FlxSprite.prototype,{
 	,xcenter: null
 	,ycenter: null
 	,myLength: null
+	,chain: null
 	,update: function(elapsed) {
 		this.myAngle += this.myAngularVelocity * elapsed;
 		if(this.direction == 1) {
@@ -8814,9 +9155,15 @@ Spiky.prototype = $extend(flixel_FlxSprite.prototype,{
 				this.myAngularVelocity = 1;
 			}
 		}
-		this.set_x(this.xcenter + this.myLength * Math.cos((this.myAngle - 90) * (Math.PI / 180)));
-		this.set_y(this.ycenter - this.myLength * Math.sin((this.myAngle - 90) * (Math.PI / 180)));
-		flixel_FlxSprite.prototype.update.call(this,elapsed);
+		var xrelative = this.myLength * Math.cos((this.myAngle - 90) * (Math.PI / 180));
+		var yrelative = this.myLength * Math.sin((this.myAngle - 90) * (Math.PI / 180));
+		this.set_x(this.xcenter + xrelative);
+		this.set_y(this.ycenter - yrelative);
+		this.chain.relativeX = -(xrelative / 2) * 1.1 + 54;
+		var tmp = this.get_height() / 2;
+		this.chain.relativeY = yrelative / 2 * 1.1 - tmp;
+		this.chain.relativeAngle = -this.myAngle;
+		flixel_addons_display_FlxNestedSprite.prototype.update.call(this,elapsed);
 	}
 	,__class__: Spiky
 });
@@ -47094,7 +47441,7 @@ gui_MenuState.__name__ = "gui.MenuState";
 gui_MenuState.__super__ = flixel_FlxState;
 gui_MenuState.prototype = $extend(flixel_FlxState.prototype,{
 	create: function() {
-		this.add(new flixel_text_FlxText(0,1044,flixel_FlxG.width,"v0.13-alpha").setFormat(null,24));
+		this.add(new flixel_text_FlxText(0,1044,flixel_FlxG.width,"v0.14-alpha").setFormat(null,24));
 		flixel_FlxG.mouse.set_visible(!flixel_FlxG.html5.onMobile);
 		this.add(new flixel_text_FlxText(0,180,flixel_FlxG.width,"Buddha Breath").setFormat(null,192,-65536,"center"));
 		this.add(new FlxScaleButton(840,540,"New game",$bind(this,this.play)));
@@ -70156,7 +70503,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 655946;
+	this.version = 457499;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
@@ -115108,9 +115455,11 @@ openfl_display_DisplayObject.__tempStack = new lime_utils_ObjectPool(function() 
 AssetPaths.data_goes_here__txt = "assets/data/data-goes-here.txt";
 AssetPaths.background__png = "assets/images/background.png";
 AssetPaths.background1__png = "assets/images/background1.png";
+AssetPaths.ball__png = "assets/images/ball.png";
 AssetPaths.big_birds__png = "assets/images/big-birds.png";
 AssetPaths.bird__png = "assets/images/bird.png";
 AssetPaths.btn_128x128__png = "assets/images/btn-128x128.png";
+AssetPaths.chain__png = "assets/images/chain.png";
 AssetPaths.fish__png = "assets/images/fish.png";
 AssetPaths.flag__png = "assets/images/flag.png";
 AssetPaths.fullscreen__png = "assets/images/fullscreen.png";
