@@ -894,9 +894,9 @@ ApplicationMain.create = function(config) {
 	ManifestResources.init(config);
 	var _this = app.meta;
 	if(__map_reserved["build"] != null) {
-		_this.setReserved("build","60");
+		_this.setReserved("build","61");
 	} else {
-		_this.h["build"] = "60";
+		_this.h["build"] = "61";
 	}
 	var _this1 = app.meta;
 	if(__map_reserved["company"] != null) {
@@ -8497,9 +8497,9 @@ var Player = function() {
 	this.animation.add("hit",[16]);
 	this.setSize(90,228);
 	this.offset.set(72,12);
-	this.drag.set_x(1920);
+	this.drag.set_x(2400);
 	this.acceleration.set_y(1800);
-	this.maxVelocity.set(450,900);
+	this.maxVelocity.set(500,900);
 	this.set_x(this.startx);
 	this.set_y(this.starty);
 };
@@ -8535,7 +8535,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			this.offset.set(42,12);
 			this.direction = -1;
 			var _g = this.acceleration;
-			_g.set_x(_g.x - 960);
+			_g.set_x(_g.x - 1000);
 		} else {
 			var tmp1;
 			var _this2 = flixel_FlxG.keys.pressed;
@@ -8551,7 +8551,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 				this.offset.set(72,12);
 				this.direction = 1;
 				var _g1 = this.acceleration;
-				_g1.set_x(_g1.x + 960);
+				_g1.set_x(_g1.x + 1000);
 			}
 		}
 		if(this.velocity.y == 0) {
@@ -8580,7 +8580,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 				this.maxVelocity.set_x(150);
 			} else {
 				this.crouch = false;
-				this.maxVelocity.set_x(450);
+				this.maxVelocity.set_x(500);
 			}
 		} else {
 			var _this8 = flixel_FlxG.keys.justPressed;
@@ -47441,7 +47441,7 @@ gui_MenuState.__name__ = "gui.MenuState";
 gui_MenuState.__super__ = flixel_FlxState;
 gui_MenuState.prototype = $extend(flixel_FlxState.prototype,{
 	create: function() {
-		this.add(new flixel_text_FlxText(0,1044,flixel_FlxG.width,"v0.14-alpha").setFormat(null,24));
+		this.add(new flixel_text_FlxText(0,1044,flixel_FlxG.width,"v0.2.0-alpha").setFormat(null,24));
 		flixel_FlxG.mouse.set_visible(!flixel_FlxG.html5.onMobile);
 		this.add(new flixel_text_FlxText(0,180,flixel_FlxG.width,"Buddha Breath").setFormat(null,192,-65536,"center"));
 		this.add(new FlxScaleButton(840,540,"New game",$bind(this,this.play)));
@@ -70503,7 +70503,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 457499;
+	this.version = 150282;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
@@ -115551,12 +115551,12 @@ flixel_ui_FlxButton.HIGHLIGHT = 1;
 flixel_ui_FlxButton.PRESSED = 2;
 openfl_text_Font.__fontByName = new haxe_ds_StringMap();
 openfl_text_Font.__registeredFonts = [];
-Player.ACCELERATION = 960;
-Player.DRAG = 1920;
+Player.ACCELERATION = 1000;
+Player.DRAG = 2400;
 Player.GRAVITY = 1800;
 Player.JUMP_FORCE = -840;
 Player.WALK_SPEED = 300;
-Player.RUN_SPEED = 450;
+Player.RUN_SPEED = 500;
 Player.CROUCH_SPEED = 150;
 Player.FALLING_SPEED = 900;
 Xml.Element = 0;
