@@ -8343,15 +8343,6 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 	,update: function(elapsed) {
 		flixel_FlxState.prototype.update.call(this,elapsed);
 		this.frames++;
-		if(flixel_FlxG.html5.onMobile) {
-			if(flixel_FlxG.mouse._leftButton.current == 2) {
-				if(flixel_FlxG.mouse.x - this.get_camera().scroll.x < flixel_FlxG.camera.width / 2) {
-					var position = new flixel_math_FlxPoint(flixel_FlxG.mouse.x - this.get_camera().scroll.x,flixel_FlxG.mouse.y - this.get_camera().scroll.y);
-					PlayState.buttonLeft.setPosition(position.x - PlayState.buttonLeft.get_width() - this.virtualPadOffset,position.y - PlayState.buttonLeft.get_height() / 2 - 1);
-					PlayState.buttonRight.setPosition(position.x + this.virtualPadOffset,position.y - PlayState.buttonRight.get_height() / 2 - 1);
-				}
-			}
-		}
 		if(!this.birdsReleased && this.player.x > 10500) {
 			this.birdsReleased = true;
 			this.releaseBirds(15,this.map.get_width() | 0,0,-900,300);
@@ -70499,7 +70490,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 398276;
+	this.version = 179984;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
