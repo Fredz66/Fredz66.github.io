@@ -894,9 +894,9 @@ ApplicationMain.create = function(config) {
 	ManifestResources.init(config);
 	var _this = app.meta;
 	if(__map_reserved["build"] != null) {
-		_this.setReserved("build","63");
+		_this.setReserved("build","64");
 	} else {
-		_this.h["build"] = "63";
+		_this.h["build"] = "64";
 	}
 	var _this1 = app.meta;
 	if(__map_reserved["company"] != null) {
@@ -3313,7 +3313,7 @@ openfl_display_InteractiveObject.prototype = $extend(openfl_display_DisplayObjec
 	,__tabEnabled: null
 	,__tabIndex: null
 	,requestSoftKeyboard: function() {
-		openfl__$internal_Lib.notImplemented({ fileName : "openfl/display/InteractiveObject.hx", lineNumber : 1245, className : "openfl.display.InteractiveObject", methodName : "requestSoftKeyboard"});
+		openfl__$internal_Lib.notImplemented({ fileName : "openfl/display/InteractiveObject.hx", lineNumber : 1246, className : "openfl.display.InteractiveObject", methodName : "requestSoftKeyboard"});
 		return false;
 	}
 	,__allowMouseFocus: function() {
@@ -7186,372 +7186,6 @@ Lambda.array = function(it) {
 	}
 	return a;
 };
-var ManifestResources = function() { };
-$hxClasses["ManifestResources"] = ManifestResources;
-ManifestResources.__name__ = "ManifestResources";
-ManifestResources.preloadLibraries = null;
-ManifestResources.preloadLibraryNames = null;
-ManifestResources.rootPath = null;
-ManifestResources.init = function(config) {
-	ManifestResources.preloadLibraries = [];
-	ManifestResources.preloadLibraryNames = [];
-	ManifestResources.rootPath = null;
-	if(config != null && Object.prototype.hasOwnProperty.call(config,"rootPath")) {
-		ManifestResources.rootPath = Reflect.field(config,"rootPath");
-	}
-	if(ManifestResources.rootPath == null) {
-		ManifestResources.rootPath = "";
-	}
-	lime_utils_Assets.defaultRootPath = ManifestResources.rootPath;
-	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf);
-	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf);
-	var data = "{\"name\":null,\"assets\":\"aoy4:pathy34:assets%2Fdata%2Fdata-goes-here.txty4:sizezy4:typey4:TEXTy2:idR1y7:preloadtgoR0y25:assets%2Fimages%2F640.pngR2i239826R3y5:IMAGER5R7R6tgoR0y32:assets%2Fimages%2Fbackground.pngR2i843302R3R8R5R9R6tgoR0y33:assets%2Fimages%2Fbackground1.pngR2i2111368R3R8R5R10R6tgoR0y33:assets%2Fimages%2Fbackground2.pngR2i1842525R3R8R5R11R6tgoR0y33:assets%2Fimages%2Fbackground3.pngR2i1835687R3R8R5R12R6tgoR0y26:assets%2Fimages%2Fball.pngR2i11372R3R8R5R13R6tgoR0y31:assets%2Fimages%2Fbig-birds.pngR2i641R3R8R5R14R6tgoR0y26:assets%2Fimages%2Fbird.pngR2i3846R3R8R5R15R6tgoR0y26:assets%2Fimages%2Fboat.pngR2i278304R3R8R5R16R6tgoR0y27:assets%2Fimages%2Fboat2.pngR2i276124R3R8R5R17R6tgoR0y33:assets%2Fimages%2Fbtn-128x128.pngR2i1490R3R8R5R18R6tgoR0y34:assets%2Fimages%2FbuttonAction.pngR2i8141R3R8R5R19R6tgoR0y33:assets%2Fimages%2FbuttonRight.pngR2i8889R3R8R5R20R6tgoR0y30:assets%2Fimages%2FbuttonUp.pngR2i6990R3R8R5R21R6tgoR0y27:assets%2Fimages%2Fchain.pngR2i4449R3R8R5R22R6tgoR0y26:assets%2Fimages%2Ffish.pngR2i5373R3R8R5R23R6tgoR0y26:assets%2Fimages%2Fflag.pngR2i63780R3R8R5R24R6tgoR0y32:assets%2Fimages%2Ffullscreen.pngR2i6259R3R8R5R25R6tgoR0y29:assets%2Fimages%2Fisland1.pngR2i432263R3R8R5R26R6tgoR0y29:assets%2Fimages%2Fisland2.pngR2i439004R3R8R5R27R6tgoR0y28:assets%2Fimages%2Flitang.pngR2i381270R3R8R5R28R6tgoR0y34:assets%2Fimages%2Fold-arrow-up.pngR2i2272R3R8R5R29R6tgoR0y31:assets%2Fimages%2Fold-arrow.pngR2i2850R3R8R5R30R6tgoR0y30:assets%2Fimages%2Fold-bird.pngR2i640R3R8R5R31R6tgoR0y30:assets%2Fimages%2Fold-fish.pngR2i925R3R8R5R32R6tgoR0y30:assets%2Fimages%2Fold-flag.pngR2i2708R3R8R5R33R6tgoR0y32:assets%2Fimages%2Fold-litang.pngR2i113360R3R8R5R34R6tgoR0y31:assets%2Fimages%2Fold-plonk.pngR2i3982R3R8R5R35R6tgoR0y30:assets%2Fimages%2Fold-pole.pngR2i623R3R8R5R36R6tgoR0y30:assets%2Fimages%2Fold-reed.pngR2i2996R3R8R5R37R6tgoR0y31:assets%2Fimages%2Fold-spiky.pngR2i945R3R8R5R38R6tgoR0y31:assets%2Fimages%2Fold-tiles.pngR2i6619R3R8R5R39R6tgoR0y32:assets%2Fimages%2Fold-water1.pngR2i3591R3R8R5R40R6tgoR0y32:assets%2Fimages%2Fold-water2.pngR2i3579R3R8R5R41R6tgoR0y32:assets%2Fimages%2Fold-water3.pngR2i3569R3R8R5R42R6tgoR0y27:assets%2Fimages%2Fplonk.pngR2i25171R3R8R5R43R6tgoR0y26:assets%2Fimages%2Fpole.pngR2i12936R3R8R5R44R6tgoR0y27:assets%2Fimages%2Fpopup.pngR2i2240R3R8R5R45R6tgoR0y26:assets%2Fimages%2Freed.pngR2i19653R3R8R5R46R6tgoR0y27:assets%2Fimages%2Fspiky.pngR2i16349R3R8R5R47R6tgoR0y28:assets%2Fimages%2Fspiky1.pngR2i15661R3R8R5R48R6tgoR0y31:assets%2Fimages%2Fspikyball.pngR2i10961R3R8R5R49R6tgoR0y27:assets%2Fimages%2Ftiles.pngR2i43711R3R8R5R50R6tgoR0y36:assets%2Fimages%2Fvirtual-button.pngR2i7318R3R8R5R51R6tgoR0y28:assets%2Fimages%2Fwater1.pngR2i48014R3R8R5R52R6tgoR0y28:assets%2Fimages%2Fwater2.pngR2i46993R3R8R5R53R6tgoR0y28:assets%2Fimages%2Fwater3.pngR2i45365R3R8R5R54R6tgoR0y28:assets%2Flevels%2Flevel1.tmxR2i4607R3R4R5R55R6tgoR2i2106598R3y5:MUSICR5y45:assets%2Fmusic%2Fasian-mystery-nometadata.oggy9:pathGroupaR57hR6tgoR2i542898R3y5:SOUNDR5y38:assets%2Fmusic%2Ftemple-nometadata.oggR58aR60hR6tgoR2i11689R3R59R5y27:assets%2Fsounds%2Fdeath.oggR58aR61hR6tgoR2i9318R3R59R5y26:assets%2Fsounds%2Fjump.oggR58aR62hR6tgoR2i52494R3R59R5y26:assets%2Fsounds%2Ftree.oggR58aR63hR6tgoR2i28546R3R59R5y33:assets%2Fsounds%2Fwatersplash.oggR58aR64hR6tgoR0y36:assets%2Ftilesets%2FBuddhaBreath.tsxR2i241R3R4R5R65R6tgoR2i2114R3R56R5y26:flixel%2Fsounds%2Fbeep.mp3R58aR66y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R56R5y28:flixel%2Fsounds%2Fflixel.mp3R58aR68y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3R59R5R67R58aR66R67hgoR2i33629R3R59R5R69R58aR68R69hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R70R71y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R8R5R76R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R8R5R77R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
-	var manifest = lime_utils_AssetManifest.parse(data,ManifestResources.rootPath);
-	var library = lime_utils_AssetLibrary.fromManifest(manifest);
-	lime_utils_Assets.registerLibrary("default",library);
-	library = lime_utils_Assets.getLibrary("default");
-	if(library != null) {
-		ManifestResources.preloadLibraries.push(library);
-	} else {
-		ManifestResources.preloadLibraryNames.push("default");
-	}
-};
-var lime_text_Font = function(name) {
-	if(name != null) {
-		this.name = name;
-	}
-	if(!this.__init) {
-		if(this.ascender == undefined) {
-			this.ascender = 0;
-		}
-		if(this.descender == undefined) {
-			this.descender = 0;
-		}
-		if(this.height == undefined) {
-			this.height = 0;
-		}
-		if(this.numGlyphs == undefined) {
-			this.numGlyphs = 0;
-		}
-		if(this.underlinePosition == undefined) {
-			this.underlinePosition = 0;
-		}
-		if(this.underlineThickness == undefined) {
-			this.underlineThickness = 0;
-		}
-		if(this.unitsPerEM == undefined) {
-			this.unitsPerEM = 0;
-		}
-		if(this.__fontID != null) {
-			if(lime_utils_Assets.isLocal(this.__fontID)) {
-				this.__fromBytes(lime_utils_Assets.getBytes(this.__fontID));
-			}
-		} else if(this.__fontPath != null) {
-			this.__fromFile(this.__fontPath);
-		}
-	}
-};
-$hxClasses["lime.text.Font"] = lime_text_Font;
-lime_text_Font.__name__ = "lime.text.Font";
-lime_text_Font.fromBytes = function(bytes) {
-	if(bytes == null) {
-		return null;
-	}
-	var font = new lime_text_Font();
-	font.__fromBytes(bytes);
-	return font;
-};
-lime_text_Font.fromFile = function(path) {
-	if(path == null) {
-		return null;
-	}
-	var font = new lime_text_Font();
-	font.__fromFile(path);
-	return font;
-};
-lime_text_Font.loadFromBytes = function(bytes) {
-	return lime_app_Future.withValue(lime_text_Font.fromBytes(bytes));
-};
-lime_text_Font.loadFromFile = function(path) {
-	var request = new lime_net__$HTTPRequest_$lime_$text_$Font();
-	return request.load(path).then(function(font) {
-		if(font != null) {
-			return lime_app_Future.withValue(font);
-		} else {
-			return lime_app_Future.withError("");
-		}
-	});
-};
-lime_text_Font.loadFromName = function(path) {
-	var font = new lime_text_Font();
-	return font.__loadFromName(path);
-};
-lime_text_Font.__measureFontNode = function(fontFamily) {
-	var node = window.document.createElement("span");
-	node.setAttribute("aria-hidden","true");
-	var text = window.document.createTextNode("BESbswy");
-	node.appendChild(text);
-	var style = node.style;
-	style.display = "block";
-	style.position = "absolute";
-	style.top = "-9999px";
-	style.left = "-9999px";
-	style.fontSize = "300px";
-	style.width = "auto";
-	style.height = "auto";
-	style.lineHeight = "normal";
-	style.margin = "0";
-	style.padding = "0";
-	style.fontVariant = "normal";
-	style.whiteSpace = "nowrap";
-	style.fontFamily = fontFamily;
-	window.document.body.appendChild(node);
-	return node;
-};
-lime_text_Font.prototype = {
-	ascender: null
-	,descender: null
-	,height: null
-	,name: null
-	,numGlyphs: null
-	,src: null
-	,underlinePosition: null
-	,underlineThickness: null
-	,unitsPerEM: null
-	,__fontID: null
-	,__fontPath: null
-	,__init: null
-	,decompose: function() {
-		return null;
-	}
-	,getGlyph: function(character) {
-		return -1;
-	}
-	,getGlyphs: function(characters) {
-		if(characters == null) {
-			characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^`'\"/\\&*()[]{}<>|:;_-+=?,. ";
-		}
-		return null;
-	}
-	,getGlyphMetrics: function(glyph) {
-		return null;
-	}
-	,renderGlyph: function(glyph,fontSize) {
-		return null;
-	}
-	,renderGlyphs: function(glyphs,fontSize) {
-		return null;
-	}
-	,__copyFrom: function(other) {
-		if(other != null) {
-			this.ascender = other.ascender;
-			this.descender = other.descender;
-			this.height = other.height;
-			this.name = other.name;
-			this.numGlyphs = other.numGlyphs;
-			this.src = other.src;
-			this.underlinePosition = other.underlinePosition;
-			this.underlineThickness = other.underlineThickness;
-			this.unitsPerEM = other.unitsPerEM;
-			this.__fontID = other.__fontID;
-			this.__fontPath = other.__fontPath;
-			this.__init = true;
-		}
-	}
-	,__fromBytes: function(bytes) {
-		this.__fontPath = null;
-	}
-	,__fromFile: function(path) {
-		this.__fontPath = path;
-	}
-	,__initializeSource: function() {
-		this.__init = true;
-	}
-	,__loadFromName: function(name) {
-		var _gthis = this;
-		var promise = new lime_app_Promise();
-		this.name = name;
-		var userAgent = window.navigator.userAgent.toLowerCase();
-		var isSafari = userAgent.indexOf(" safari/") >= 0 && userAgent.indexOf(" chrome/") < 0;
-		var isUIWebView = new EReg("(iPhone|iPod|iPad).*AppleWebKit(?!.*Version)","i").match(userAgent);
-		if(!isSafari && !isUIWebView && (window.document.fonts && ($_=window.document.fonts,$bind($_,$_.load)))) {
-			window.document.fonts.load("1em '" + name + "'").then(function(_) {
-				promise.complete(_gthis);
-			},function(_1) {
-				lime_utils_Log.warn("Could not load web font \"" + name + "\"",{ fileName : "lime/text/Font.hx", lineNumber : 512, className : "lime.text.Font", methodName : "__loadFromName"});
-				promise.complete(_gthis);
-			});
-		} else {
-			var node1 = lime_text_Font.__measureFontNode("'" + name + "', sans-serif");
-			var node2 = lime_text_Font.__measureFontNode("'" + name + "', serif");
-			var width1 = node1.offsetWidth;
-			var width2 = node2.offsetWidth;
-			var interval = -1;
-			var timeout = 3000;
-			var intervalLength = 50;
-			var intervalCount = 0;
-			var loaded;
-			var timeExpired;
-			var checkFont = function() {
-				intervalCount += 1;
-				loaded = node1.offsetWidth != width1 || node2.offsetWidth != width2;
-				timeExpired = intervalCount * intervalLength >= timeout;
-				if(loaded || timeExpired) {
-					window.clearInterval(interval);
-					node1.parentNode.removeChild(node1);
-					node2.parentNode.removeChild(node2);
-					node1 = null;
-					node2 = null;
-					if(timeExpired) {
-						lime_utils_Log.warn("Could not load web font \"" + name + "\"",{ fileName : "lime/text/Font.hx", lineNumber : 547, className : "lime.text.Font", methodName : "__loadFromName"});
-					}
-					promise.complete(_gthis);
-				}
-			};
-			interval = window.setInterval(checkFont,intervalLength);
-		}
-		return promise.future;
-	}
-	,__setSize: function(size) {
-	}
-	,__class__: lime_text_Font
-};
-var _$_$ASSET_$_$flixel_$fonts_$nokiafc22_$ttf = $hx_exports["__ASSET__flixel_fonts_nokiafc22_ttf"] = function() {
-	this.ascender = 2048;
-	this.descender = -512;
-	this.height = 2816;
-	this.numGlyphs = 172;
-	this.underlinePosition = -640;
-	this.underlineThickness = 256;
-	this.unitsPerEM = 2048;
-	this.name = "Nokia Cellphone FC Small";
-	lime_text_Font.call(this);
-};
-$hxClasses["__ASSET__flixel_fonts_nokiafc22_ttf"] = _$_$ASSET_$_$flixel_$fonts_$nokiafc22_$ttf;
-_$_$ASSET_$_$flixel_$fonts_$nokiafc22_$ttf.__name__ = "__ASSET__flixel_fonts_nokiafc22_ttf";
-_$_$ASSET_$_$flixel_$fonts_$nokiafc22_$ttf.__super__ = lime_text_Font;
-_$_$ASSET_$_$flixel_$fonts_$nokiafc22_$ttf.prototype = $extend(lime_text_Font.prototype,{
-	__class__: _$_$ASSET_$_$flixel_$fonts_$nokiafc22_$ttf
-});
-var _$_$ASSET_$_$flixel_$fonts_$monsterrat_$ttf = $hx_exports["__ASSET__flixel_fonts_monsterrat_ttf"] = function() {
-	this.ascender = 968;
-	this.descender = -251;
-	this.height = 1219;
-	this.numGlyphs = 263;
-	this.underlinePosition = -150;
-	this.underlineThickness = 50;
-	this.unitsPerEM = 1000;
-	this.name = "Monsterrat";
-	lime_text_Font.call(this);
-};
-$hxClasses["__ASSET__flixel_fonts_monsterrat_ttf"] = _$_$ASSET_$_$flixel_$fonts_$monsterrat_$ttf;
-_$_$ASSET_$_$flixel_$fonts_$monsterrat_$ttf.__name__ = "__ASSET__flixel_fonts_monsterrat_ttf";
-_$_$ASSET_$_$flixel_$fonts_$monsterrat_$ttf.__super__ = lime_text_Font;
-_$_$ASSET_$_$flixel_$fonts_$monsterrat_$ttf.prototype = $extend(lime_text_Font.prototype,{
-	__class__: _$_$ASSET_$_$flixel_$fonts_$monsterrat_$ttf
-});
-var openfl_text_Font = function(name) {
-	lime_text_Font.call(this,name);
-};
-$hxClasses["openfl.text.Font"] = openfl_text_Font;
-openfl_text_Font.__name__ = "openfl.text.Font";
-openfl_text_Font.enumerateFonts = function(enumerateDeviceFonts) {
-	if(enumerateDeviceFonts == null) {
-		enumerateDeviceFonts = false;
-	}
-	return openfl_text_Font.__registeredFonts;
-};
-openfl_text_Font.fromBytes = function(bytes) {
-	var font = new openfl_text_Font();
-	font.__fromBytes(openfl_utils__$ByteArray_ByteArray_$Impl_$.toBytes(bytes));
-	return font;
-};
-openfl_text_Font.fromFile = function(path) {
-	var font = new openfl_text_Font();
-	font.__fromFile(path);
-	return font;
-};
-openfl_text_Font.loadFromBytes = function(bytes) {
-	return lime_text_Font.loadFromBytes(openfl_utils__$ByteArray_ByteArray_$Impl_$.toBytes(bytes)).then(function(limeFont) {
-		var font = new openfl_text_Font();
-		font.__fromLimeFont(limeFont);
-		return lime_app_Future.withValue(font);
-	});
-};
-openfl_text_Font.loadFromFile = function(path) {
-	return lime_text_Font.loadFromFile(path).then(function(limeFont) {
-		var font = new openfl_text_Font();
-		font.__fromLimeFont(limeFont);
-		return lime_app_Future.withValue(font);
-	});
-};
-openfl_text_Font.loadFromName = function(path) {
-	return lime_text_Font.loadFromName(path).then(function(limeFont) {
-		var font = new openfl_text_Font();
-		font.__fromLimeFont(limeFont);
-		return lime_app_Future.withValue(font);
-	});
-};
-openfl_text_Font.registerFont = function(font) {
-	var instance = null;
-	var o = font;
-	if((o == null ? null : js_Boot.getClass(o)) == null) {
-		instance = js_Boot.__cast(Type.createInstance(font,[]) , openfl_text_Font);
-	} else {
-		instance = js_Boot.__cast(font , openfl_text_Font);
-	}
-	if(instance != null) {
-		openfl_text_Font.__registeredFonts.push(instance);
-		var k = instance.name;
-		var _this = openfl_text_Font.__fontByName;
-		if(__map_reserved[k] != null) {
-			_this.setReserved(k,instance);
-		} else {
-			_this.h[k] = instance;
-		}
-	}
-};
-openfl_text_Font.__super__ = lime_text_Font;
-openfl_text_Font.prototype = $extend(lime_text_Font.prototype,{
-	fontStyle: null
-	,fontType: null
-	,__initialized: null
-	,__fromLimeFont: function(font) {
-		this.__copyFrom(font);
-	}
-	,__initialize: function() {
-		return this.__initialized;
-	}
-	,get_fontName: function() {
-		return this.name;
-	}
-	,set_fontName: function(value) {
-		return this.name = value;
-	}
-	,__class__: openfl_text_Font
-	,__properties__: {set_fontName:"set_fontName",get_fontName:"get_fontName"}
-});
-var _$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf = $hx_exports["__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf"] = function() {
-	this.__fromLimeFont(new _$_$ASSET_$_$flixel_$fonts_$nokiafc22_$ttf());
-	openfl_text_Font.call(this);
-};
-$hxClasses["__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf"] = _$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf;
-_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf.__name__ = "__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf";
-_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf.__super__ = openfl_text_Font;
-_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf.prototype = $extend(openfl_text_Font.prototype,{
-	__class__: _$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf
-});
-var _$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf = $hx_exports["__ASSET__OPENFL__flixel_fonts_monsterrat_ttf"] = function() {
-	this.__fromLimeFont(new _$_$ASSET_$_$flixel_$fonts_$monsterrat_$ttf());
-	openfl_text_Font.call(this);
-};
-$hxClasses["__ASSET__OPENFL__flixel_fonts_monsterrat_ttf"] = _$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf;
-_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf.__name__ = "__ASSET__OPENFL__flixel_fonts_monsterrat_ttf";
-_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf.__super__ = openfl_text_Font;
-_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf.prototype = $extend(openfl_text_Font.prototype,{
-	__class__: _$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf
-});
-Math.__name__ = "Math";
 var flixel_group_FlxTypedGroup = function(MaxSize) {
 	if(MaxSize == null) {
 		MaxSize = 0;
@@ -8183,6 +7817,679 @@ flixel_FlxState.prototype = $extend(flixel_group_FlxTypedGroup.prototype,{
 	,__class__: flixel_FlxState
 	,__properties__: $extend(flixel_group_FlxTypedGroup.prototype.__properties__,{set_bgColor:"set_bgColor",get_bgColor:"get_bgColor"})
 });
+var Level2State = function(MaxSize) {
+	this.tiles = ["                                                                                                                                  ","                                                                                                                                  ","                                                  |     |     |     |     |                                                       ","                                                  |     |     |     |     |                                                       ","                                                  |     |     |     |     |                                     v                 ","                                                  |     |     |     |     |                                    [-]                ",")                                                 |     |     |     |     |                                     |                (","|                                                 |     |     |     |     |                        [-]    [-]   |                |","|                                                                                        [--]       |      |    |     [-]        L","|                                                                                         ||   ()   |      |    |      |          ","|                =                     [_)                                         [-]    ||   ||   |      |    |      |          ","|  v    ~     =  |    =        [--]      |           ~                         ~    |     ||   ||   |      |    |      |          ","--------------)  |    |         ||       (--------------------------------------------)   ||   ||   |      |    |      |       (--","|||||||||||||||  |    |         ||       ||||||||||||||||||||||||||||||||||||||||||||||   ||   ||   |      |    |      |       |||","|||||||||||||||  |    |         ||       ||||||||||||||||||||||||||||||||||||||||||||||   ||   ||   |      |    |      |       |||","|||||||||||||||  |    |         ||       ||||||||||||||||||||||||||||||||||||||||||||||   ||   ||   |      |    |      |       |||"];
+	this.birdsReleased = false;
+	this.poleFalling = false;
+	this.frames = 0;
+	this.spikies = [];
+	flixel_FlxState.call(this,MaxSize);
+};
+$hxClasses["Level2State"] = Level2State;
+Level2State.__name__ = "Level2State";
+Level2State.pad = null;
+Level2State.__super__ = flixel_FlxState;
+Level2State.prototype = $extend(flixel_FlxState.prototype,{
+	background: null
+	,island1: null
+	,island2: null
+	,island3: null
+	,island4: null
+	,boat1: null
+	,boat2: null
+	,boat3: null
+	,boat4: null
+	,foreground1: null
+	,foreground2: null
+	,foreground3: null
+	,foreground4: null
+	,map: null
+	,pole: null
+	,plonk: null
+	,spikies: null
+	,flagStart: null
+	,flagEnd: null
+	,bird: null
+	,fish: null
+	,player: null
+	,frames: null
+	,poleFalling: null
+	,birdsReleased: null
+	,tiles: null
+	,StringsToMapData: function(strings) {
+		var mapData = [];
+		var _g = 0;
+		while(_g < strings.length) {
+			var row = strings[_g];
+			++_g;
+			var _g1 = 0;
+			var _g11 = row.length;
+			while(_g1 < _g11) {
+				var i = _g1++;
+				switch(row.charAt(i)) {
+				case " ":
+					mapData.push(0);
+					break;
+				case "(":
+					mapData.push(8);
+					break;
+				case ")":
+					mapData.push(7);
+					break;
+				case "-":
+					mapData.push(1);
+					break;
+				case "=":
+					mapData.push(2);
+					break;
+				case "L":
+					mapData.push(9);
+					break;
+				case "[":
+					mapData.push(4);
+					break;
+				case "]":
+					mapData.push(3);
+					break;
+				case "_":
+					mapData.push(10);
+					break;
+				case "|":
+					mapData.push(5);
+					break;
+				default:
+					mapData.push(0);
+				}
+			}
+		}
+		return mapData;
+	}
+	,create: function() {
+		flixel_FlxState.prototype.create.call(this);
+		flixel_FlxG.sound.playMusic("assets/music/asian-mystery-nometadata.ogg",1,true);
+		var yshift = 0;
+		this.background = new flixel_addons_display_FlxBackdrop("assets/images/background3.png");
+		this.background.scrollFactor.set_x(0.5);
+		this.background.scrollFactor.set_y(0.5);
+		this.background.offset.set_y(yshift + 250);
+		this.add(this.background);
+		this.island1 = new flixel_addons_display_FlxBackdrop("assets/images/island2.png",0.55,0.55,false,false);
+		this.island1.offset.set_x(-600);
+		this.island1.offset.set_y(yshift - 250);
+		this.add(this.island1);
+		this.island2 = new flixel_addons_display_FlxBackdrop("assets/images/island2.png",0.55,0.55,false,false);
+		this.island2.offset.set_x(-2700);
+		this.island2.offset.set_y(yshift - 250);
+		this.add(this.island2);
+		this.island3 = new flixel_addons_display_FlxBackdrop("assets/images/island2.png",0.55,0.55,false,false);
+		this.island3.offset.set_x(-4800);
+		this.island3.offset.set_y(yshift - 250);
+		this.add(this.island3);
+		this.island4 = new flixel_addons_display_FlxBackdrop("assets/images/island2.png",0.55,0.55,false,false);
+		this.island4.offset.set_x(-6900);
+		this.island4.offset.set_y(yshift - 250);
+		this.add(this.island4);
+		this.boat1 = new flixel_addons_display_FlxBackdrop("assets/images/boat2.png",0.58,0.58,false,false);
+		this.boat1.offset.set_x(-1270);
+		this.boat1.offset.set_y(yshift - 700);
+		this.add(this.boat1);
+		this.boat2 = new flixel_addons_display_FlxBackdrop("assets/images/boat2.png",0.58,0.58,false,false);
+		this.boat2.offset.set_x(-3370);
+		this.boat2.offset.set_y(yshift - 700);
+		this.add(this.boat2);
+		this.boat3 = new flixel_addons_display_FlxBackdrop("assets/images/boat2.png",0.58,0.58,false,false);
+		this.boat3.offset.set_x(-5470);
+		this.boat3.offset.set_y(yshift - 700);
+		this.add(this.boat3);
+		this.boat4 = new flixel_addons_display_FlxBackdrop("assets/images/boat2.png",0.58,0.58,false,false);
+		this.boat4.offset.set_x(-7570);
+		this.boat4.offset.set_y(yshift - 700);
+		this.add(this.boat4);
+		this.map = new flixel_tile_FlxTilemap();
+		this.map.loadMapFromArray(this.StringsToMapData(this.tiles),130,16,"assets/images/tiles.png",96,96);
+		this.add(this.map);
+		this.flagStart = new Flag(66,570,false);
+		this.add(this.flagStart);
+		this.flagEnd = new Flag(12111,570,true);
+		this.add(this.flagEnd);
+		this.releaseBirds(11,0,0,900,300);
+		this.player = new Player();
+		this.add(this.player);
+		this.pole = new Pole();
+		this.add(this.pole);
+		this.addSpiky(4779,720,33.5,120);
+		this.addSpiky(5355,720,0,150);
+		this.addSpiky(5931,720,50,102);
+		this.addSpiky(6507,720,0,150);
+		this.addSpiky(7083,720,50,102);
+		this.foreground1 = new flixel_addons_display_FlxBackdrop("assets/images/water3.png",1.25,1.25,true,false);
+		this.foreground1.offset.set_y(-1350);
+		this.foreground2 = new flixel_addons_display_FlxBackdrop("assets/images/water2.png",1.30,1.25,true,false);
+		this.foreground2.offset.set_x(60);
+		this.foreground2.offset.set_y(-1422);
+		this.foreground3 = new flixel_addons_display_FlxBackdrop("assets/images/water1.png",1.50,1.25,true,false);
+		this.foreground3.offset.set_x(180);
+		this.foreground3.offset.set_y(-1530);
+		this.foreground4 = new flixel_addons_display_FlxBackdrop("assets/images/reed.png",1.75,1.25,true,false);
+		this.foreground4.offset.set_y(-1470);
+		this.plonk = new Plonk();
+		this.plonk.set_visible(false);
+		this.fish = new Fish(1500,1110,-900,-150,1020);
+		this.add(this.plonk);
+		this.add(this.foreground1);
+		this.add(this.fish);
+		this.add(this.foreground2);
+		this.add(this.foreground3);
+		this.add(this.foreground4);
+		flixel_FlxG.camera.follow(this.player,flixel_FlxCameraFollowStyle.LOCKON,1);
+		this.map.follow();
+		flixel_FlxG.mouse.set_visible(false);
+		if(flixel_FlxG.html5.onMobile) {
+			Level2State.pad = new VirtualPad();
+			this.add(Level2State.pad);
+		}
+	}
+	,releaseBirds: function(count,x,y,speed,height) {
+		var _g = 0;
+		var _g1 = count;
+		while(_g < _g1) {
+			var i = _g++;
+			this.bird = new Bird(flixel_FlxG.random.int(0,75) * 2 + x,flixel_FlxG.random.int(0,45) * 2 + y,60,speed,height);
+			this.add(this.bird);
+		}
+	}
+	,update: function(elapsed) {
+		flixel_FlxState.prototype.update.call(this,elapsed);
+		this.frames++;
+		if(!this.birdsReleased && this.player.x > 10500) {
+			this.birdsReleased = true;
+			this.releaseBirds(15,this.map.get_width() | 0,0,-900,300);
+		}
+		var _g = this.foreground1;
+		_g.set_x(_g.x + 6);
+		var _g1 = this.foreground1;
+		var _g2 = _g1.y;
+		var n = this.frames / (700 + flixel_FlxG.random.int(0,300)) % 360 * (180 / Math.PI);
+		n *= 0.3183098862;
+		if(n > 1) {
+			n -= Math.ceil(n) >> 1 << 1;
+		} else if(n < -1) {
+			n += Math.ceil(-n) >> 1 << 1;
+		}
+		_g1.set_y(_g2 + (n > 0 ? n * (3.1 + n * (0.5 + n * (-7.2 + n * 3.6))) : n * (3.1 - n * (0.5 + n * (7.2 + n * 3.6)))));
+		var _g3 = this.foreground2;
+		_g3.set_x(_g3.x + 7);
+		var _g4 = this.foreground2;
+		var _g5 = _g4.y;
+		var n1 = this.frames / (700 + flixel_FlxG.random.int(0,300)) % 360 * (180 / Math.PI);
+		n1 *= 0.3183098862;
+		if(n1 > 1) {
+			n1 -= Math.ceil(n1) >> 1 << 1;
+		} else if(n1 < -1) {
+			n1 += Math.ceil(-n1) >> 1 << 1;
+		}
+		_g4.set_y(_g5 + (n1 > 0 ? n1 * (3.1 + n1 * (0.5 + n1 * (-7.2 + n1 * 3.6))) : n1 * (3.1 - n1 * (0.5 + n1 * (7.2 + n1 * 3.6)))));
+		var _g6 = this.foreground3;
+		_g6.set_x(_g6.x + 9);
+		var _g7 = this.foreground3;
+		var _g8 = _g7.y;
+		var n2 = this.frames / (700 + flixel_FlxG.random.int(0,300)) % 360 * (180 / Math.PI);
+		n2 *= 0.3183098862;
+		if(n2 > 1) {
+			n2 -= Math.ceil(n2) >> 1 << 1;
+		} else if(n2 < -1) {
+			n2 += Math.ceil(-n2) >> 1 << 1;
+		}
+		_g7.set_y(_g8 + (n2 > 0 ? n2 * (3.1 + n2 * (0.5 + n2 * (-7.2 + n2 * 3.6))) : n2 * (3.1 - n2 * (0.5 + n2 * (7.2 + n2 * 3.6)))));
+		var _this = flixel_FlxG.keys.justPressed;
+		if(_this.keyManager.checkStatus(72,_this.status)) {
+			this.map.set_visible(!this.map.visible);
+		}
+		var _this1 = flixel_FlxG.keys.justPressed;
+		if(_this1.keyManager.checkStatus(27,_this1.status)) {
+			flixel_FlxG.sound.pause();
+			this.openSubState(new gui_ExitState());
+		}
+		if(this.player.alive) {
+			flixel_FlxG.overlap(this.player,this.pole,$bind(this,this.hitPole));
+			flixel_FlxG.overlap(this.player,this.map,null,flixel_FlxObject.separate);
+			if(this.player.alive) {
+				var _g9 = 0;
+				var _g11 = this.spikies;
+				while(_g9 < _g11.length) {
+					var spiky = _g11[_g9];
+					++_g9;
+					if(flixel_util_FlxCollision.pixelPerfectCheck(this.player,spiky)) {
+						this.player.set_alive(false);
+						this.hit();
+					}
+				}
+			}
+		}
+		if(this.player.alive || !this.player.drown) {
+			if(this.player.y - this.player.get_height() > flixel_FlxG.height) {
+				this.player.set_alive(false);
+				this.player.drown = true;
+				this.player.acceleration.set_x(0);
+				this.drown();
+			}
+		}
+		if(this.player.x > this.map.get_width()) {
+			flixel_FlxG.camera.fade(-16777216,.33,false,$bind(this,this.win));
+		}
+	}
+	,hitPole: function(Object1,Object2) {
+		flixel_FlxObject.separate(Object1,Object2);
+		if(!this.poleFalling) {
+			this.poleFalling = true;
+			flixel_FlxG.sound.play("assets/sounds/tree.ogg",1);
+		}
+	}
+	,addSpiky: function(x,y,angle,velocity) {
+		var spiky = new Spiky(x,y,angle,velocity);
+		this.add(spiky);
+		this.spikies.push(spiky);
+	}
+	,drown: function() {
+		flixel_FlxG.sound.play("assets/sounds/watersplash.ogg",1);
+		this.plonk.set_x(this.player.x);
+		this.plonk.set_y(flixel_FlxG.height + this.player.get_height());
+		this.plonk.set_visible(true);
+		this.plonk.velocity.set_y(-900);
+		this.plonk.acceleration.set_y(1200);
+		new flixel_util_FlxTimer().start(2,$bind(this,this.hitdeath));
+	}
+	,hit: function() {
+		flixel_FlxG.sound.play("assets/sounds/death.ogg",1);
+		flixel_FlxG.camera.shake(0.01,0.2);
+		this.player.animation.play("hit");
+		this.player.maxVelocity.set(1500,900);
+		this.player.velocity.set(-1350,-600);
+		this.player.acceleration.set_x(0);
+	}
+	,hitdeath: function(Timer) {
+		flixel_FlxG.camera.fade(-16777216,.33,false,$bind(this,this.death));
+	}
+	,death: function() {
+		var nextState = new gui_GameOverState();
+		if(flixel_FlxG.game._state.switchTo(nextState)) {
+			flixel_FlxG.game._requestedState = nextState;
+		}
+	}
+	,win: function() {
+		var nextState = new gui_WinState();
+		if(flixel_FlxG.game._state.switchTo(nextState)) {
+			flixel_FlxG.game._requestedState = nextState;
+		}
+	}
+	,__class__: Level2State
+});
+var ManifestResources = function() { };
+$hxClasses["ManifestResources"] = ManifestResources;
+ManifestResources.__name__ = "ManifestResources";
+ManifestResources.preloadLibraries = null;
+ManifestResources.preloadLibraryNames = null;
+ManifestResources.rootPath = null;
+ManifestResources.init = function(config) {
+	ManifestResources.preloadLibraries = [];
+	ManifestResources.preloadLibraryNames = [];
+	ManifestResources.rootPath = null;
+	if(config != null && Object.prototype.hasOwnProperty.call(config,"rootPath")) {
+		ManifestResources.rootPath = Reflect.field(config,"rootPath");
+	}
+	if(ManifestResources.rootPath == null) {
+		ManifestResources.rootPath = "";
+	}
+	lime_utils_Assets.defaultRootPath = ManifestResources.rootPath;
+	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf);
+	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf);
+	var data = "{\"name\":null,\"assets\":\"aoy4:pathy34:assets%2Fdata%2Fdata-goes-here.txty4:sizezy4:typey4:TEXTy2:idR1y7:preloadtgoR0y25:assets%2Fimages%2F640.pngR2i239826R3y5:IMAGER5R7R6tgoR0y32:assets%2Fimages%2Fbackground.pngR2i843302R3R8R5R9R6tgoR0y33:assets%2Fimages%2Fbackground1.pngR2i2111368R3R8R5R10R6tgoR0y33:assets%2Fimages%2Fbackground2.pngR2i1842525R3R8R5R11R6tgoR0y33:assets%2Fimages%2Fbackground3.pngR2i1835687R3R8R5R12R6tgoR0y26:assets%2Fimages%2Fball.pngR2i11372R3R8R5R13R6tgoR0y31:assets%2Fimages%2Fbig-birds.pngR2i641R3R8R5R14R6tgoR0y26:assets%2Fimages%2Fbird.pngR2i3846R3R8R5R15R6tgoR0y26:assets%2Fimages%2Fboat.pngR2i278304R3R8R5R16R6tgoR0y27:assets%2Fimages%2Fboat2.pngR2i276124R3R8R5R17R6tgoR0y33:assets%2Fimages%2Fbtn-128x128.pngR2i1490R3R8R5R18R6tgoR0y34:assets%2Fimages%2FbuttonAction.pngR2i8141R3R8R5R19R6tgoR0y33:assets%2Fimages%2FbuttonRight.pngR2i8889R3R8R5R20R6tgoR0y30:assets%2Fimages%2FbuttonUp.pngR2i6990R3R8R5R21R6tgoR0y27:assets%2Fimages%2Fchain.pngR2i4449R3R8R5R22R6tgoR0y26:assets%2Fimages%2Ffish.pngR2i5373R3R8R5R23R6tgoR0y26:assets%2Fimages%2Fflag.pngR2i63780R3R8R5R24R6tgoR0y32:assets%2Fimages%2Ffullscreen.pngR2i6259R3R8R5R25R6tgoR0y29:assets%2Fimages%2Fisland1.pngR2i432263R3R8R5R26R6tgoR0y29:assets%2Fimages%2Fisland2.pngR2i439004R3R8R5R27R6tgoR0y28:assets%2Fimages%2Flitang.pngR2i381270R3R8R5R28R6tgoR0y34:assets%2Fimages%2Fold-arrow-up.pngR2i2272R3R8R5R29R6tgoR0y31:assets%2Fimages%2Fold-arrow.pngR2i2850R3R8R5R30R6tgoR0y30:assets%2Fimages%2Fold-bird.pngR2i640R3R8R5R31R6tgoR0y30:assets%2Fimages%2Fold-fish.pngR2i925R3R8R5R32R6tgoR0y30:assets%2Fimages%2Fold-flag.pngR2i2708R3R8R5R33R6tgoR0y32:assets%2Fimages%2Fold-litang.pngR2i113360R3R8R5R34R6tgoR0y31:assets%2Fimages%2Fold-plonk.pngR2i3982R3R8R5R35R6tgoR0y30:assets%2Fimages%2Fold-pole.pngR2i623R3R8R5R36R6tgoR0y30:assets%2Fimages%2Fold-reed.pngR2i2996R3R8R5R37R6tgoR0y31:assets%2Fimages%2Fold-spiky.pngR2i945R3R8R5R38R6tgoR0y31:assets%2Fimages%2Fold-tiles.pngR2i6619R3R8R5R39R6tgoR0y32:assets%2Fimages%2Fold-water1.pngR2i3591R3R8R5R40R6tgoR0y32:assets%2Fimages%2Fold-water2.pngR2i3579R3R8R5R41R6tgoR0y32:assets%2Fimages%2Fold-water3.pngR2i3569R3R8R5R42R6tgoR0y27:assets%2Fimages%2Fplonk.pngR2i25171R3R8R5R43R6tgoR0y26:assets%2Fimages%2Fpole.pngR2i12936R3R8R5R44R6tgoR0y27:assets%2Fimages%2Fpopup.pngR2i2240R3R8R5R45R6tgoR0y26:assets%2Fimages%2Freed.pngR2i19653R3R8R5R46R6tgoR0y27:assets%2Fimages%2Fspiky.pngR2i16349R3R8R5R47R6tgoR0y28:assets%2Fimages%2Fspiky1.pngR2i15661R3R8R5R48R6tgoR0y31:assets%2Fimages%2Fspikyball.pngR2i10961R3R8R5R49R6tgoR0y27:assets%2Fimages%2Ftiles.pngR2i43711R3R8R5R50R6tgoR0y36:assets%2Fimages%2Fvirtual-button.pngR2i7318R3R8R5R51R6tgoR0y28:assets%2Fimages%2Fwater1.pngR2i48014R3R8R5R52R6tgoR0y28:assets%2Fimages%2Fwater2.pngR2i46993R3R8R5R53R6tgoR0y28:assets%2Fimages%2Fwater3.pngR2i45365R3R8R5R54R6tgoR0y28:assets%2Flevels%2Flevel1.tmxR2i4607R3R4R5R55R6tgoR2i2106598R3y5:MUSICR5y45:assets%2Fmusic%2Fasian-mystery-nometadata.oggy9:pathGroupaR57hR6tgoR2i542898R3y5:SOUNDR5y38:assets%2Fmusic%2Ftemple-nometadata.oggR58aR60hR6tgoR2i11689R3R59R5y27:assets%2Fsounds%2Fdeath.oggR58aR61hR6tgoR2i9318R3R59R5y26:assets%2Fsounds%2Fjump.oggR58aR62hR6tgoR2i52494R3R59R5y26:assets%2Fsounds%2Ftree.oggR58aR63hR6tgoR2i28546R3R59R5y33:assets%2Fsounds%2Fwatersplash.oggR58aR64hR6tgoR0y36:assets%2Ftilesets%2FBuddhaBreath.tsxR2i241R3R4R5R65R6tgoR2i2114R3R56R5y26:flixel%2Fsounds%2Fbeep.mp3R58aR66y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R56R5y28:flixel%2Fsounds%2Fflixel.mp3R58aR68y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3R59R5R67R58aR66R67hgoR2i33629R3R59R5R69R58aR68R69hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R70R71y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R8R5R76R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R8R5R77R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
+	var manifest = lime_utils_AssetManifest.parse(data,ManifestResources.rootPath);
+	var library = lime_utils_AssetLibrary.fromManifest(manifest);
+	lime_utils_Assets.registerLibrary("default",library);
+	library = lime_utils_Assets.getLibrary("default");
+	if(library != null) {
+		ManifestResources.preloadLibraries.push(library);
+	} else {
+		ManifestResources.preloadLibraryNames.push("default");
+	}
+};
+var lime_text_Font = function(name) {
+	if(name != null) {
+		this.name = name;
+	}
+	if(!this.__init) {
+		if(this.ascender == undefined) {
+			this.ascender = 0;
+		}
+		if(this.descender == undefined) {
+			this.descender = 0;
+		}
+		if(this.height == undefined) {
+			this.height = 0;
+		}
+		if(this.numGlyphs == undefined) {
+			this.numGlyphs = 0;
+		}
+		if(this.underlinePosition == undefined) {
+			this.underlinePosition = 0;
+		}
+		if(this.underlineThickness == undefined) {
+			this.underlineThickness = 0;
+		}
+		if(this.unitsPerEM == undefined) {
+			this.unitsPerEM = 0;
+		}
+		if(this.__fontID != null) {
+			if(lime_utils_Assets.isLocal(this.__fontID)) {
+				this.__fromBytes(lime_utils_Assets.getBytes(this.__fontID));
+			}
+		} else if(this.__fontPath != null) {
+			this.__fromFile(this.__fontPath);
+		}
+	}
+};
+$hxClasses["lime.text.Font"] = lime_text_Font;
+lime_text_Font.__name__ = "lime.text.Font";
+lime_text_Font.fromBytes = function(bytes) {
+	if(bytes == null) {
+		return null;
+	}
+	var font = new lime_text_Font();
+	font.__fromBytes(bytes);
+	return font;
+};
+lime_text_Font.fromFile = function(path) {
+	if(path == null) {
+		return null;
+	}
+	var font = new lime_text_Font();
+	font.__fromFile(path);
+	return font;
+};
+lime_text_Font.loadFromBytes = function(bytes) {
+	return lime_app_Future.withValue(lime_text_Font.fromBytes(bytes));
+};
+lime_text_Font.loadFromFile = function(path) {
+	var request = new lime_net__$HTTPRequest_$lime_$text_$Font();
+	return request.load(path).then(function(font) {
+		if(font != null) {
+			return lime_app_Future.withValue(font);
+		} else {
+			return lime_app_Future.withError("");
+		}
+	});
+};
+lime_text_Font.loadFromName = function(path) {
+	var font = new lime_text_Font();
+	return font.__loadFromName(path);
+};
+lime_text_Font.__measureFontNode = function(fontFamily) {
+	var node = window.document.createElement("span");
+	node.setAttribute("aria-hidden","true");
+	var text = window.document.createTextNode("BESbswy");
+	node.appendChild(text);
+	var style = node.style;
+	style.display = "block";
+	style.position = "absolute";
+	style.top = "-9999px";
+	style.left = "-9999px";
+	style.fontSize = "300px";
+	style.width = "auto";
+	style.height = "auto";
+	style.lineHeight = "normal";
+	style.margin = "0";
+	style.padding = "0";
+	style.fontVariant = "normal";
+	style.whiteSpace = "nowrap";
+	style.fontFamily = fontFamily;
+	window.document.body.appendChild(node);
+	return node;
+};
+lime_text_Font.prototype = {
+	ascender: null
+	,descender: null
+	,height: null
+	,name: null
+	,numGlyphs: null
+	,src: null
+	,underlinePosition: null
+	,underlineThickness: null
+	,unitsPerEM: null
+	,__fontID: null
+	,__fontPath: null
+	,__init: null
+	,decompose: function() {
+		return null;
+	}
+	,getGlyph: function(character) {
+		return -1;
+	}
+	,getGlyphs: function(characters) {
+		if(characters == null) {
+			characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^`'\"/\\&*()[]{}<>|:;_-+=?,. ";
+		}
+		return null;
+	}
+	,getGlyphMetrics: function(glyph) {
+		return null;
+	}
+	,renderGlyph: function(glyph,fontSize) {
+		return null;
+	}
+	,renderGlyphs: function(glyphs,fontSize) {
+		return null;
+	}
+	,__copyFrom: function(other) {
+		if(other != null) {
+			this.ascender = other.ascender;
+			this.descender = other.descender;
+			this.height = other.height;
+			this.name = other.name;
+			this.numGlyphs = other.numGlyphs;
+			this.src = other.src;
+			this.underlinePosition = other.underlinePosition;
+			this.underlineThickness = other.underlineThickness;
+			this.unitsPerEM = other.unitsPerEM;
+			this.__fontID = other.__fontID;
+			this.__fontPath = other.__fontPath;
+			this.__init = true;
+		}
+	}
+	,__fromBytes: function(bytes) {
+		this.__fontPath = null;
+	}
+	,__fromFile: function(path) {
+		this.__fontPath = path;
+	}
+	,__initializeSource: function() {
+		this.__init = true;
+	}
+	,__loadFromName: function(name) {
+		var _gthis = this;
+		var promise = new lime_app_Promise();
+		this.name = name;
+		var userAgent = window.navigator.userAgent.toLowerCase();
+		var isSafari = userAgent.indexOf(" safari/") >= 0 && userAgent.indexOf(" chrome/") < 0;
+		var isUIWebView = new EReg("(iPhone|iPod|iPad).*AppleWebKit(?!.*Version)","i").match(userAgent);
+		if(!isSafari && !isUIWebView && (window.document.fonts && ($_=window.document.fonts,$bind($_,$_.load)))) {
+			window.document.fonts.load("1em '" + name + "'").then(function(_) {
+				promise.complete(_gthis);
+			},function(_1) {
+				lime_utils_Log.warn("Could not load web font \"" + name + "\"",{ fileName : "lime/text/Font.hx", lineNumber : 512, className : "lime.text.Font", methodName : "__loadFromName"});
+				promise.complete(_gthis);
+			});
+		} else {
+			var node1 = lime_text_Font.__measureFontNode("'" + name + "', sans-serif");
+			var node2 = lime_text_Font.__measureFontNode("'" + name + "', serif");
+			var width1 = node1.offsetWidth;
+			var width2 = node2.offsetWidth;
+			var interval = -1;
+			var timeout = 3000;
+			var intervalLength = 50;
+			var intervalCount = 0;
+			var loaded;
+			var timeExpired;
+			var checkFont = function() {
+				intervalCount += 1;
+				loaded = node1.offsetWidth != width1 || node2.offsetWidth != width2;
+				timeExpired = intervalCount * intervalLength >= timeout;
+				if(loaded || timeExpired) {
+					window.clearInterval(interval);
+					node1.parentNode.removeChild(node1);
+					node2.parentNode.removeChild(node2);
+					node1 = null;
+					node2 = null;
+					if(timeExpired) {
+						lime_utils_Log.warn("Could not load web font \"" + name + "\"",{ fileName : "lime/text/Font.hx", lineNumber : 547, className : "lime.text.Font", methodName : "__loadFromName"});
+					}
+					promise.complete(_gthis);
+				}
+			};
+			interval = window.setInterval(checkFont,intervalLength);
+		}
+		return promise.future;
+	}
+	,__setSize: function(size) {
+	}
+	,__class__: lime_text_Font
+};
+var _$_$ASSET_$_$flixel_$fonts_$nokiafc22_$ttf = $hx_exports["__ASSET__flixel_fonts_nokiafc22_ttf"] = function() {
+	this.ascender = 2048;
+	this.descender = -512;
+	this.height = 2816;
+	this.numGlyphs = 172;
+	this.underlinePosition = -640;
+	this.underlineThickness = 256;
+	this.unitsPerEM = 2048;
+	this.name = "Nokia Cellphone FC Small";
+	lime_text_Font.call(this);
+};
+$hxClasses["__ASSET__flixel_fonts_nokiafc22_ttf"] = _$_$ASSET_$_$flixel_$fonts_$nokiafc22_$ttf;
+_$_$ASSET_$_$flixel_$fonts_$nokiafc22_$ttf.__name__ = "__ASSET__flixel_fonts_nokiafc22_ttf";
+_$_$ASSET_$_$flixel_$fonts_$nokiafc22_$ttf.__super__ = lime_text_Font;
+_$_$ASSET_$_$flixel_$fonts_$nokiafc22_$ttf.prototype = $extend(lime_text_Font.prototype,{
+	__class__: _$_$ASSET_$_$flixel_$fonts_$nokiafc22_$ttf
+});
+var _$_$ASSET_$_$flixel_$fonts_$monsterrat_$ttf = $hx_exports["__ASSET__flixel_fonts_monsterrat_ttf"] = function() {
+	this.ascender = 968;
+	this.descender = -251;
+	this.height = 1219;
+	this.numGlyphs = 263;
+	this.underlinePosition = -150;
+	this.underlineThickness = 50;
+	this.unitsPerEM = 1000;
+	this.name = "Monsterrat";
+	lime_text_Font.call(this);
+};
+$hxClasses["__ASSET__flixel_fonts_monsterrat_ttf"] = _$_$ASSET_$_$flixel_$fonts_$monsterrat_$ttf;
+_$_$ASSET_$_$flixel_$fonts_$monsterrat_$ttf.__name__ = "__ASSET__flixel_fonts_monsterrat_ttf";
+_$_$ASSET_$_$flixel_$fonts_$monsterrat_$ttf.__super__ = lime_text_Font;
+_$_$ASSET_$_$flixel_$fonts_$monsterrat_$ttf.prototype = $extend(lime_text_Font.prototype,{
+	__class__: _$_$ASSET_$_$flixel_$fonts_$monsterrat_$ttf
+});
+var openfl_text_Font = function(name) {
+	lime_text_Font.call(this,name);
+};
+$hxClasses["openfl.text.Font"] = openfl_text_Font;
+openfl_text_Font.__name__ = "openfl.text.Font";
+openfl_text_Font.enumerateFonts = function(enumerateDeviceFonts) {
+	if(enumerateDeviceFonts == null) {
+		enumerateDeviceFonts = false;
+	}
+	return openfl_text_Font.__registeredFonts;
+};
+openfl_text_Font.fromBytes = function(bytes) {
+	var font = new openfl_text_Font();
+	font.__fromBytes(openfl_utils__$ByteArray_ByteArray_$Impl_$.toBytes(bytes));
+	return font;
+};
+openfl_text_Font.fromFile = function(path) {
+	var font = new openfl_text_Font();
+	font.__fromFile(path);
+	return font;
+};
+openfl_text_Font.loadFromBytes = function(bytes) {
+	return lime_text_Font.loadFromBytes(openfl_utils__$ByteArray_ByteArray_$Impl_$.toBytes(bytes)).then(function(limeFont) {
+		var font = new openfl_text_Font();
+		font.__fromLimeFont(limeFont);
+		return lime_app_Future.withValue(font);
+	});
+};
+openfl_text_Font.loadFromFile = function(path) {
+	return lime_text_Font.loadFromFile(path).then(function(limeFont) {
+		var font = new openfl_text_Font();
+		font.__fromLimeFont(limeFont);
+		return lime_app_Future.withValue(font);
+	});
+};
+openfl_text_Font.loadFromName = function(path) {
+	return lime_text_Font.loadFromName(path).then(function(limeFont) {
+		var font = new openfl_text_Font();
+		font.__fromLimeFont(limeFont);
+		return lime_app_Future.withValue(font);
+	});
+};
+openfl_text_Font.registerFont = function(font) {
+	var instance = null;
+	var o = font;
+	if((o == null ? null : js_Boot.getClass(o)) == null) {
+		instance = js_Boot.__cast(Type.createInstance(font,[]) , openfl_text_Font);
+	} else {
+		instance = js_Boot.__cast(font , openfl_text_Font);
+	}
+	if(instance != null) {
+		openfl_text_Font.__registeredFonts.push(instance);
+		var k = instance.name;
+		var _this = openfl_text_Font.__fontByName;
+		if(__map_reserved[k] != null) {
+			_this.setReserved(k,instance);
+		} else {
+			_this.h[k] = instance;
+		}
+	}
+};
+openfl_text_Font.__super__ = lime_text_Font;
+openfl_text_Font.prototype = $extend(lime_text_Font.prototype,{
+	fontStyle: null
+	,fontType: null
+	,__initialized: null
+	,__fromLimeFont: function(font) {
+		this.__copyFrom(font);
+	}
+	,__initialize: function() {
+		return this.__initialized;
+	}
+	,get_fontName: function() {
+		return this.name;
+	}
+	,set_fontName: function(value) {
+		return this.name = value;
+	}
+	,__class__: openfl_text_Font
+	,__properties__: {set_fontName:"set_fontName",get_fontName:"get_fontName"}
+});
+var _$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf = $hx_exports["__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf"] = function() {
+	this.__fromLimeFont(new _$_$ASSET_$_$flixel_$fonts_$nokiafc22_$ttf());
+	openfl_text_Font.call(this);
+};
+$hxClasses["__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf"] = _$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf;
+_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf.__name__ = "__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf";
+_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf.__super__ = openfl_text_Font;
+_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf.prototype = $extend(openfl_text_Font.prototype,{
+	__class__: _$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf
+});
+var _$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf = $hx_exports["__ASSET__OPENFL__flixel_fonts_monsterrat_ttf"] = function() {
+	this.__fromLimeFont(new _$_$ASSET_$_$flixel_$fonts_$monsterrat_$ttf());
+	openfl_text_Font.call(this);
+};
+$hxClasses["__ASSET__OPENFL__flixel_fonts_monsterrat_ttf"] = _$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf;
+_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf.__name__ = "__ASSET__OPENFL__flixel_fonts_monsterrat_ttf";
+_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf.__super__ = openfl_text_Font;
+_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf.prototype = $extend(openfl_text_Font.prototype,{
+	__class__: _$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf
+});
+Math.__name__ = "Math";
 var PlayState = function(MaxSize) {
 	this.tiles = ["                                                                                                                                  ","                                                                                                                                  ","                                                  |     |     |     |     |                                                       ","                                                  |     |     |     |     |                                                       ","                                                  |     |     |     |     |                                     v                 ","                                                  |     |     |     |     |                                    [-]                ",")                                                 |     |     |     |     |                                     |                (","|                                                 |     |     |     |     |                        [-]    [-]   |                |","|                                                                                        [--]       |      |    |     [-]        L","|                                                                                         ||   ()   |      |    |      |          ","|                =                     [_)                                         [-]    ||   ||   |      |    |      |          ","|  v    ~     =  |    =        [--]      |           ~                         ~    |     ||   ||   |      |    |      |          ","--------------)  |    |         ||       (--------------------------------------------)   ||   ||   |      |    |      |       (--","|||||||||||||||  |    |         ||       ||||||||||||||||||||||||||||||||||||||||||||||   ||   ||   |      |    |      |       |||","|||||||||||||||  |    |         ||       ||||||||||||||||||||||||||||||||||||||||||||||   ||   ||   |      |    |      |       |||","|||||||||||||||  |    |         ||       ||||||||||||||||||||||||||||||||||||||||||||||   ||   ||   |      |    |      |       |||"];
 	this.birdsReleased = false;
@@ -48546,7 +48853,7 @@ gui_WinState.prototype = $extend(flixel_FlxState.prototype,{
 		}
 	}
 	,play: function() {
-		var nextState = new PlayState();
+		var nextState = new Level2State();
 		if(flixel_FlxG.game._state.switchTo(nextState)) {
 			flixel_FlxG.game._requestedState = nextState;
 		}
@@ -57179,75 +57486,16 @@ lime__$internal_graphics_ImageDataUtil.gaussianBlur = function(image,sourceImage
 		blurX = 4;
 	}
 	var imagePremultiplied = image.get_premultiplied();
-	var sourceImagePremultiplied = sourceImage.get_premultiplied();
 	if(imagePremultiplied) {
 		image.set_premultiplied(false);
 	}
-	if(sourceImagePremultiplied) {
-		sourceImage.set_premultiplied(false);
-	}
-	var imgB = image.get_data();
-	var imgA = sourceImage.get_data();
-	var w = sourceRect.width | 0;
-	var h = sourceRect.height | 0;
-	var bx = blurX | 0;
-	var by = blurY | 0;
-	var oX = destPoint.x | 0;
-	var oY = destPoint.y | 0;
-	var n = quality * 2 - 1;
-	var rng = Math.pow(2,quality) * 0.125;
-	var bxs = lime__$internal_graphics_ImageDataUtil.__getBoxesForGaussianBlur(bx * rng,n);
-	var bys = lime__$internal_graphics_ImageDataUtil.__getBoxesForGaussianBlur(by * rng,n);
-	var offset = (w * oY + oX) * 4 | 0;
-	lime__$internal_graphics_ImageDataUtil.__boxBlur(imgA,imgB,w,h,(bxs[0] - 1) / 2,(bys[0] - 1) / 2);
-	var bIndex = 1;
-	var _g = 0;
-	var _g1 = n / 2 | 0;
-	while(_g < _g1) {
-		var i = _g++;
-		lime__$internal_graphics_ImageDataUtil.__boxBlur(imgB,imgA,w,h,(bxs[bIndex] - 1) / 2,(bys[bIndex] - 1) / 2);
-		lime__$internal_graphics_ImageDataUtil.__boxBlur(imgA,imgB,w,h,(bxs[bIndex + 1] - 1) / 2,(bys[bIndex + 1] - 1) / 2);
-		bIndex += 2;
-	}
-	var x;
-	var y;
-	if(offset != 0 || strength != 1) {
-		if(offset <= 0) {
-			y = 0;
-			while(y < h) {
-				x = 0;
-				while(x < w) {
-					lime__$internal_graphics_ImageDataUtil.__translatePixel(imgB,sourceImage.get_rect(),image.get_rect(),destPoint,x,y,strength);
-					++x;
-				}
-				++y;
-			}
-		} else {
-			y = h - 1;
-			while(y >= 0) {
-				x = w - 1;
-				while(x >= 0) {
-					lime__$internal_graphics_ImageDataUtil.__translatePixel(imgB,sourceImage.get_rect(),image.get_rect(),destPoint,x,y,strength);
-					--x;
-				}
-				--y;
-			}
-		}
-	}
+	lime__$internal_graphics_StackBlur.blur(image,sourceImage,sourceRect,destPoint,blurX,blurY,quality);
 	image.dirty = true;
 	image.version++;
-	sourceImage.dirty = true;
-	sourceImage.version++;
 	if(imagePremultiplied) {
 		image.set_premultiplied(true);
 	}
-	if(sourceImagePremultiplied) {
-		sourceImage.set_premultiplied(true);
-	}
-	if(imgB == image.get_data()) {
-		return image;
-	}
-	return sourceImage;
+	return image;
 };
 lime__$internal_graphics_ImageDataUtil.getColorBoundsRect = function(image,mask,color,findColor,format) {
 	var left = image.width + 1;
@@ -58918,6 +59166,260 @@ lime__$internal_graphics__$ImageDataUtil_ImageDataView.prototype = {
 		this.byteOffset = this.stride * (this.y + this.image.offsetY) + (this.x + this.image.offsetX) * 4;
 	}
 	,__class__: lime__$internal_graphics__$ImageDataUtil_ImageDataView
+};
+var lime__$internal_graphics_StackBlur = function() { };
+$hxClasses["lime._internal.graphics.StackBlur"] = lime__$internal_graphics_StackBlur;
+lime__$internal_graphics_StackBlur.__name__ = "lime._internal.graphics.StackBlur";
+lime__$internal_graphics_StackBlur.blur = function(dest,source,sourceRect,destPoint,blurX,blurY,quality) {
+	dest.copyPixels(source,sourceRect,destPoint);
+	lime__$internal_graphics_StackBlur.__stackBlurCanvasRGBA(dest,sourceRect.width | 0,sourceRect.height | 0,blurX,blurY,quality);
+};
+lime__$internal_graphics_StackBlur.__stackBlurCanvasRGBA = function(image,width,height,blurX,blurY,quality) {
+	var radiusX = Math.round(blurX) >> 1;
+	var radiusY = Math.round(blurY) >> 1;
+	if(lime__$internal_graphics_StackBlur.MUL_TABLE == null) {
+		return;
+	}
+	if(radiusX >= lime__$internal_graphics_StackBlur.MUL_TABLE.length) {
+		radiusX = lime__$internal_graphics_StackBlur.MUL_TABLE.length - 1;
+	}
+	if(radiusY >= lime__$internal_graphics_StackBlur.MUL_TABLE.length) {
+		radiusY = lime__$internal_graphics_StackBlur.MUL_TABLE.length - 1;
+	}
+	if(radiusX < 0 || radiusY < 0) {
+		return;
+	}
+	var iterations = quality;
+	if(iterations < 1) {
+		iterations = 1;
+	}
+	if(iterations > 3) {
+		iterations = 3;
+	}
+	var px = image.get_data();
+	var x;
+	var y;
+	var i;
+	var p;
+	var yp;
+	var yi;
+	var yw;
+	var r;
+	var g;
+	var b;
+	var a;
+	var pr;
+	var pg;
+	var pb;
+	var pa;
+	var f;
+	var divx = radiusX + radiusX + 1;
+	var divy = radiusY + radiusY + 1;
+	var w = width;
+	var h = height;
+	var w1 = w - 1;
+	var h1 = h - 1;
+	var rxp1 = radiusX + 1;
+	var ryp1 = radiusY + 1;
+	var ssx = new lime__$internal_graphics_BlurStack();
+	var sx = ssx;
+	var _g = 1;
+	var _g1 = divx;
+	while(_g < _g1) {
+		var i1 = _g++;
+		sx = sx.n = new lime__$internal_graphics_BlurStack();
+	}
+	sx.n = ssx;
+	var ssy = new lime__$internal_graphics_BlurStack();
+	var sy = ssy;
+	var _g2 = 1;
+	var _g3 = divy;
+	while(_g2 < _g3) {
+		var i2 = _g2++;
+		sy = sy.n = new lime__$internal_graphics_BlurStack();
+	}
+	sy.n = ssy;
+	var si = null;
+	var mtx = lime__$internal_graphics_StackBlur.MUL_TABLE[radiusX];
+	var stx = lime__$internal_graphics_StackBlur.SHG_TABLE[radiusX];
+	var mty = lime__$internal_graphics_StackBlur.MUL_TABLE[radiusY];
+	var sty = lime__$internal_graphics_StackBlur.SHG_TABLE[radiusY];
+	while(iterations > 0) {
+		--iterations;
+		yi = 0;
+		yw = yi;
+		var ms = mtx;
+		var ss = stx;
+		y = h;
+		while(true) {
+			pr = px[yi];
+			r = rxp1 * pr;
+			pg = px[yi + 1];
+			g = rxp1 * pg;
+			pb = px[yi + 2];
+			b = rxp1 * pb;
+			pa = px[yi + 3];
+			a = rxp1 * pa;
+			sx = ssx;
+			i = rxp1;
+			while(true) {
+				sx.r = pr;
+				sx.g = pg;
+				sx.b = pb;
+				sx.a = pa;
+				sx = sx.n;
+				if(!(--i > -1)) {
+					break;
+				}
+			}
+			var _g4 = 1;
+			var _g5 = rxp1;
+			while(_g4 < _g5) {
+				var i3 = _g4++;
+				p = yi + ((w1 < i3 ? w1 : i3) << 2);
+				r += sx.r = px[p];
+				g += sx.g = px[p + 1];
+				b += sx.b = px[p + 2];
+				a += sx.a = px[p + 3];
+				sx = sx.n;
+			}
+			si = ssx;
+			var _g6 = 0;
+			var _g7 = w;
+			while(_g6 < _g7) {
+				var x1 = _g6++;
+				px[yi++] = r * ms >>> ss;
+				px[yi++] = g * ms >>> ss;
+				px[yi++] = b * ms >>> ss;
+				px[yi++] = a * ms >>> ss;
+				p = x1 + radiusX + 1;
+				p = yw + (p < w1 ? p : w1) << 2;
+				r -= si.r - (si.r = px[p]);
+				g -= si.g - (si.g = px[p + 1]);
+				b -= si.b - (si.b = px[p + 2]);
+				a -= si.a - (si.a = px[p + 3]);
+				si = si.n;
+			}
+			yw += w;
+			if(!(--y > 0)) {
+				break;
+			}
+		}
+		ms = mty;
+		ss = sty;
+		var _g41 = 0;
+		var _g51 = w;
+		while(_g41 < _g51) {
+			var x2 = _g41++;
+			yi = x2 << 2;
+			pr = px[yi];
+			r = ryp1 * pr;
+			pg = px[yi + 1];
+			g = ryp1 * pg;
+			pb = px[yi + 2];
+			b = ryp1 * pb;
+			pa = px[yi + 3];
+			a = ryp1 * pa;
+			sy = ssy;
+			var _g42 = 0;
+			var _g52 = ryp1;
+			while(_g42 < _g52) {
+				var i4 = _g42++;
+				sy.r = pr;
+				sy.g = pg;
+				sy.b = pb;
+				sy.a = pa;
+				sy = sy.n;
+			}
+			yp = w;
+			var _g61 = 1;
+			var _g71 = radiusY + 1;
+			while(_g61 < _g71) {
+				var i5 = _g61++;
+				yi = yp + x2 << 2;
+				r += sy.r = px[yi];
+				g += sy.g = px[yi + 1];
+				b += sy.b = px[yi + 2];
+				a += sy.a = px[yi + 3];
+				sy = sy.n;
+				if(i5 < h1) {
+					yp += w;
+				}
+			}
+			yi = x2;
+			si = ssy;
+			if(iterations > 0) {
+				var _g8 = 0;
+				var _g9 = h;
+				while(_g8 < _g9) {
+					var y1 = _g8++;
+					p = yi << 2;
+					pa = a * ms >>> ss;
+					px[p + 3] = pa;
+					if(pa > 0) {
+						px[p] = r * ms >>> ss;
+						px[p + 1] = g * ms >>> ss;
+						px[p + 2] = b * ms >>> ss;
+					} else {
+						px[p] = px[p + 1] = px[p + 2] = 0;
+					}
+					p = y1 + ryp1;
+					p = x2 + (p < h1 ? p : h1) * w << 2;
+					r -= si.r - (si.r = px[p]);
+					g -= si.g - (si.g = px[p + 1]);
+					b -= si.b - (si.b = px[p + 2]);
+					a -= si.a - (si.a = px[p + 3]);
+					si = si.n;
+					yi += w;
+				}
+			} else {
+				var _g81 = 0;
+				var _g91 = h;
+				while(_g81 < _g91) {
+					var y2 = _g81++;
+					p = yi << 2;
+					pa = a * ms >>> ss;
+					px[p + 3] = pa;
+					if(pa > 0) {
+						f = 255 / pa;
+						pr = (r * ms >>> ss) * f | 0;
+						pg = (g * ms >>> ss) * f | 0;
+						pb = (b * ms >>> ss) * f | 0;
+						px[p] = pr > 255 ? 255 : pr;
+						px[p + 1] = pg > 255 ? 255 : pg;
+						px[p + 2] = pb > 255 ? 255 : pb;
+					} else {
+						px[p] = px[p + 1] = px[p + 2] = 0;
+					}
+					p = y2 + ryp1;
+					p = x2 + (p < h1 ? p : h1) * w << 2;
+					r -= si.r - (si.r = px[p]);
+					g -= si.g - (si.g = px[p + 1]);
+					b -= si.b - (si.b = px[p + 2]);
+					a -= si.a - (si.a = px[p + 3]);
+					si = si.n;
+					yi += w;
+				}
+			}
+		}
+	}
+};
+var lime__$internal_graphics_BlurStack = function() {
+	this.r = 0;
+	this.g = 0;
+	this.b = 0;
+	this.a = 0;
+	this.n = null;
+};
+$hxClasses["lime._internal.graphics.BlurStack"] = lime__$internal_graphics_BlurStack;
+lime__$internal_graphics_BlurStack.__name__ = "lime._internal.graphics.BlurStack";
+lime__$internal_graphics_BlurStack.prototype = {
+	r: null
+	,g: null
+	,b: null
+	,a: null
+	,n: null
+	,__class__: lime__$internal_graphics_BlurStack
 };
 var lime__$internal_macros_AssetsMacro = function() { };
 $hxClasses["lime._internal.macros.AssetsMacro"] = lime__$internal_macros_AssetsMacro;
@@ -66672,7 +67174,9 @@ lime_media_AudioManager.suspend = function() {
 		if(currentContext != null) {
 			alc.suspendContext(currentContext);
 			var device = alc.getContextsDevice(currentContext);
-			alc.pauseDevice(device);
+			if(device != null) {
+				alc.pauseDevice(device);
+			}
 		}
 	}
 };
@@ -71800,7 +72304,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 501755;
+	this.version = 693306;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
@@ -76704,6 +77208,8 @@ openfl__$internal_formats_html_HTMLParser.parse = function(value,textFormat,text
 				if(tagName.toLowerCase() == "p" && textFormatRanges.get_length() > 0) {
 					value += "\n";
 					noLineBreak = true;
+					var tmp = textFormatRanges.get(textFormatRanges.get_length() - 1);
+					tmp.end++;
 				}
 				if(start < segment1.length) {
 					sub = HxOverrides.substr(segment1,start,null);
@@ -76792,6 +77298,9 @@ openfl__$internal_formats_html_HTMLParser.parse = function(value,textFormat,text
 						textFormatRanges.push(new openfl__$internal_text_TextFormatRange(format,value.length,value.length + sub.length));
 						value += sub;
 						noLineBreak = false;
+					} else if(textFormatRanges.get_length() > 0) {
+						var tmp1 = textFormatRanges.get(textFormatRanges.get_length() - 1);
+						tmp1.end++;
 					}
 				} else {
 					textFormatRanges.push(new openfl__$internal_text_TextFormatRange(format,value.length,value.length + segment1.length));
@@ -76912,6 +77421,12 @@ openfl__$internal_formats_swf_SWFLite.prototype = {
 		return serializer.toString();
 	}
 	,__init: function() {
+		if(this.symbols == null) {
+			return;
+		}
+		if(this.symbolsByClassName == null) {
+			this.symbolsByClassName = new haxe_ds_StringMap();
+		}
 		var symbol = this.symbols.iterator();
 		while(symbol.hasNext()) {
 			var symbol1 = symbol.next();
@@ -81850,24 +82365,6 @@ var openfl__$internal_renderer_DrawCommandType = $hxEnums["openfl._internal.rend
 	,WINDING_EVEN_ODD: {_hx_index:21,__enum__:"openfl._internal.renderer.DrawCommandType",toString:$estr}
 	,WINDING_NON_ZERO: {_hx_index:22,__enum__:"openfl._internal.renderer.DrawCommandType",toString:$estr}
 	,UNKNOWN: {_hx_index:23,__enum__:"openfl._internal.renderer.DrawCommandType",toString:$estr}
-};
-var openfl__$internal_renderer_GraphicsDataType = $hxEnums["openfl._internal.renderer.GraphicsDataType"] = { __ename__ : "openfl._internal.renderer.GraphicsDataType", __constructs__ : ["STROKE","SOLID","GRADIENT","PATH","BITMAP","END","QUAD_PATH","TRIANGLE_PATH","SHADER"]
-	,STROKE: {_hx_index:0,__enum__:"openfl._internal.renderer.GraphicsDataType",toString:$estr}
-	,SOLID: {_hx_index:1,__enum__:"openfl._internal.renderer.GraphicsDataType",toString:$estr}
-	,GRADIENT: {_hx_index:2,__enum__:"openfl._internal.renderer.GraphicsDataType",toString:$estr}
-	,PATH: {_hx_index:3,__enum__:"openfl._internal.renderer.GraphicsDataType",toString:$estr}
-	,BITMAP: {_hx_index:4,__enum__:"openfl._internal.renderer.GraphicsDataType",toString:$estr}
-	,END: {_hx_index:5,__enum__:"openfl._internal.renderer.GraphicsDataType",toString:$estr}
-	,QUAD_PATH: {_hx_index:6,__enum__:"openfl._internal.renderer.GraphicsDataType",toString:$estr}
-	,TRIANGLE_PATH: {_hx_index:7,__enum__:"openfl._internal.renderer.GraphicsDataType",toString:$estr}
-	,SHADER: {_hx_index:8,__enum__:"openfl._internal.renderer.GraphicsDataType",toString:$estr}
-};
-var openfl__$internal_renderer_GraphicsFillType = $hxEnums["openfl._internal.renderer.GraphicsFillType"] = { __ename__ : "openfl._internal.renderer.GraphicsFillType", __constructs__ : ["SOLID_FILL","GRADIENT_FILL","BITMAP_FILL","END_FILL","SHADER_FILL"]
-	,SOLID_FILL: {_hx_index:0,__enum__:"openfl._internal.renderer.GraphicsFillType",toString:$estr}
-	,GRADIENT_FILL: {_hx_index:1,__enum__:"openfl._internal.renderer.GraphicsFillType",toString:$estr}
-	,BITMAP_FILL: {_hx_index:2,__enum__:"openfl._internal.renderer.GraphicsFillType",toString:$estr}
-	,END_FILL: {_hx_index:3,__enum__:"openfl._internal.renderer.GraphicsFillType",toString:$estr}
-	,SHADER_FILL: {_hx_index:4,__enum__:"openfl._internal.renderer.GraphicsFillType",toString:$estr}
 };
 var openfl__$internal_renderer_SamplerState = function(wrap,filter,mipfilter,lodBias,ignoreSampler,centroid,textureAlpha) {
 	if(textureAlpha == null) {
@@ -88934,7 +89431,7 @@ openfl__$internal_renderer_canvas_CanvasTextField.render = function(textField,re
 					if(group1.lineIndex < textField.get_scrollV() - 1) {
 						continue;
 					}
-					if(group1.lineIndex > textField.get_scrollV() + textEngine.bottomScrollV - 2) {
+					if(group1.lineIndex > textEngine.get_bottomScrollV() - 1) {
 						break;
 					}
 					var color = "#" + StringTools.hex(group1.format.color & 16777215,6);
@@ -92080,7 +92577,7 @@ openfl__$internal_renderer_context3D_Context3DTextField.render = function(textFi
 					if(group1.lineIndex < textField.get_scrollV() - 1) {
 						continue;
 					}
-					if(group1.lineIndex > textField.get_scrollV() + textEngine.bottomScrollV - 2) {
+					if(group1.lineIndex > textEngine.get_bottomScrollV() - 1) {
 						break;
 					}
 					var color = "#" + StringTools.hex(group1.format.color & 16777215,6);
@@ -92292,7 +92789,7 @@ openfl__$internal_renderer_context3D_Context3DTextField.renderMask = function(te
 					if(group1.lineIndex < textField.get_scrollV() - 1) {
 						continue;
 					}
-					if(group1.lineIndex > textField.get_scrollV() + textEngine.bottomScrollV - 2) {
+					if(group1.lineIndex > textEngine.get_bottomScrollV() - 1) {
 						break;
 					}
 					var color = "#" + StringTools.hex(group1.format.color & 16777215,6);
@@ -93194,9 +93691,10 @@ var openfl__$internal_text_TextEngine = function(textField) {
 	this.gridFitType = 1;
 	this.maxChars = 0;
 	this.multiline = false;
+	this.numLines = 1;
 	this.sharpness = 0;
 	this.scrollH = 0;
-	this.scrollV = 1;
+	this.set_scrollV(1);
 	this.wordWrap = false;
 	this.lineAscents = openfl__$Vector_Vector_$Impl_$.toFloatVector(null);
 	this.lineBreaks = openfl__$Vector_Vector_$Impl_$.toIntVector(null);
@@ -93501,7 +93999,6 @@ openfl__$internal_text_TextEngine.prototype = {
 		this.textWidth = 0;
 		this.textHeight = 0;
 		this.numLines = 1;
-		this.bottomScrollV = 0;
 		this.maxScrollH = 0;
 		var group = this.layoutGroups.iterator();
 		while(group.hasNext()) {
@@ -93518,9 +94015,6 @@ openfl__$internal_text_TextEngine.prototype = {
 				currentLineHeight = 0;
 				currentLineWidth = 0;
 				this.numLines++;
-				if(this.textHeight <= this.height - 2) {
-					this.bottomScrollV++;
-				}
 			}
 			currentLineAscent = Math.max(currentLineAscent,group1.ascent);
 			currentLineDescent = Math.max(currentLineDescent,group1.descent);
@@ -93568,12 +94062,15 @@ openfl__$internal_text_TextEngine.prototype = {
 		this.lineHeights.push(currentLineHeight);
 		this.lineWidths.push(currentLineWidth);
 		if(this.numLines == 1) {
-			this.bottomScrollV = 1;
 			if(currentLineLeading > 0) {
 				this.textHeight += currentLineLeading;
 			}
-		} else if(this.textHeight <= this.height - 2) {
-			this.bottomScrollV++;
+		}
+		if(this.layoutGroups.get_length() > 0) {
+			var group2 = this.layoutGroups.get(this.layoutGroups.get_length() - 1);
+			if(group2 != null && group2.startIndex == group2.endIndex) {
+				this.textHeight -= currentLineHeight;
+			}
 		}
 		if(this.autoSize != 2) {
 			switch(this.autoSize) {
@@ -93591,10 +94088,6 @@ openfl__$internal_text_TextEngine.prototype = {
 			this.maxScrollH = this.textWidth - this.width + 4 | 0;
 		} else {
 			this.maxScrollH = 0;
-		}
-		this.maxScrollV = this.numLines - this.bottomScrollV + 1;
-		if(this.scrollV > this.maxScrollV) {
-			this.scrollV = this.maxScrollV;
 		}
 		if(this.scrollH > this.maxScrollH) {
 			this.scrollH = this.maxScrollH;
@@ -93620,6 +94113,7 @@ openfl__$internal_text_TextEngine.prototype = {
 		var heightValue = 0;
 		var maxHeightValue = 0;
 		var previousSpaceIndex = -2;
+		var previousBreakIndex = -1;
 		var spaceIndex = lime_text__$UTF8String_UTF8String_$Impl_$.indexOf(this.text," ");
 		var breakIndex = this.getLineBreakIndex();
 		var offsetX = 2.0;
@@ -93738,7 +94232,7 @@ openfl__$internal_text_TextEngine.prototype = {
 					}
 					if(tempRangeEnd != endIndex2) {
 						if(!nextFormatRange()) {
-							lime_utils_Log.warn("You found a bug in OpenFL's text code! Please save a copy of your project and contact Joshua Granick (@singmajesty) so we can fix this.",{ fileName : "openfl/_internal/text/TextEngine.hx", lineNumber : 1011, className : "openfl._internal.text.TextEngine", methodName : "getLayoutGroups"});
+							lime_utils_Log.warn("You found a bug in OpenFL's text code! Please save a copy of your project and contact Joshua Granick (@singmajesty) so we can fix this.",{ fileName : "openfl/_internal/text/TextEngine.hx", lineNumber : 1008, className : "openfl._internal.text.TextEngine", methodName : "getLayoutGroups"});
 							break;
 						}
 						tempIndex = tempRangeEnd;
@@ -93799,7 +94293,7 @@ openfl__$internal_text_TextEngine.prototype = {
 						break;
 					}
 					if(!nextFormatRange()) {
-						lime_utils_Log.warn("You found a bug in OpenFL's text code! Please save a copy of your project and contact Joshua Granick (@singmajesty) so we can fix this.",{ fileName : "openfl/_internal/text/TextEngine.hx", lineNumber : 1099, className : "openfl._internal.text.TextEngine", methodName : "getLayoutGroups"});
+						lime_utils_Log.warn("You found a bug in OpenFL's text code! Please save a copy of your project and contact Joshua Granick (@singmajesty) so we can fix this.",{ fileName : "openfl/_internal/text/TextEngine.hx", lineNumber : 1097, className : "openfl._internal.text.TextEngine", methodName : "getLayoutGroups"});
 						break;
 					}
 					setLineMetrics();
@@ -93849,7 +94343,9 @@ openfl__$internal_text_TextEngine.prototype = {
 						++i3;
 					}
 				}
-				if(i3 < 2 && positionWidth + offsetX > _gthis.width - 2) {
+				if(positionWidth == 0.0) {
+					break;
+				} else if(i3 < 2 && positionWidth + offsetX > _gthis.width - 2) {
 					if(textIndex + i3 - bufferCount == endIndex4) {
 						break;
 					}
@@ -93902,11 +94398,9 @@ openfl__$internal_text_TextEngine.prototype = {
 				setLineMetrics();
 				lineFormat = formatRange.format;
 			}
-			if(breakIndex >= lime_text__$UTF8String_UTF8String_$Impl_$.get_length(this.text) - 1) {
-				offsetY -= maxHeightValue;
-			}
 			alignBaseline();
 			textIndex = breakIndex + 1;
+			previousBreakIndex = breakIndex;
 			breakIndex = this.getLineBreakIndex(textIndex);
 		} else if(spaceIndex > -1) {
 			if(layoutGroup != null && layoutGroup.startIndex != layoutGroup.endIndex) {
@@ -94060,6 +94554,18 @@ openfl__$internal_text_TextEngine.prototype = {
 			}
 			textIndex += 1;
 		}
+		if(previousBreakIndex == textIndex - 2 && previousBreakIndex > -1) {
+			nextLayoutGroup(textIndex,textIndex);
+			layoutGroup.positions = [];
+			layoutGroup.ascent = ascent;
+			layoutGroup.descent = descent;
+			layoutGroup.leading = leading;
+			layoutGroup.lineIndex = lineIndex;
+			layoutGroup.offsetX = 2;
+			layoutGroup.offsetY = offsetY;
+			layoutGroup.width = 0;
+			layoutGroup.height = heightValue;
+		}
 	}
 	,restrictText: function(value) {
 		if(value == null) {
@@ -94175,6 +94681,56 @@ openfl__$internal_text_TextEngine.prototype = {
 		}
 		this.getBounds();
 	}
+	,get_bottomScrollV: function() {
+		if(this.numLines == 1 || this.lineHeights == null) {
+			return 1;
+		} else {
+			var tempHeight = 0.0;
+			var ret = this.lineHeights.get_length();
+			var _g = ret - 1;
+			var _g1 = this.lineHeights.get_length();
+			while(_g < _g1) {
+				var i = _g++;
+				if(tempHeight + this.lineHeights.get(i) <= this.height - 4) {
+					tempHeight += this.lineHeights.get(i);
+				} else {
+					ret = i;
+					break;
+				}
+			}
+			if(ret < 1) {
+				return 1;
+			}
+			return ret;
+		}
+	}
+	,get_maxScrollV: function() {
+		if(this.numLines == 1 || this.lineHeights == null) {
+			return 1;
+		} else {
+			var i = this.numLines - 1;
+			var tempHeight = 0.0;
+			if(lime_text__$UTF8String_UTF8String_$Impl_$.charCodeAt(this.text,lime_text__$UTF8String_UTF8String_$Impl_$.get_length(this.text) - 1) == 10) {
+				--i;
+			}
+			var j = i;
+			while(i >= 0) if(tempHeight + this.lineHeights.get(i) <= this.height - 4) {
+				tempHeight += this.lineHeights.get(i);
+				--i;
+			} else {
+				break;
+			}
+			if(i == j) {
+				i = this.numLines;
+			} else {
+				i += 2;
+			}
+			if(i < 1) {
+				return 1;
+			}
+			return i;
+		}
+	}
 	,set_restrict: function(value) {
 		if(lime_text__$UTF8String_UTF8String_$Impl_$.equals(this.restrict,value)) {
 			return this.restrict;
@@ -94187,11 +94743,27 @@ openfl__$internal_text_TextEngine.prototype = {
 		}
 		return this.restrict;
 	}
+	,get_scrollV: function() {
+		if(this.numLines == 1 || this.lineHeights == null) {
+			return 1;
+		}
+		var max = this.get_maxScrollV();
+		if(this.scrollV > max) {
+			return max;
+		}
+		return this.scrollV;
+	}
+	,set_scrollV: function(value) {
+		if(value < 1) {
+			value = 1;
+		}
+		return this.scrollV = value;
+	}
 	,set_text: function(value) {
 		return this.text = value;
 	}
 	,__class__: openfl__$internal_text_TextEngine
-	,__properties__: {set_text:"set_text",set_restrict:"set_restrict"}
+	,__properties__: {set_text:"set_text",set_scrollV:"set_scrollV",get_scrollV:"get_scrollV",set_restrict:"set_restrict",get_maxScrollV:"get_maxScrollV",get_bottomScrollV:"get_bottomScrollV"}
 };
 var openfl__$internal_text_TextFormatRange = function(format,start,end) {
 	this.format = format;
@@ -96162,7 +96734,7 @@ openfl_display_Graphics.prototype = {
 		while(graphics.hasNext()) {
 			var graphics1 = graphics.next();
 			switch(graphics1.__graphicsDataType) {
-			case openfl__$internal_renderer_GraphicsDataType.STROKE:
+			case 0:
 				stroke = graphics1;
 				if(stroke.fill != null) {
 					var thickness = stroke.thickness;
@@ -96170,16 +96742,16 @@ openfl_display_Graphics.prototype = {
 						thickness = null;
 					}
 					switch(stroke.fill.__graphicsFillType) {
-					case openfl__$internal_renderer_GraphicsFillType.SOLID_FILL:
+					case 0:
 						fill = stroke.fill;
 						this.lineStyle(thickness,fill.color,fill.alpha,stroke.pixelHinting,stroke.scaleMode,stroke.caps,stroke.joints,stroke.miterLimit);
 						break;
-					case openfl__$internal_renderer_GraphicsFillType.GRADIENT_FILL:
+					case 1:
 						gradientFill = stroke.fill;
 						this.lineStyle(thickness,0,1,stroke.pixelHinting,stroke.scaleMode,stroke.caps,stroke.joints,stroke.miterLimit);
 						this.lineGradientStyle(gradientFill.type,gradientFill.colors,gradientFill.alphas,gradientFill.ratios,gradientFill.matrix,gradientFill.spreadMethod,gradientFill.interpolationMethod,gradientFill.focalPointRatio);
 						break;
-					case openfl__$internal_renderer_GraphicsFillType.BITMAP_FILL:
+					case 2:
 						bitmapFill = stroke.fill;
 						this.lineStyle(thickness,0,1,stroke.pixelHinting,stroke.scaleMode,stroke.caps,stroke.joints,stroke.miterLimit);
 						this.lineBitmapStyle(bitmapFill.bitmapData,bitmapFill.matrix,bitmapFill.repeat,bitmapFill.smooth);
@@ -96190,34 +96762,34 @@ openfl_display_Graphics.prototype = {
 					this.lineStyle();
 				}
 				break;
-			case openfl__$internal_renderer_GraphicsDataType.SOLID:
+			case 1:
 				fill = graphics1;
 				this.beginFill(fill.color,fill.alpha);
 				break;
-			case openfl__$internal_renderer_GraphicsDataType.GRADIENT:
+			case 2:
 				gradientFill = graphics1;
 				this.beginGradientFill(gradientFill.type,gradientFill.colors,gradientFill.alphas,gradientFill.ratios,gradientFill.matrix,gradientFill.spreadMethod,gradientFill.interpolationMethod,gradientFill.focalPointRatio);
 				break;
-			case openfl__$internal_renderer_GraphicsDataType.PATH:
+			case 3:
 				path = graphics1;
 				this.drawPath(path.commands,path.data,path.winding);
 				break;
-			case openfl__$internal_renderer_GraphicsDataType.BITMAP:
+			case 4:
 				bitmapFill = graphics1;
 				this.beginBitmapFill(bitmapFill.bitmapData,bitmapFill.matrix,bitmapFill.repeat,bitmapFill.smooth);
 				break;
-			case openfl__$internal_renderer_GraphicsDataType.END:
+			case 5:
 				this.endFill();
 				break;
-			case openfl__$internal_renderer_GraphicsDataType.QUAD_PATH:
+			case 6:
 				quadPath = graphics1;
 				this.drawQuads(quadPath.rects,quadPath.indices,quadPath.transforms);
 				break;
-			case openfl__$internal_renderer_GraphicsDataType.TRIANGLE_PATH:
+			case 7:
 				trianglePath = graphics1;
 				this.drawTriangles(trianglePath.vertices,trianglePath.indices,trianglePath.uvtData,trianglePath.culling);
 				break;
-			case openfl__$internal_renderer_GraphicsDataType.SHADER:
+			case 8:
 				shaderFill = graphics1;
 				this.beginShaderFill(shaderFill.shader,shaderFill.matrix);
 				break;
@@ -98079,8 +98651,8 @@ var openfl_display_GraphicsBitmapFill = function(bitmapData,matrix,repeat,smooth
 	this.matrix = matrix;
 	this.repeat = repeat;
 	this.smooth = smooth;
-	this.__graphicsDataType = openfl__$internal_renderer_GraphicsDataType.BITMAP;
-	this.__graphicsFillType = openfl__$internal_renderer_GraphicsFillType.BITMAP_FILL;
+	this.__graphicsDataType = 4;
+	this.__graphicsFillType = 2;
 };
 $hxClasses["openfl.display.GraphicsBitmapFill"] = openfl_display_GraphicsBitmapFill;
 openfl_display_GraphicsBitmapFill.__name__ = "openfl.display.GraphicsBitmapFill";
@@ -98095,8 +98667,8 @@ openfl_display_GraphicsBitmapFill.prototype = {
 	,__class__: openfl_display_GraphicsBitmapFill
 };
 var openfl_display_GraphicsEndFill = function() {
-	this.__graphicsDataType = openfl__$internal_renderer_GraphicsDataType.END;
-	this.__graphicsFillType = openfl__$internal_renderer_GraphicsFillType.END_FILL;
+	this.__graphicsDataType = 5;
+	this.__graphicsFillType = 3;
 };
 $hxClasses["openfl.display.GraphicsEndFill"] = openfl_display_GraphicsEndFill;
 openfl_display_GraphicsEndFill.__name__ = "openfl.display.GraphicsEndFill";
@@ -98127,8 +98699,8 @@ var openfl_display_GraphicsGradientFill = function(type,colors,alphas,ratios,mat
 	this.spreadMethod = spreadMethod;
 	this.interpolationMethod = interpolationMethod;
 	this.focalPointRatio = focalPointRatio;
-	this.__graphicsDataType = openfl__$internal_renderer_GraphicsDataType.GRADIENT;
-	this.__graphicsFillType = openfl__$internal_renderer_GraphicsFillType.GRADIENT_FILL;
+	this.__graphicsDataType = 2;
+	this.__graphicsFillType = 1;
 };
 $hxClasses["openfl.display.GraphicsGradientFill"] = openfl_display_GraphicsGradientFill;
 openfl_display_GraphicsGradientFill.__name__ = "openfl.display.GraphicsGradientFill";
@@ -98156,7 +98728,7 @@ var openfl_display_GraphicsPath = function(commands,data,winding) {
 	this.commands = commands;
 	this.data = data;
 	this.winding = winding;
-	this.__graphicsDataType = openfl__$internal_renderer_GraphicsDataType.PATH;
+	this.__graphicsDataType = 3;
 };
 $hxClasses["openfl.display.GraphicsPath"] = openfl_display_GraphicsPath;
 openfl_display_GraphicsPath.__name__ = "openfl.display.GraphicsPath";
@@ -98309,7 +98881,7 @@ var openfl_display_GraphicsQuadPath = function(rects,indices,transforms) {
 	this.rects = rects;
 	this.indices = indices;
 	this.transforms = transforms;
-	this.__graphicsDataType = openfl__$internal_renderer_GraphicsDataType.QUAD_PATH;
+	this.__graphicsDataType = 6;
 };
 $hxClasses["openfl.display.GraphicsQuadPath"] = openfl_display_GraphicsQuadPath;
 openfl_display_GraphicsQuadPath.__name__ = "openfl.display.GraphicsQuadPath";
@@ -98324,8 +98896,8 @@ openfl_display_GraphicsQuadPath.prototype = {
 var openfl_display_GraphicsShaderFill = function(shader,matrix) {
 	this.shader = shader;
 	this.matrix = matrix;
-	this.__graphicsDataType = openfl__$internal_renderer_GraphicsDataType.SHADER;
-	this.__graphicsFillType = openfl__$internal_renderer_GraphicsFillType.SHADER_FILL;
+	this.__graphicsDataType = 8;
+	this.__graphicsFillType = 4;
 };
 $hxClasses["openfl.display.GraphicsShaderFill"] = openfl_display_GraphicsShaderFill;
 openfl_display_GraphicsShaderFill.__name__ = "openfl.display.GraphicsShaderFill";
@@ -98346,8 +98918,8 @@ var openfl_display_GraphicsSolidFill = function(color,alpha) {
 	}
 	this.alpha = alpha;
 	this.color = color;
-	this.__graphicsDataType = openfl__$internal_renderer_GraphicsDataType.SOLID;
-	this.__graphicsFillType = openfl__$internal_renderer_GraphicsFillType.SOLID_FILL;
+	this.__graphicsDataType = 1;
+	this.__graphicsFillType = 0;
 };
 $hxClasses["openfl.display.GraphicsSolidFill"] = openfl_display_GraphicsSolidFill;
 openfl_display_GraphicsSolidFill.__name__ = "openfl.display.GraphicsSolidFill";
@@ -98388,7 +98960,7 @@ var openfl_display_GraphicsStroke = function(thickness,pixelHinting,scaleMode,ca
 	this.pixelHinting = pixelHinting;
 	this.scaleMode = scaleMode;
 	this.thickness = thickness;
-	this.__graphicsDataType = openfl__$internal_renderer_GraphicsDataType.STROKE;
+	this.__graphicsDataType = 0;
 };
 $hxClasses["openfl.display.GraphicsStroke"] = openfl_display_GraphicsStroke;
 openfl_display_GraphicsStroke.__name__ = "openfl.display.GraphicsStroke";
@@ -98412,7 +98984,7 @@ var openfl_display_GraphicsTrianglePath = function(vertices,indices,uvtData,cull
 	this.indices = indices;
 	this.uvtData = uvtData;
 	this.culling = culling;
-	this.__graphicsDataType = openfl__$internal_renderer_GraphicsDataType.TRIANGLE_PATH;
+	this.__graphicsDataType = 7;
 };
 $hxClasses["openfl.display.GraphicsTrianglePath"] = openfl_display_GraphicsTrianglePath;
 openfl_display_GraphicsTrianglePath.__name__ = "openfl.display.GraphicsTrianglePath";
@@ -98552,7 +99124,7 @@ openfl_display_Loader.prototype = $extend(openfl_display_DisplayObjectContainer.
 	,__path: null
 	,__unloaded: null
 	,close: function() {
-		openfl__$internal_Lib.notImplemented({ fileName : "openfl/display/Loader.hx", lineNumber : 211, className : "openfl.display.Loader", methodName : "close"});
+		openfl__$internal_Lib.notImplemented({ fileName : "openfl/display/Loader.hx", lineNumber : 212, className : "openfl.display.Loader", methodName : "close"});
 	}
 	,load: function(request,context) {
 		this.contentLoaderInfo.loaderURL = openfl_Lib.get_current().get_loaderInfo().url;
@@ -105570,7 +106142,6 @@ openfl_display3D_Program3D.prototype = {
 		while(_g < _g1) {
 			var i = _g++;
 			var info = gl.getActiveUniform(this.__glProgram,i);
-			haxe_Log.trace(info,{ fileName : "openfl/display3D/Program3D.hx", lineNumber : 503, className : "openfl.display3D.Program3D", methodName : "__buildAGALUniformList"});
 			var name = info.name;
 			var size = info.size;
 			var uniformType = info.type;
@@ -105578,8 +106149,6 @@ openfl_display3D_Program3D.prototype = {
 			uniform.name = name;
 			uniform.size = size;
 			uniform.type = uniformType;
-			haxe_Log.trace(uniform.name,{ fileName : "openfl/display3D/Program3D.hx", lineNumber : 513, className : "openfl.display3D.Program3D", methodName : "__buildAGALUniformList"});
-			haxe_Log.trace(uniform.name.length,{ fileName : "openfl/display3D/Program3D.hx", lineNumber : 514, className : "openfl.display3D.Program3D", methodName : "__buildAGALUniformList"});
 			uniform.location = gl.getUniformLocation(this.__glProgram,uniform.name);
 			var indexBracket = uniform.name.indexOf("[");
 			if(indexBracket >= 0) {
@@ -105628,7 +106197,7 @@ openfl_display3D_Program3D.prototype = {
 				this.__agalAlphaSamplerEnabled[uniform.regIndex] = uniform;
 			}
 			if(lime_utils_Log.level == 5) {
-				lime_utils_Log.verbose("" + i + " name:" + uniform.name + " type:" + uniform.type + " size:" + uniform.size + " location:" + Std.string(uniform.location),{ fileName : "openfl/display3D/Program3D.hx", lineNumber : 580, className : "openfl.display3D.Program3D", methodName : "__buildAGALUniformList"});
+				lime_utils_Log.verbose("" + i + " name:" + uniform.name + " type:" + uniform.type + " size:" + uniform.size + " location:" + Std.string(uniform.location),{ fileName : "openfl/display3D/Program3D.hx", lineNumber : 577, className : "openfl.display3D.Program3D", methodName : "__buildAGALUniformList"});
 			}
 		}
 		this.__agalVertexUniformMap = new openfl_display3D_UniformMap(Lambda.array(vertexUniforms));
@@ -105827,7 +106396,7 @@ openfl_display3D_Program3D.prototype = {
 			var message = "Error compiling vertex shader";
 			message += "\n" + gl.getShaderInfoLog(this.__glVertexShader);
 			message += "\n" + vertexShaderSource;
-			lime_utils_Log.error(message,{ fileName : "openfl/display3D/Program3D.hx", lineNumber : 872, className : "openfl.display3D.Program3D", methodName : "__uploadFromGLSL"});
+			lime_utils_Log.error(message,{ fileName : "openfl/display3D/Program3D.hx", lineNumber : 869, className : "openfl.display3D.Program3D", methodName : "__uploadFromGLSL"});
 		}
 		this.__glFragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
 		gl.shaderSource(this.__glFragmentShader,fragmentShaderSource);
@@ -105836,7 +106405,7 @@ openfl_display3D_Program3D.prototype = {
 			var message1 = "Error compiling fragment shader";
 			message1 += "\n" + gl.getShaderInfoLog(this.__glFragmentShader);
 			message1 += "\n" + fragmentShaderSource;
-			lime_utils_Log.error(message1,{ fileName : "openfl/display3D/Program3D.hx", lineNumber : 884, className : "openfl.display3D.Program3D", methodName : "__uploadFromGLSL"});
+			lime_utils_Log.error(message1,{ fileName : "openfl/display3D/Program3D.hx", lineNumber : 881, className : "openfl.display3D.Program3D", methodName : "__uploadFromGLSL"});
 		}
 		this.__glProgram = gl.createProgram();
 		if(this.__format == 0) {
@@ -105866,7 +106435,7 @@ openfl_display3D_Program3D.prototype = {
 		if(gl.getProgramParameter(this.__glProgram,gl.LINK_STATUS) == 0) {
 			var message2 = "Unable to initialize the shader program";
 			message2 += "\n" + gl.getProgramInfoLog(this.__glProgram);
-			lime_utils_Log.error(message2,{ fileName : "openfl/display3D/Program3D.hx", lineNumber : 925, className : "openfl.display3D.Program3D", methodName : "__uploadFromGLSL"});
+			lime_utils_Log.error(message2,{ fileName : "openfl/display3D/Program3D.hx", lineNumber : 922, className : "openfl.display3D.Program3D", methodName : "__uploadFromGLSL"});
 		}
 	}
 	,__class__: openfl_display3D_Program3D
@@ -108070,10 +108639,10 @@ openfl_filters_BitmapFilterShader.prototype = $extend(openfl_display_Shader.prot
 });
 var openfl_filters__$BlurFilter_BlurShader = function() {
 	if(this.__glFragmentSource == null) {
-		this.__glFragmentSource = "uniform sampler2D openfl_Texture;\n\t\t\n\t\tvarying vec2 vBlurCoords[7];\n\t\t\n\t\tvoid main(void) {\n\t\t\t\n\t\t\tvec4 sum = vec4(0.0);\n\t\t\tsum += texture2D(openfl_Texture, vBlurCoords[0]) * 0.00443;\n\t\t\tsum += texture2D(openfl_Texture, vBlurCoords[1]) * 0.05399;\n\t\t\tsum += texture2D(openfl_Texture, vBlurCoords[2]) * 0.24197;\n\t\t\tsum += texture2D(openfl_Texture, vBlurCoords[3]) * 0.39894;\n\t\t\tsum += texture2D(openfl_Texture, vBlurCoords[4]) * 0.24197;\n\t\t\tsum += texture2D(openfl_Texture, vBlurCoords[5]) * 0.05399;\n\t\t\tsum += texture2D(openfl_Texture, vBlurCoords[6]) * 0.00443;\n\t\t\t\n\t\t\tgl_FragColor = sum;\n\t\t\t\n\t\t}";
+		this.__glFragmentSource = "uniform sampler2D openfl_Texture;\n\n\t\tvarying vec2 vBlurCoords[7];\n\n\t\tvoid main(void) {\n\n\t\t\tvec4 sum = vec4(0.0);\n\t\t\tsum += texture2D(openfl_Texture, vBlurCoords[0]) * 0.00443;\n\t\t\tsum += texture2D(openfl_Texture, vBlurCoords[1]) * 0.05399;\n\t\t\tsum += texture2D(openfl_Texture, vBlurCoords[2]) * 0.24197;\n\t\t\tsum += texture2D(openfl_Texture, vBlurCoords[3]) * 0.39894;\n\t\t\tsum += texture2D(openfl_Texture, vBlurCoords[4]) * 0.24197;\n\t\t\tsum += texture2D(openfl_Texture, vBlurCoords[5]) * 0.05399;\n\t\t\tsum += texture2D(openfl_Texture, vBlurCoords[6]) * 0.00443;\n\n\t\t\tgl_FragColor = sum;\n\n\t\t}";
 	}
 	if(this.__glVertexSource == null) {
-		this.__glVertexSource = "attribute vec4 openfl_Position;\n\t\tattribute vec2 openfl_TextureCoord;\n\t\t\n\t\tuniform mat4 openfl_Matrix;\n\t\t\n\t\tuniform vec2 uRadius;\n\t\tvarying vec2 vBlurCoords[7];\n\t\tuniform vec2 uTextureSize;\n\t\t\n\t\tvoid main(void) {\n\t\t\t\n\t\t\tgl_Position = openfl_Matrix * openfl_Position;\n\t\t\t\n\t\t\tvec2 r = uRadius / uTextureSize;\n\t\t\tvBlurCoords[0] = openfl_TextureCoord - r * 1.0;\n\t\t\tvBlurCoords[1] = openfl_TextureCoord - r * 0.75;\n\t\t\tvBlurCoords[2] = openfl_TextureCoord - r * 0.5;\n\t\t\tvBlurCoords[3] = openfl_TextureCoord;\n\t\t\tvBlurCoords[4] = openfl_TextureCoord + r * 0.5;\n\t\t\tvBlurCoords[5] = openfl_TextureCoord + r * 0.75;\n\t\t\tvBlurCoords[6] = openfl_TextureCoord + r * 1.0;\n\t\t\t\n\t\t}";
+		this.__glVertexSource = "attribute vec4 openfl_Position;\n\t\tattribute vec2 openfl_TextureCoord;\n\n\t\tuniform mat4 openfl_Matrix;\n\n\t\tuniform vec2 uRadius;\n\t\tvarying vec2 vBlurCoords[7];\n\t\tuniform vec2 uTextureSize;\n\n\t\tvoid main(void) {\n\n\t\t\tgl_Position = openfl_Matrix * openfl_Position;\n\n\t\t\tvec2 r = uRadius / uTextureSize;\n\t\t\tvBlurCoords[0] = openfl_TextureCoord - r * 1.0;\n\t\t\tvBlurCoords[1] = openfl_TextureCoord - r * 0.75;\n\t\t\tvBlurCoords[2] = openfl_TextureCoord - r * 0.5;\n\t\t\tvBlurCoords[3] = openfl_TextureCoord;\n\t\t\tvBlurCoords[4] = openfl_TextureCoord + r * 0.5;\n\t\t\tvBlurCoords[5] = openfl_TextureCoord + r * 0.75;\n\t\t\tvBlurCoords[6] = openfl_TextureCoord + r * 1.0;\n\n\t\t}";
 	}
 	openfl_filters_BitmapFilterShader.call(this);
 	this.uRadius.value = [0,0];
@@ -108123,7 +108692,9 @@ openfl_filters_BlurFilter.prototype = $extend(openfl_filters_BitmapFilter.protot
 		return new openfl_filters_BlurFilter(this.__blurX,this.__blurY,this.__quality);
 	}
 	,__applyFilter: function(bitmapData,sourceBitmapData,sourceRect,destPoint) {
+		var time = new Date().getTime() / 1000;
 		var finalImage = lime__$internal_graphics_ImageDataUtil.gaussianBlur(bitmapData.image,sourceBitmapData.image,sourceRect.__toLimeRectangle(),destPoint.__toLimeVector2(),this.__blurX,this.__blurY,this.__quality);
+		var elapsed = new Date().getTime() / 1000 - time;
 		if(finalImage == bitmapData.image) {
 			return bitmapData;
 		}
@@ -110481,6 +111052,7 @@ var openfl_net_NetStream = function(connection,peerID) {
 	this.__video = window.document.createElement("video");
 	this.__video.setAttribute("playsinline","");
 	this.__video.setAttribute("webkit-playsinline","");
+	this.__video.setAttribute("crossorigin","anonymous");
 	this.__video.addEventListener("error",$bind(this,this.video_onError),false);
 	this.__video.addEventListener("waiting",$bind(this,this.video_onWaiting),false);
 	this.__video.addEventListener("ended",$bind(this,this.video_onEnd),false);
@@ -110779,7 +111351,7 @@ openfl_net_SharedObject.getRemote = function(name,remotePath,persistence,secure)
 	if(persistence == null) {
 		persistence = false;
 	}
-	openfl__$internal_Lib.notImplemented({ fileName : "openfl/net/SharedObject.hx", lineNumber : 806, className : "openfl.net.SharedObject", methodName : "getRemote"});
+	openfl__$internal_Lib.notImplemented({ fileName : "openfl/net/SharedObject.hx", lineNumber : 809, className : "openfl.net.SharedObject", methodName : "getRemote"});
 	return null;
 };
 openfl_net_SharedObject.__getPath = function(localPath,name) {
@@ -110859,7 +111431,7 @@ openfl_net_SharedObject.prototype = $extend(openfl_events_EventDispatcher.protot
 	,close: function() {
 	}
 	,connect: function(myConnection,params) {
-		openfl__$internal_Lib.notImplemented({ fileName : "openfl/net/SharedObject.hx", lineNumber : 392, className : "openfl.net.SharedObject", methodName : "connect"});
+		openfl__$internal_Lib.notImplemented({ fileName : "openfl/net/SharedObject.hx", lineNumber : 393, className : "openfl.net.SharedObject", methodName : "connect"});
 	}
 	,flush: function(minDiskSpace) {
 		if(minDiskSpace == null) {
@@ -110883,7 +111455,7 @@ openfl_net_SharedObject.prototype = $extend(openfl_events_EventDispatcher.protot
 		return 0;
 	}
 	,send: function(args) {
-		openfl__$internal_Lib.notImplemented({ fileName : "openfl/net/SharedObject.hx", lineNumber : 820, className : "openfl.net.SharedObject", methodName : "send"});
+		openfl__$internal_Lib.notImplemented({ fileName : "openfl/net/SharedObject.hx", lineNumber : 825, className : "openfl.net.SharedObject", methodName : "send"});
 	}
 	,setDirty: function(propertyName) {
 	}
@@ -111270,10 +111842,10 @@ openfl_system_System.exit = function(code) {
 openfl_system_System.gc = function() {
 };
 openfl_system_System.pause = function() {
-	openfl__$internal_Lib.notImplemented({ fileName : "openfl/system/System.hx", lineNumber : 216, className : "openfl.system.System", methodName : "pause"});
+	openfl__$internal_Lib.notImplemented({ fileName : "openfl/system/System.hx", lineNumber : 217, className : "openfl.system.System", methodName : "pause"});
 };
 openfl_system_System.resume = function() {
-	openfl__$internal_Lib.notImplemented({ fileName : "openfl/system/System.hx", lineNumber : 230, className : "openfl.system.System", methodName : "resume"});
+	openfl__$internal_Lib.notImplemented({ fileName : "openfl/system/System.hx", lineNumber : 233, className : "openfl.system.System", methodName : "resume"});
 };
 openfl_system_System.setClipboard = function(string) {
 	lime_system_Clipboard.set_text(string);
@@ -111471,6 +112043,7 @@ openfl_text_TextField.prototype = $extend(openfl_display_InteractiveObject.proto
 		}
 		this.__updateText(lime_text__$UTF8String_UTF8String_$Impl_$.plus(this.__text,text));
 		this.__textEngine.textFormatRanges.get(this.__textEngine.textFormatRanges.get_length() - 1).end = lime_text__$UTF8String_UTF8String_$Impl_$.get_length(this.__text);
+		this.__updateScrollV();
 		this.__updateScrollH();
 	}
 	,getCharBoundaries: function(charIndex) {
@@ -111762,6 +112335,7 @@ openfl_text_TextField.prototype = $extend(openfl_display_InteractiveObject.proto
 	,setSelection: function(beginIndex,endIndex) {
 		this.__selectionIndex = beginIndex;
 		this.__caretIndex = endIndex;
+		this.__updateScrollV();
 		this.__stopCursorTimer();
 		this.__startCursorTimer();
 	}
@@ -112056,7 +112630,7 @@ openfl_text_TextField.prototype = $extend(openfl_display_InteractiveObject.proto
 				} else {
 					_this1.h[k] = true;
 				}
-				lime_utils_Log.warn("Could not find required font \"" + format.font + "\", it has not been embedded",{ fileName : "openfl/text/TextField.hx", lineNumber : 1771, className : "openfl.text.TextField", methodName : "__fromSymbol"});
+				lime_utils_Log.warn("Could not find required font \"" + format.font + "\", it has not been embedded",{ fileName : "openfl/text/TextField.hx", lineNumber : 1776, className : "openfl.text.TextField", methodName : "__fromSymbol"});
 			}
 		}
 		if(symbol.align != null) {
@@ -112411,7 +112985,7 @@ openfl_text_TextField.prototype = $extend(openfl_display_InteractiveObject.proto
 								if(group1.lineIndex < this.get_scrollV() - 1) {
 									continue;
 								}
-								if(group1.lineIndex > this.get_scrollV() + textEngine.bottomScrollV - 2) {
+								if(group1.lineIndex > textEngine.get_bottomScrollV() - 1) {
 									break;
 								}
 								var color = "#" + StringTools.hex(group1.format.color & 16777215,6);
@@ -112939,6 +113513,7 @@ openfl_text_TextField.prototype = $extend(openfl_display_InteractiveObject.proto
 				++i;
 			}
 		}
+		this.__updateScrollV();
 		this.__updateScrollH();
 		this.__dirty = true;
 		this.__layoutDirty = true;
@@ -113052,6 +113627,29 @@ openfl_text_TextField.prototype = $extend(openfl_display_InteractiveObject.proto
 			}
 		}
 	}
+	,__updateScrollV: function() {
+		this.__layoutDirty = true;
+		this.__updateLayout();
+		var lineIndex = this.getLineIndexOfChar(this.__caretIndex);
+		if(lineIndex == -1 && this.__caretIndex > 0) {
+			lineIndex = this.getLineIndexOfChar(this.__caretIndex - 1) + 1;
+		}
+		if(lineIndex + 1 < this.get_scrollV()) {
+			this.set_scrollV(lineIndex + 1);
+		} else if(lineIndex + 1 > this.get_bottomScrollV()) {
+			var i = lineIndex;
+			var tempHeight = 0.0;
+			while(i >= 0) if(tempHeight + this.__textEngine.lineHeights.get(i) <= this.get_height() - 4) {
+				tempHeight += this.__textEngine.lineHeights.get(i);
+				--i;
+			} else {
+				break;
+			}
+			this.set_scrollV(i + 2);
+		} else {
+			this.set_scrollV(this.get_scrollV());
+		}
+	}
 	,__updateText: function(value) {
 		if(openfl_display_DisplayObject.__supportDOM && this.__renderedOnCanvasWhileOnDOM) {
 			this.__forceCachedBitmapUpdate = this.__text != value;
@@ -113158,7 +113756,7 @@ openfl_text_TextField.prototype = $extend(openfl_display_InteractiveObject.proto
 	}
 	,get_bottomScrollV: function() {
 		this.__updateLayout();
-		return this.__textEngine.bottomScrollV;
+		return this.__textEngine.get_bottomScrollV();
 	}
 	,get_caretIndex: function() {
 		return this.__caretIndex;
@@ -113257,6 +113855,7 @@ openfl_text_TextField.prototype = $extend(openfl_display_InteractiveObject.proto
 		} else {
 			this.__updateText(value);
 		}
+		this.__updateScrollV();
 		return value;
 	}
 	,get_length: function() {
@@ -113286,7 +113885,7 @@ openfl_text_TextField.prototype = $extend(openfl_display_InteractiveObject.proto
 	}
 	,get_maxScrollV: function() {
 		this.__updateLayout();
-		return this.__textEngine.maxScrollV;
+		return this.__textEngine.get_maxScrollV();
 	}
 	,get_mouseWheelEnabled: function() {
 		return this.__mouseWheelEnabled;
@@ -113346,17 +113945,11 @@ openfl_text_TextField.prototype = $extend(openfl_display_InteractiveObject.proto
 		return this.__textEngine.scrollH = value;
 	}
 	,get_scrollV: function() {
-		return this.__textEngine.scrollV;
+		return this.__textEngine.get_scrollV();
 	}
 	,set_scrollV: function(value) {
 		this.__updateLayout();
-		if(value > this.__textEngine.maxScrollV) {
-			value = this.__textEngine.maxScrollV;
-		}
-		if(value < 1) {
-			value = 1;
-		}
-		if(value != this.__textEngine.scrollV) {
+		if(value != this.__textEngine.get_scrollV()) {
 			this.__dirty = true;
 			if(!this.__renderDirty) {
 				this.__renderDirty = true;
@@ -113364,7 +113957,7 @@ openfl_text_TextField.prototype = $extend(openfl_display_InteractiveObject.proto
 			}
 			this.dispatchEvent(new openfl_events_Event("scroll"));
 		}
-		return this.__textEngine.scrollV = value;
+		return this.__textEngine.set_scrollV(value);
 	}
 	,get_selectable: function() {
 		return this.__textEngine.selectable;
@@ -113429,6 +114022,7 @@ openfl_text_TextField.prototype = $extend(openfl_display_InteractiveObject.proto
 		range.end = lime_text__$UTF8String_UTF8String_$Impl_$.get_length(utfValue);
 		this.__isHTML = false;
 		this.__updateText(value);
+		this.__updateScrollV();
 		return value;
 	}
 	,get_textColor: function() {
@@ -113710,6 +114304,7 @@ openfl_text_TextField.prototype = $extend(openfl_display_InteractiveObject.proto
 					this.__selectionIndex = this.__caretIndex;
 				}
 				this.__updateScrollH();
+				this.__updateScrollV();
 				this.__stopCursorTimer();
 				this.__startCursorTimer();
 			}
@@ -113732,6 +114327,7 @@ openfl_text_TextField.prototype = $extend(openfl_display_InteractiveObject.proto
 					this.__selectionIndex = this.__caretIndex;
 				}
 				this.__updateScrollH();
+				this.__updateScrollV();
 				this.__stopCursorTimer();
 				this.__startCursorTimer();
 			}
@@ -113752,6 +114348,7 @@ openfl_text_TextField.prototype = $extend(openfl_display_InteractiveObject.proto
 					}
 					this.__selectionIndex = this.__caretIndex;
 				}
+				this.__updateScrollV();
 				this.__stopCursorTimer();
 				this.__startCursorTimer();
 			}
@@ -113772,6 +114369,7 @@ openfl_text_TextField.prototype = $extend(openfl_display_InteractiveObject.proto
 					}
 					this.__selectionIndex = this.__caretIndex;
 				}
+				this.__updateScrollV();
 				this.__stopCursorTimer();
 				this.__startCursorTimer();
 			}
@@ -113923,11 +114521,8 @@ openfl_text_TextFormat.prototype = {
 		if(format.underline != null) {
 			this.underline = format.underline;
 		}
-		if(format.url != null && format.url != "") {
+		if(format.url != null) {
 			this.url = format.url;
-		}
-		if(format.url == "" && this.url == null) {
-			this.url = "";
 		}
 		if(format.target != null) {
 			this.target = format.target;
@@ -118554,6 +119149,8 @@ lime__$internal_backend_html5_HTML5HTTPRequest.requestLimit = 17;
 lime__$internal_backend_html5_HTML5HTTPRequest.requestQueue = new haxe_ds_List();
 lime__$internal_backend_html5_HTML5Window.dummyCharacter = "";
 lime__$internal_backend_html5_HTML5Window.windowID = 0;
+lime__$internal_graphics_StackBlur.MUL_TABLE = [1,171,205,293,57,373,79,137,241,27,391,357,41,19,283,265,497,469,443,421,25,191,365,349,335,161,155,149,9,278,269,261,505,245,475,231,449,437,213,415,405,395,193,377,369,361,353,345,169,331,325,319,313,307,301,37,145,285,281,69,271,267,263,259,509,501,493,243,479,118,465,459,113,446,55,435,429,423,209,413,51,403,199,393,97,3,379,375,371,367,363,359,355,351,347,43,85,337,333,165,327,323,5,317,157,311,77,305,303,75,297,294,73,289,287,71,141,279,277,275,68,135,67,133,33,262,260,129,511,507,503,499,495,491,61,121,481,477,237,235,467,232,115,457,227,451,7,445,221,439,218,433,215,427,425,211,419,417,207,411,409,203,202,401,399,396,197,49,389,387,385,383,95,189,47,187,93,185,23,183,91,181,45,179,89,177,11,175,87,173,345,343,341,339,337,21,167,83,331,329,327,163,81,323,321,319,159,79,315,313,39,155,309,307,153,305,303,151,75,299,149,37,295,147,73,291,145,289,287,143,285,71,141,281,35,279,139,69,275,137,273,17,271,135,269,267,133,265,33,263,131,261,130,259,129,257,1];
+lime__$internal_graphics_StackBlur.SHG_TABLE = [0,9,10,11,9,12,10,11,12,9,13,13,10,9,13,13,14,14,14,14,10,13,14,14,14,13,13,13,9,14,14,14,15,14,15,14,15,15,14,15,15,15,14,15,15,15,15,15,14,15,15,15,15,15,15,12,14,15,15,13,15,15,15,15,16,16,16,15,16,14,16,16,14,16,13,16,16,16,15,16,13,16,15,16,14,9,16,16,16,16,16,16,16,16,16,13,14,16,16,15,16,16,10,16,15,16,14,16,16,14,16,16,14,16,16,14,15,16,16,16,14,15,14,15,13,16,16,15,17,17,17,17,17,17,14,15,17,17,16,16,17,16,15,17,16,17,11,17,16,17,16,17,16,17,17,16,17,17,16,17,17,16,16,17,17,17,16,14,17,17,17,17,15,16,14,16,15,16,13,16,15,16,14,16,15,16,12,16,15,16,17,17,17,17,17,13,16,15,17,17,17,16,15,17,17,17,16,15,17,17,14,16,17,17,16,17,17,16,15,17,16,14,17,16,15,17,16,17,17,16,17,15,16,17,14,17,16,15,17,16,17,13,17,16,17,17,16,17,14,17,16,17,16,17,16,17,9];
 lime__$internal_unifill_Unicode.minCodePoint = 0;
 lime__$internal_unifill_Unicode.maxCodePoint = 1114111;
 lime__$internal_unifill_Unicode.minHighSurrogate = 55296;
@@ -120730,9 +121327,12 @@ $hx_exports.lime = $hx_exports.lime || {};
 $hx_exports.lime.$scripts = $hx_exports.lime.$scripts || {};
 $hx_exports.lime.$scripts["haxeflixel-game"] = $hx_script;
 $hx_exports.lime.embed = function(projectName) { var exports = {};
-	$hx_exports.lime.$scripts[projectName](exports, $global);
+	var script = $hx_exports.lime.$scripts[projectName];
+	if (!script) throw Error("Cannot find project name \"" + projectName + "\"");
+	script(exports, $global);
 	for (var key in exports) $hx_exports[key] = $hx_exports[key] || exports[key];
-	exports.lime.embed.apply(exports.lime, arguments);
+	var lime = exports.lime || window.lime;
+	if (lime && lime.embed && this != lime.embed) lime.embed.apply(lime, arguments);
 	return exports;
 };
 })(typeof exports != "undefined" ? exports : typeof window != "undefined" ? window : typeof self != "undefined" ? self : this, typeof window != "undefined" ? window : typeof global != "undefined" ? global : typeof self != "undefined" ? self : this);
