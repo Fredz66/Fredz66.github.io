@@ -894,9 +894,9 @@ ApplicationMain.create = function(config) {
 	ManifestResources.init(config);
 	var _this = app.meta;
 	if(__map_reserved["build"] != null) {
-		_this.setReserved("build","68");
+		_this.setReserved("build","72");
 	} else {
-		_this.h["build"] = "68";
+		_this.h["build"] = "72";
 	}
 	var _this1 = app.meta;
 	if(__map_reserved["company"] != null) {
@@ -8383,7 +8383,7 @@ ManifestResources.init = function(config) {
 	lime_utils_Assets.defaultRootPath = ManifestResources.rootPath;
 	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf);
 	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf);
-	var data = "{\"name\":null,\"assets\":\"aoy4:pathy26:assets%2Fbuddha-breath.cdby4:sizei9886y4:typey4:TEXTy2:idR1y7:preloadtgoR0y26:assets%2Fbuddha-breath.imgR2i3091576R3R4R5R7R6tgoR0y34:assets%2Fdata%2Fdata-goes-here.txtR2zR3R4R5R8R6tgoR0y33:assets%2Fimages%2Fbackground3.pngR2i1835687R3y5:IMAGER5R9R6tgoR0y26:assets%2Fimages%2Fball.pngR2i11372R3R10R5R11R6tgoR0y26:assets%2Fimages%2Fbird.pngR2i3846R3R10R5R12R6tgoR0y27:assets%2Fimages%2Fboat2.pngR2i276124R3R10R5R13R6tgoR0y34:assets%2Fimages%2FbuttonAction.pngR2i8141R3R10R5R14R6tgoR0y33:assets%2Fimages%2FbuttonRight.pngR2i8889R3R10R5R15R6tgoR0y30:assets%2Fimages%2FbuttonUp.pngR2i6990R3R10R5R16R6tgoR0y27:assets%2Fimages%2Fchain.pngR2i4449R3R10R5R17R6tgoR0y26:assets%2Fimages%2Ffish.pngR2i5373R3R10R5R18R6tgoR0y26:assets%2Fimages%2Fflag.pngR2i63780R3R10R5R19R6tgoR0y32:assets%2Fimages%2Ffullscreen.pngR2i6259R3R10R5R20R6tgoR0y29:assets%2Fimages%2Fisland2.pngR2i439004R3R10R5R21R6tgoR0y28:assets%2Fimages%2Flitang.pngR2i381270R3R10R5R22R6tgoR0y25:assets%2Fimages%2Fnew.cdbR2i6342R3R4R5R23R6tgoR0y25:assets%2Fimages%2Fnew.imgR2i513616R3R4R5R24R6tgoR0y27:assets%2Fimages%2Fplonk.pngR2i25171R3R10R5R25R6tgoR0y26:assets%2Fimages%2Fpole.pngR2i12936R3R10R5R26R6tgoR0y27:assets%2Fimages%2Fpopup.pngR2i2240R3R10R5R27R6tgoR0y26:assets%2Fimages%2Freed.pngR2i19653R3R10R5R28R6tgoR0y31:assets%2Fimages%2Fspikyball.pngR2i10961R3R10R5R29R6tgoR0y27:assets%2Fimages%2Ftiles.pngR2i43711R3R10R5R30R6tgoR0y28:assets%2Fimages%2Fwater1.pngR2i48014R3R10R5R31R6tgoR0y28:assets%2Fimages%2Fwater2.pngR2i46993R3R10R5R32R6tgoR0y28:assets%2Fimages%2Fwater3.pngR2i45365R3R10R5R33R6tgoR0y28:assets%2Flevels%2Flevel1.tmxR2i4607R3R4R5R34R6tgoR2i2106598R3y5:MUSICR5y45:assets%2Fmusic%2Fasian-mystery-nometadata.oggy9:pathGroupaR36hR6tgoR2i542898R3y5:SOUNDR5y38:assets%2Fmusic%2Ftemple-nometadata.oggR37aR39hR6tgoR2i11689R3R38R5y27:assets%2Fsounds%2Fdeath.oggR37aR40hR6tgoR2i9318R3R38R5y26:assets%2Fsounds%2Fjump.oggR37aR41hR6tgoR2i52494R3R38R5y26:assets%2Fsounds%2Ftree.oggR37aR42hR6tgoR2i28546R3R38R5y33:assets%2Fsounds%2Fwatersplash.oggR37aR43hR6tgoR0y36:assets%2Ftilesets%2FBuddhaBreath.tsxR2i241R3R4R5R44R6tgoR2i2114R3R35R5y26:flixel%2Fsounds%2Fbeep.mp3R37aR45y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R35R5y28:flixel%2Fsounds%2Fflixel.mp3R37aR47y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3R38R5R46R37aR45R46hgoR2i33629R3R38R5R48R37aR47R48hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R49R50y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R10R5R55R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R10R5R56R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
+	var data = "{\"name\":null,\"assets\":\"aoy4:pathy26:assets%2Fbuddha-breath.cdby4:sizei9886y4:typey4:TEXTy2:idR1y7:preloadtgoR0y26:assets%2Fbuddha-breath.imgR2i3091576R3R4R5R7R6tgoR0y34:assets%2Fdata%2Fdata-goes-here.txtR2zR3R4R5R8R6tgoR0y37:assets%2Fimages%2F360p%2Fbird-360.pngR2i640R3y5:IMAGER5R9R6tgoR0y37:assets%2Fimages%2F360p%2Fboat-360.pngR2i278304R3R10R5R11R6tgoR0y37:assets%2Fimages%2F360p%2Ffish-360.pngR2i925R3R10R5R12R6tgoR0y37:assets%2Fimages%2F360p%2Fflag-360.pngR2i2708R3R10R5R13R6tgoR0y39:assets%2Fimages%2F360p%2Flitang-360.pngR2i113360R3R10R5R14R6tgoR0y38:assets%2Fimages%2F360p%2Fplonk-360.pngR2i3982R3R10R5R15R6tgoR0y37:assets%2Fimages%2F360p%2Fpole-360.pngR2i623R3R10R5R16R6tgoR0y37:assets%2Fimages%2F360p%2Freed-360.pngR2i2996R3R10R5R17R6tgoR0y38:assets%2Fimages%2F360p%2Ftiles-360.pngR2i6619R3R10R5R18R6tgoR0y39:assets%2Fimages%2F360p%2Fwater1-360.pngR2i3591R3R10R5R19R6tgoR0y39:assets%2Fimages%2F360p%2Fwater2-360.pngR2i3579R3R10R5R20R6tgoR0y39:assets%2Fimages%2F360p%2Fwater3-360.pngR2i3569R3R10R5R21R6tgoR0y33:assets%2Fimages%2Fbackground3.pngR2i1835687R3R10R5R22R6tgoR0y26:assets%2Fimages%2Fball.pngR2i11372R3R10R5R23R6tgoR0y26:assets%2Fimages%2Fbird.pngR2i3846R3R10R5R24R6tgoR0y27:assets%2Fimages%2Fboat2.pngR2i276124R3R10R5R25R6tgoR0y34:assets%2Fimages%2FbuttonAction.pngR2i8141R3R10R5R26R6tgoR0y33:assets%2Fimages%2FbuttonRight.pngR2i8889R3R10R5R27R6tgoR0y30:assets%2Fimages%2FbuttonUp.pngR2i6990R3R10R5R28R6tgoR0y27:assets%2Fimages%2Fchain.pngR2i4449R3R10R5R29R6tgoR0y26:assets%2Fimages%2Ffish.pngR2i5373R3R10R5R30R6tgoR0y26:assets%2Fimages%2Fflag.pngR2i63780R3R10R5R31R6tgoR0y32:assets%2Fimages%2Ffullscreen.pngR2i6259R3R10R5R32R6tgoR0y29:assets%2Fimages%2Fisland2.pngR2i439004R3R10R5R33R6tgoR0y28:assets%2Fimages%2Flitang.pngR2i381270R3R10R5R34R6tgoR0y25:assets%2Fimages%2Fnew.cdbR2i6342R3R4R5R35R6tgoR0y25:assets%2Fimages%2Fnew.imgR2i513616R3R4R5R36R6tgoR0y43:assets%2Fimages%2Foriginal%2Fbackground.pngR2i843302R3R10R5R37R6tgoR0y44:assets%2Fimages%2Foriginal%2Fbackground1.pngR2i2111368R3R10R5R38R6tgoR0y44:assets%2Fimages%2Foriginal%2Fbackground2.pngR2i1842525R3R10R5R39R6tgoR0y42:assets%2Fimages%2Foriginal%2Fbig-birds.pngR2i641R3R10R5R40R6tgoR0y44:assets%2Fimages%2Foriginal%2Fbtn-128x128.pngR2i1490R3R10R5R41R6tgoR0y40:assets%2Fimages%2Foriginal%2Fisland1.pngR2i432263R3R10R5R42R6tgoR0y45:assets%2Fimages%2Foriginal%2Fold-arrow-up.pngR2i2272R3R10R5R43R6tgoR0y42:assets%2Fimages%2Foriginal%2Fold-arrow.pngR2i2850R3R10R5R44R6tgoR0y42:assets%2Fimages%2Foriginal%2Fold-spiky.pngR2i945R3R10R5R45R6tgoR0y38:assets%2Fimages%2Foriginal%2Fspiky.pngR2i16349R3R10R5R46R6tgoR0y39:assets%2Fimages%2Foriginal%2Fspiky1.pngR2i15661R3R10R5R47R6tgoR0y47:assets%2Fimages%2Foriginal%2Fvirtual-button.pngR2i7318R3R10R5R48R6tgoR0y27:assets%2Fimages%2Fplonk.pngR2i25171R3R10R5R49R6tgoR0y26:assets%2Fimages%2Fpole.pngR2i12936R3R10R5R50R6tgoR0y27:assets%2Fimages%2Fpopup.pngR2i2240R3R10R5R51R6tgoR0y26:assets%2Fimages%2Freed.pngR2i19653R3R10R5R52R6tgoR0y31:assets%2Fimages%2Fspikyball.pngR2i10961R3R10R5R53R6tgoR0y27:assets%2Fimages%2Ftiles.pngR2i43711R3R10R5R54R6tgoR0y28:assets%2Fimages%2Fwater1.pngR2i48014R3R10R5R55R6tgoR0y28:assets%2Fimages%2Fwater2.pngR2i46993R3R10R5R56R6tgoR0y28:assets%2Fimages%2Fwater3.pngR2i45365R3R10R5R57R6tgoR0y28:assets%2Flevels%2Flevel1.tmxR2i4607R3R4R5R58R6tgoR2i2106598R3y5:MUSICR5y45:assets%2Fmusic%2Fasian-mystery-nometadata.oggy9:pathGroupaR60hR6tgoR2i542898R3y5:SOUNDR5y38:assets%2Fmusic%2Ftemple-nometadata.oggR61aR63hR6tgoR2i11689R3R62R5y27:assets%2Fsounds%2Fdeath.oggR61aR64hR6tgoR2i9318R3R62R5y26:assets%2Fsounds%2Fjump.oggR61aR65hR6tgoR2i52494R3R62R5y26:assets%2Fsounds%2Ftree.oggR61aR66hR6tgoR2i28546R3R62R5y33:assets%2Fsounds%2Fwatersplash.oggR61aR67hR6tgoR0y36:assets%2Ftilesets%2FBuddhaBreath.tsxR2i241R3R4R5R68R6tgoR2i2114R3R59R5y26:flixel%2Fsounds%2Fbeep.mp3R61aR69y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R59R5y28:flixel%2Fsounds%2Fflixel.mp3R61aR71y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3R62R5R70R61aR69R70hgoR2i33629R3R62R5R72R61aR71R72hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R73R74y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R10R5R79R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R10R5R80R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
 	var manifest = lime_utils_AssetManifest.parse(data,ManifestResources.rootPath);
 	var library = lime_utils_AssetLibrary.fromManifest(manifest);
 	lime_utils_Assets.registerLibrary("default",library);
@@ -8731,6 +8731,7 @@ _$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf.prototype = $extend(openfl
 });
 Math.__name__ = "Math";
 var Player = function(X,Y) {
+	this.usePad = false;
 	this.drown = false;
 	this.crouch = false;
 	this.direction = 1;
@@ -8751,6 +8752,7 @@ var Player = function(X,Y) {
 	this.drag.set_x(2400);
 	this.acceleration.set_y(1800);
 	this.maxVelocity.set(500,900);
+	this.usePad = Main.pad != null;
 	this.set_x(this.startx);
 	this.set_y(this.starty);
 };
@@ -8761,6 +8763,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 	direction: null
 	,crouch: null
 	,drown: null
+	,usePad: null
 	,startx: null
 	,starty: null
 	,update: function(elapsed) {
@@ -8775,7 +8778,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 		var tmp;
 		var _this = flixel_FlxG.keys.pressed;
 		if(!_this.keyManager.checkStatus(37,_this.status)) {
-			if(Main.pad != null) {
+			if(this.usePad) {
 				var _this1 = Main.pad.buttonLeft.input;
 				tmp = _this1.current == 1 || _this1.current == 2;
 			} else {
@@ -8795,7 +8798,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			var tmp1;
 			var _this2 = flixel_FlxG.keys.pressed;
 			if(!_this2.keyManager.checkStatus(39,_this2.status)) {
-				if(Main.pad != null) {
+				if(this.usePad) {
 					var _this3 = Main.pad.buttonRight.input;
 					tmp1 = _this3.current == 1 || _this3.current == 2;
 				} else {
@@ -8817,7 +8820,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			var tmp2;
 			var _this4 = flixel_FlxG.keys.justPressed;
 			if(!_this4.keyManager.checkStatus(38,_this4.status)) {
-				if(Main.pad != null) {
+				if(this.usePad) {
 					var _this5 = Main.pad.buttonUp.input;
 					tmp2 = _this5.current == 1 || _this5.current == 2;
 				} else {
@@ -8833,7 +8836,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			var tmp3;
 			var _this6 = flixel_FlxG.keys.pressed;
 			if(!_this6.keyManager.checkStatus(40,_this6.status)) {
-				if(Main.pad != null) {
+				if(this.usePad) {
 					var _this7 = Main.pad.buttonDown.input;
 					tmp3 = _this7.current == 1 || _this7.current == 2;
 				} else {
@@ -8851,7 +8854,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			}
 		} else {
 			var _this8 = flixel_FlxG.keys.justPressed;
-			if((_this8.keyManager.checkStatus(38,_this8.status) || Main.pad != null && Main.pad.buttonUp.input.current == 2) && (this.touching & 4096) > 0) {
+			if((_this8.keyManager.checkStatus(38,_this8.status) || this.usePad && Main.pad.buttonUp.input.current == 2) && (this.touching & 4096) > 0) {
 				flixel_FlxG.sound.play("assets/sounds/jump.ogg",1);
 				this.velocity.set_y(-840);
 			}
@@ -47779,7 +47782,7 @@ gui_MenuState.__name__ = "gui.MenuState";
 gui_MenuState.__super__ = flixel_FlxState;
 gui_MenuState.prototype = $extend(flixel_FlxState.prototype,{
 	create: function() {
-		this.add(new flixel_text_FlxText(0,1044,flixel_FlxG.width,"v0.8.0-alpha").setFormat(null,24));
+		this.add(new flixel_text_FlxText(0,1044 / flixel_FlxG.initialZoom,flixel_FlxG.width,"v0.9.0-alpha").setFormat(null,24 / flixel_FlxG.initialZoom | 0));
 		flixel_FlxG.mouse.set_visible(!flixel_FlxG.html5.onMobile);
 		this.add(new flixel_text_FlxText(0,180,flixel_FlxG.width,"Buddha Breath").setFormat(null,192,-65536,"center"));
 		this.add(new FlxScaleButton(840,540,"New game",$bind(this,this.play)));
@@ -47797,6 +47800,8 @@ gui_MenuState.prototype = $extend(flixel_FlxState.prototype,{
 		});
 		button.loadGraphic("assets/images/fullscreen.png");
 		this.add(button);
+		platforms += " (" + openfl_system_Capabilities.get_screenResolutionX() + "x" + openfl_system_Capabilities.get_screenResolutionY() + ")";
+		platforms += " (" + openfl_Lib.get_current().stage.stageWidth + "x" + openfl_Lib.get_current().stage.stageHeight + ")";
 		this.add(new flixel_text_FlxText(0,1014,flixel_FlxG.width,platforms).setFormat(null,24));
 		flixel_FlxState.prototype.create.call(this);
 		flixel_FlxG.sound.playMusic("assets/music/temple-nometadata.ogg",1,true);
@@ -71065,7 +71070,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 4315;
+	this.version = 250033;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
@@ -110566,6 +110571,101 @@ openfl_system_ApplicationDomain.prototype = {
 	}
 	,__class__: openfl_system_ApplicationDomain
 };
+var openfl_system_Capabilities = function() { };
+$hxClasses["openfl.system.Capabilities"] = openfl_system_Capabilities;
+openfl_system_Capabilities.__name__ = "openfl.system.Capabilities";
+openfl_system_Capabilities.__properties__ = {get_version:"get_version",get_screenResolutionY:"get_screenResolutionY",get_screenResolutionX:"get_screenResolutionX",get_screenDPI:"get_screenDPI",get_pixelAspectRatio:"get_pixelAspectRatio",get_os:"get_os",get_manufacturer:"get_manufacturer",get_language:"get_language",get_cpuArchitecture:"get_cpuArchitecture"};
+openfl_system_Capabilities.hasMultiChannelAudio = function(type) {
+	return false;
+};
+openfl_system_Capabilities.get_cpuArchitecture = function() {
+	return "x86";
+};
+openfl_system_Capabilities.get_language = function() {
+	var language = lime_system__$Locale_Locale_$Impl_$.get_language(lime_system__$Locale_Locale_$Impl_$.get_currentLocale());
+	if(language != null) {
+		language = language.toLowerCase();
+		switch(language) {
+		case "cs":case "da":case "de":case "en":case "es":case "fi":case "fr":case "hu":case "it":case "ja":case "ko":case "nb":case "nl":case "pl":case "pt":case "ru":case "sv":case "tr":
+			return language;
+		case "zh":
+			var region = lime_system__$Locale_Locale_$Impl_$.get_region(lime_system__$Locale_Locale_$Impl_$.get_currentLocale());
+			if(region != null) {
+				switch(region.toUpperCase()) {
+				case "HANT":case "TW":
+					return "zh-TW";
+				default:
+				}
+			}
+			return "zh-CN";
+		default:
+			return "xu";
+		}
+	}
+	return "en";
+};
+openfl_system_Capabilities.get_manufacturer = function() {
+	var name = lime_system_System.get_platformName();
+	return "OpenFL" + (name != null ? " " + name : "");
+};
+openfl_system_Capabilities.get_os = function() {
+	var label = lime_system_System.get_platformLabel();
+	if(label != null) {
+		return label;
+	} else {
+		return "";
+	}
+};
+openfl_system_Capabilities.get_pixelAspectRatio = function() {
+	return 1;
+};
+openfl_system_Capabilities.get_screenDPI = function() {
+	var $window = openfl__$internal_Lib.application != null ? openfl__$internal_Lib.application.__window : null;
+	var screenDPI = 72;
+	if($window != null) {
+		screenDPI *= $window.__scale;
+	}
+	return screenDPI;
+};
+openfl_system_Capabilities.get_screenResolutionX = function() {
+	var stage = openfl__$internal_Lib.current.stage;
+	var resolutionX = 0;
+	if(stage == null) {
+		return 0;
+	}
+	if(stage.window != null) {
+		var display = stage.window.get_display();
+		if(display != null) {
+			resolutionX = Math.ceil(display.currentMode.width * stage.window.__scale);
+		}
+	}
+	if(resolutionX > 0) {
+		return resolutionX;
+	}
+	return stage.stageWidth;
+};
+openfl_system_Capabilities.get_screenResolutionY = function() {
+	var stage = openfl__$internal_Lib.current.stage;
+	var resolutionY = 0;
+	if(stage == null) {
+		return 0;
+	}
+	if(stage.window != null) {
+		var display = stage.window.get_display();
+		if(display != null) {
+			resolutionY = Math.ceil(display.currentMode.height * stage.window.__scale);
+		}
+	}
+	if(resolutionY > 0) {
+		return resolutionY;
+	}
+	return stage.stageHeight;
+};
+openfl_system_Capabilities.get_version = function() {
+	var value = "WEB";
+	value += " " + StringTools.replace("8.9.1",".",",") + ",0";
+	return value;
+};
 var openfl_system_LoaderContext = function(checkPolicyFile,applicationDomain,securityDomain) {
 	if(checkPolicyFile == null) {
 		checkPolicyFile = false;
@@ -110616,6 +110716,33 @@ openfl_system_System.get_totalMemory = function() {
 };
 openfl_system_System.get_vmVersion = function() {
 	return "1.0.0";
+};
+var openfl_system__$TouchscreenType_TouchscreenType_$Impl_$ = {};
+$hxClasses["openfl.system._TouchscreenType.TouchscreenType_Impl_"] = openfl_system__$TouchscreenType_TouchscreenType_$Impl_$;
+openfl_system__$TouchscreenType_TouchscreenType_$Impl_$.__name__ = "openfl.system._TouchscreenType.TouchscreenType_Impl_";
+openfl_system__$TouchscreenType_TouchscreenType_$Impl_$.fromString = function(value) {
+	switch(value) {
+	case "finger":
+		return 0;
+	case "none":
+		return 1;
+	case "stylus":
+		return 2;
+	default:
+		return null;
+	}
+};
+openfl_system__$TouchscreenType_TouchscreenType_$Impl_$.toString = function(value) {
+	switch(value) {
+	case 0:
+		return "finger";
+	case 1:
+		return "none";
+	case 2:
+		return "stylus";
+	default:
+		return null;
+	}
 };
 var openfl_text__$AntiAliasType_AntiAliasType_$Impl_$ = {};
 $hxClasses["openfl.text._AntiAliasType.AntiAliasType_Impl_"] = openfl_text__$AntiAliasType_AntiAliasType_$Impl_$;
@@ -116109,6 +116236,18 @@ Main.level = 1;
 AssetPaths.buddha_breath__cdb = "assets/buddha-breath.cdb";
 AssetPaths.buddha_breath__img = "assets/buddha-breath.img";
 AssetPaths.data_goes_here__txt = "assets/data/data-goes-here.txt";
+AssetPaths.bird_360__png = "assets/images/360p/bird-360.png";
+AssetPaths.boat_360__png = "assets/images/360p/boat-360.png";
+AssetPaths.fish_360__png = "assets/images/360p/fish-360.png";
+AssetPaths.flag_360__png = "assets/images/360p/flag-360.png";
+AssetPaths.litang_360__png = "assets/images/360p/litang-360.png";
+AssetPaths.plonk_360__png = "assets/images/360p/plonk-360.png";
+AssetPaths.pole_360__png = "assets/images/360p/pole-360.png";
+AssetPaths.reed_360__png = "assets/images/360p/reed-360.png";
+AssetPaths.tiles_360__png = "assets/images/360p/tiles-360.png";
+AssetPaths.water1_360__png = "assets/images/360p/water1-360.png";
+AssetPaths.water2_360__png = "assets/images/360p/water2-360.png";
+AssetPaths.water3_360__png = "assets/images/360p/water3-360.png";
 AssetPaths.background3__png = "assets/images/background3.png";
 AssetPaths.ball__png = "assets/images/ball.png";
 AssetPaths.bird__png = "assets/images/bird.png";
@@ -116124,6 +116263,18 @@ AssetPaths.island2__png = "assets/images/island2.png";
 AssetPaths.litang__png = "assets/images/litang.png";
 AssetPaths.new__cdb = "assets/images/new.cdb";
 AssetPaths.new__img = "assets/images/new.img";
+AssetPaths.background__png = "assets/images/original/background.png";
+AssetPaths.background1__png = "assets/images/original/background1.png";
+AssetPaths.background2__png = "assets/images/original/background2.png";
+AssetPaths.big_birds__png = "assets/images/original/big-birds.png";
+AssetPaths.btn_128x128__png = "assets/images/original/btn-128x128.png";
+AssetPaths.island1__png = "assets/images/original/island1.png";
+AssetPaths.old_arrow_up__png = "assets/images/original/old-arrow-up.png";
+AssetPaths.old_arrow__png = "assets/images/original/old-arrow.png";
+AssetPaths.old_spiky__png = "assets/images/original/old-spiky.png";
+AssetPaths.spiky__png = "assets/images/original/spiky.png";
+AssetPaths.spiky1__png = "assets/images/original/spiky1.png";
+AssetPaths.virtual_button__png = "assets/images/original/virtual-button.png";
 AssetPaths.plonk__png = "assets/images/plonk.png";
 AssetPaths.pole__png = "assets/images/pole.png";
 AssetPaths.popup__png = "assets/images/popup.png";
@@ -119763,9 +119914,37 @@ openfl_sensors_Accelerometer.defaultInterval = 34;
 openfl_sensors_Accelerometer.initialized = false;
 openfl_sensors_Accelerometer.supported = false;
 openfl_system_ApplicationDomain.currentDomain = new openfl_system_ApplicationDomain(null);
+openfl_system_Capabilities.avHardwareDisable = true;
+openfl_system_Capabilities.hasAccessibility = false;
+openfl_system_Capabilities.hasAudio = true;
+openfl_system_Capabilities.hasAudioEncoder = false;
+openfl_system_Capabilities.hasEmbeddedVideo = false;
+openfl_system_Capabilities.hasIME = false;
+openfl_system_Capabilities.hasMP3 = false;
+openfl_system_Capabilities.hasPrinting = true;
+openfl_system_Capabilities.hasScreenBroadcast = false;
+openfl_system_Capabilities.hasScreenPlayback = false;
+openfl_system_Capabilities.hasStreamingAudio = false;
+openfl_system_Capabilities.hasStreamingVideo = false;
+openfl_system_Capabilities.hasTLS = true;
+openfl_system_Capabilities.hasVideoEncoder = true;
+openfl_system_Capabilities.isDebugger = false;
+openfl_system_Capabilities.isEmbeddedInAcrobat = false;
+openfl_system_Capabilities.localFileReadDisable = true;
+openfl_system_Capabilities.maxLevelIDC = 0;
+openfl_system_Capabilities.playerType = "PlugIn";
+openfl_system_Capabilities.screenColor = "color";
+openfl_system_Capabilities.serverString = "";
+openfl_system_Capabilities.supports32BitProcesses = false;
+openfl_system_Capabilities.supports64BitProcesses = false;
+openfl_system_Capabilities.touchscreenType = 0;
+openfl_system_Capabilities.__standardDensities = [120,160,240,320,480,640,800,960];
 openfl_system_SecurityDomain.__meta__ = { obj : { SuppressWarnings : ["checkstyle:UnnecessaryConstructor"]}};
 openfl_system_SecurityDomain.currentDomain = new openfl_system_SecurityDomain();
 openfl_system_System.useCodePage = false;
+openfl_system__$TouchscreenType_TouchscreenType_$Impl_$.FINGER = 0;
+openfl_system__$TouchscreenType_TouchscreenType_$Impl_$.NONE = 1;
+openfl_system__$TouchscreenType_TouchscreenType_$Impl_$.STYLUS = 2;
 openfl_text__$AntiAliasType_AntiAliasType_$Impl_$.ADVANCED = 0;
 openfl_text__$AntiAliasType_AntiAliasType_$Impl_$.NORMAL = 1;
 openfl_text__$FontStyle_FontStyle_$Impl_$.BOLD = 0;
