@@ -894,9 +894,9 @@ ApplicationMain.create = function(config) {
 	ManifestResources.init(config);
 	var _this = app.meta;
 	if(__map_reserved["build"] != null) {
-		_this.setReserved("build","73");
+		_this.setReserved("build","74");
 	} else {
-		_this.h["build"] = "73";
+		_this.h["build"] = "74";
 	}
 	var _this1 = app.meta;
 	if(__map_reserved["company"] != null) {
@@ -47779,7 +47779,7 @@ gui_MenuState.__name__ = "gui.MenuState";
 gui_MenuState.__super__ = flixel_FlxState;
 gui_MenuState.prototype = $extend(flixel_FlxState.prototype,{
 	create: function() {
-		this.add(new flixel_text_FlxText(0,1044 / flixel_FlxG.initialZoom,flixel_FlxG.width,"v0.9.0-alpha").setFormat(null,24 / flixel_FlxG.initialZoom | 0));
+		this.add(new flixel_text_FlxText(0,1044 / flixel_FlxG.initialZoom,flixel_FlxG.width,"v0.9.1-alpha").setFormat(null,24 / flixel_FlxG.initialZoom | 0));
 		flixel_FlxG.mouse.set_visible(!flixel_FlxG.html5.onMobile);
 		this.add(new flixel_text_FlxText(0,180,flixel_FlxG.width,"Buddha Breath").setFormat(null,192,-65536,"center"));
 		this.add(new FlxScaleButton(840,540,"New game",$bind(this,this.play)));
@@ -71067,7 +71067,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 20422;
+	this.version = 385653;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
