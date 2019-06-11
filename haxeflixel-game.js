@@ -894,9 +894,9 @@ ApplicationMain.create = function(config) {
 	ManifestResources.init(config);
 	var _this = app.meta;
 	if(__map_reserved["build"] != null) {
-		_this.setReserved("build","72");
+		_this.setReserved("build","73");
 	} else {
-		_this.h["build"] = "72";
+		_this.h["build"] = "73";
 	}
 	var _this1 = app.meta;
 	if(__map_reserved["company"] != null) {
@@ -8731,7 +8731,6 @@ _$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf.prototype = $extend(openfl
 });
 Math.__name__ = "Math";
 var Player = function(X,Y) {
-	this.usePad = false;
 	this.drown = false;
 	this.crouch = false;
 	this.direction = 1;
@@ -8752,7 +8751,6 @@ var Player = function(X,Y) {
 	this.drag.set_x(2400);
 	this.acceleration.set_y(1800);
 	this.maxVelocity.set(500,900);
-	this.usePad = Main.pad != null;
 	this.set_x(this.startx);
 	this.set_y(this.starty);
 };
@@ -8763,7 +8761,6 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 	direction: null
 	,crouch: null
 	,drown: null
-	,usePad: null
 	,startx: null
 	,starty: null
 	,update: function(elapsed) {
@@ -8778,7 +8775,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 		var tmp;
 		var _this = flixel_FlxG.keys.pressed;
 		if(!_this.keyManager.checkStatus(37,_this.status)) {
-			if(this.usePad) {
+			if(flixel_FlxG.html5.onMobile) {
 				var _this1 = Main.pad.buttonLeft.input;
 				tmp = _this1.current == 1 || _this1.current == 2;
 			} else {
@@ -8798,7 +8795,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			var tmp1;
 			var _this2 = flixel_FlxG.keys.pressed;
 			if(!_this2.keyManager.checkStatus(39,_this2.status)) {
-				if(this.usePad) {
+				if(flixel_FlxG.html5.onMobile) {
 					var _this3 = Main.pad.buttonRight.input;
 					tmp1 = _this3.current == 1 || _this3.current == 2;
 				} else {
@@ -8820,7 +8817,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			var tmp2;
 			var _this4 = flixel_FlxG.keys.justPressed;
 			if(!_this4.keyManager.checkStatus(38,_this4.status)) {
-				if(this.usePad) {
+				if(flixel_FlxG.html5.onMobile) {
 					var _this5 = Main.pad.buttonUp.input;
 					tmp2 = _this5.current == 1 || _this5.current == 2;
 				} else {
@@ -8836,7 +8833,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			var tmp3;
 			var _this6 = flixel_FlxG.keys.pressed;
 			if(!_this6.keyManager.checkStatus(40,_this6.status)) {
-				if(this.usePad) {
+				if(flixel_FlxG.html5.onMobile) {
 					var _this7 = Main.pad.buttonDown.input;
 					tmp3 = _this7.current == 1 || _this7.current == 2;
 				} else {
@@ -8854,7 +8851,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			}
 		} else {
 			var _this8 = flixel_FlxG.keys.justPressed;
-			if((_this8.keyManager.checkStatus(38,_this8.status) || this.usePad && Main.pad.buttonUp.input.current == 2) && (this.touching & 4096) > 0) {
+			if((_this8.keyManager.checkStatus(38,_this8.status) || flixel_FlxG.html5.onMobile && Main.pad.buttonUp.input.current == 2) && (this.touching & 4096) > 0) {
 				flixel_FlxG.sound.play("assets/sounds/jump.ogg",1);
 				this.velocity.set_y(-840);
 			}
@@ -71070,7 +71067,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 250033;
+	this.version = 20422;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
