@@ -894,9 +894,9 @@ ApplicationMain.create = function(config) {
 	ManifestResources.init(config);
 	var _this = app.meta;
 	if(__map_reserved["build"] != null) {
-		_this.setReserved("build","74");
+		_this.setReserved("build","75");
 	} else {
-		_this.h["build"] = "74";
+		_this.h["build"] = "75";
 	}
 	var _this1 = app.meta;
 	if(__map_reserved["company"] != null) {
@@ -4224,6 +4224,7 @@ openfl_display_Sprite.prototype = $extend(openfl_display_DisplayObjectContainer.
 var Main = function() {
 	openfl_display_Sprite.call(this);
 	var max = Math.max(openfl_system_Capabilities.get_screenResolutionX(),openfl_system_Capabilities.get_screenResolutionY());
+	max = 1920;
 	if(max == 640) {
 		Main.scale = 1;
 		this.addChild(new flixel_FlxGame(640,360,gui_MenuState,1,60,60,true,true));
@@ -8384,7 +8385,7 @@ ManifestResources.init = function(config) {
 	lime_utils_Assets.defaultRootPath = ManifestResources.rootPath;
 	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf);
 	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf);
-	var data = "{\"name\":null,\"assets\":\"aoy4:pathy37:assets%2Fcastledb%2Fbuddha-breath.cdby4:sizei9886y4:typey4:TEXTy2:idR1y7:preloadtgoR0y37:assets%2Fcastledb%2Fbuddha-breath.imgR2i3091576R3R4R5R7R6tgoR0y27:assets%2Fcastledb%2Fnew.cdbR2i6342R3R4R5R8R6tgoR0y27:assets%2Fcastledb%2Fnew.imgR2i513616R3R4R5R9R6tgoR0y33:assets%2Fcastledb%2Ftmp%2Fnew.cdbR2i6342R3R4R5R10R6tgoR0y33:assets%2Fcastledb%2Ftmp%2Fnew.imgR2i513616R3R4R5R11R6tgoR0y34:assets%2Fdata%2Fdata-goes-here.txtR2zR3R4R5R12R6tgoR0y37:assets%2Fimages%2F1%2Fbackground3.pngR2i227355R3y5:IMAGER5R13R6tgoR0y30:assets%2Fimages%2F1%2Fball.pngR2i2723R3R14R5R15R6tgoR0y30:assets%2Fimages%2F1%2Fbird.pngR2i640R3R14R5R16R6tgoR0y31:assets%2Fimages%2F1%2Fboat2.pngR2i27167R3R14R5R17R6tgoR0y38:assets%2Fimages%2F1%2FbuttonAction.pngR2i2000R3R14R5R18R6tgoR0y37:assets%2Fimages%2F1%2FbuttonRight.pngR2i2147R3R14R5R19R6tgoR0y34:assets%2Fimages%2F1%2FbuttonUp.pngR2i1748R3R14R5R20R6tgoR0y31:assets%2Fimages%2F1%2Fchain.pngR2i1358R3R14R5R21R6tgoR0y30:assets%2Fimages%2F1%2Ffish.pngR2i925R3R14R5R22R6tgoR0y30:assets%2Fimages%2F1%2Fflag.pngR2i2708R3R14R5R23R6tgoR0y36:assets%2Fimages%2F1%2Ffullscreen.pngR2i1700R3R14R5R24R6tgoR0y33:assets%2Fimages%2F1%2Fisland2.pngR2i49554R3R14R5R25R6tgoR0y32:assets%2Fimages%2F1%2Flitang.pngR2i113360R3R14R5R26R6tgoR0y31:assets%2Fimages%2F1%2Fplonk.pngR2i3982R3R14R5R27R6tgoR0y30:assets%2Fimages%2F1%2Fpole.pngR2i623R3R14R5R28R6tgoR0y31:assets%2Fimages%2F1%2Fpopup.pngR2i2240R3R14R5R29R6tgoR0y30:assets%2Fimages%2F1%2Freed.pngR2i2996R3R14R5R30R6tgoR0y31:assets%2Fimages%2F1%2Ftiles.pngR2i8577R3R14R5R31R6tgoR0y32:assets%2Fimages%2F1%2Fwater1.pngR2i3591R3R14R5R32R6tgoR0y32:assets%2Fimages%2F1%2Fwater2.pngR2i3579R3R14R5R33R6tgoR0y32:assets%2Fimages%2F1%2Fwater3.pngR2i3569R3R14R5R34R6tgoR0y37:assets%2Fimages%2F3%2Fbackground3.pngR2i1835687R3R14R5R35R6tgoR0y30:assets%2Fimages%2F3%2Fball.pngR2i11372R3R14R5R36R6tgoR0y30:assets%2Fimages%2F3%2Fbird.pngR2i3846R3R14R5R37R6tgoR0y31:assets%2Fimages%2F3%2Fboat2.pngR2i276124R3R14R5R38R6tgoR0y38:assets%2Fimages%2F3%2FbuttonAction.pngR2i8141R3R14R5R39R6tgoR0y37:assets%2Fimages%2F3%2FbuttonRight.pngR2i8889R3R14R5R40R6tgoR0y34:assets%2Fimages%2F3%2FbuttonUp.pngR2i6990R3R14R5R41R6tgoR0y31:assets%2Fimages%2F3%2Fchain.pngR2i4449R3R14R5R42R6tgoR0y30:assets%2Fimages%2F3%2Ffish.pngR2i5373R3R14R5R43R6tgoR0y30:assets%2Fimages%2F3%2Fflag.pngR2i63780R3R14R5R44R6tgoR0y36:assets%2Fimages%2F3%2Ffullscreen.pngR2i6259R3R14R5R45R6tgoR0y33:assets%2Fimages%2F3%2Fisland2.pngR2i439004R3R14R5R46R6tgoR0y32:assets%2Fimages%2F3%2Flitang.pngR2i381270R3R14R5R47R6tgoR0y31:assets%2Fimages%2F3%2Fplonk.pngR2i25171R3R14R5R48R6tgoR0y30:assets%2Fimages%2F3%2Fpole.pngR2i12936R3R14R5R49R6tgoR0y31:assets%2Fimages%2F3%2Fpopup.pngR2i2240R3R14R5R50R6tgoR0y30:assets%2Fimages%2F3%2Freed.pngR2i19653R3R14R5R51R6tgoR0y35:assets%2Fimages%2F3%2Fspikyball.pngR2i10961R3R14R5R52R6tgoR0y31:assets%2Fimages%2F3%2Ftiles.pngR2i43711R3R14R5R53R6tgoR0y32:assets%2Fimages%2F3%2Fwater1.pngR2i48014R3R14R5R54R6tgoR0y32:assets%2Fimages%2F3%2Fwater2.pngR2i46993R3R14R5R55R6tgoR0y32:assets%2Fimages%2F3%2Fwater3.pngR2i45365R3R14R5R56R6tgoR0y33:assets%2Fimages%2Fbackground3.pngR2i1835687R3R14R5R57R6tgoR0y26:assets%2Fimages%2Fball.pngR2i11372R3R14R5R58R6tgoR0y26:assets%2Fimages%2Fbird.pngR2i3846R3R14R5R59R6tgoR0y27:assets%2Fimages%2Fboat2.pngR2i276124R3R14R5R60R6tgoR0y34:assets%2Fimages%2FbuttonAction.pngR2i8141R3R14R5R61R6tgoR0y33:assets%2Fimages%2FbuttonRight.pngR2i8889R3R14R5R62R6tgoR0y30:assets%2Fimages%2FbuttonUp.pngR2i6990R3R14R5R63R6tgoR0y27:assets%2Fimages%2Fchain.pngR2i4449R3R14R5R64R6tgoR0y26:assets%2Fimages%2Ffish.pngR2i5373R3R14R5R65R6tgoR0y26:assets%2Fimages%2Fflag.pngR2i63780R3R14R5R66R6tgoR0y32:assets%2Fimages%2Ffullscreen.pngR2i6259R3R14R5R67R6tgoR0y29:assets%2Fimages%2Fisland2.pngR2i439004R3R14R5R68R6tgoR0y28:assets%2Fimages%2Flitang.pngR2i381270R3R14R5R69R6tgoR0y43:assets%2Fimages%2Foriginal%2Fbackground.pngR2i843302R3R14R5R70R6tgoR0y44:assets%2Fimages%2Foriginal%2Fbackground1.pngR2i2111368R3R14R5R71R6tgoR0y44:assets%2Fimages%2Foriginal%2Fbackground2.pngR2i1842525R3R14R5R72R6tgoR0y42:assets%2Fimages%2Foriginal%2Fbig-birds.pngR2i641R3R14R5R73R6tgoR0y44:assets%2Fimages%2Foriginal%2Fbtn-128x128.pngR2i1490R3R14R5R74R6tgoR0y40:assets%2Fimages%2Foriginal%2Fisland1.pngR2i432263R3R14R5R75R6tgoR0y45:assets%2Fimages%2Foriginal%2Fold-arrow-up.pngR2i2272R3R14R5R76R6tgoR0y42:assets%2Fimages%2Foriginal%2Fold-arrow.pngR2i2850R3R14R5R77R6tgoR0y42:assets%2Fimages%2Foriginal%2Fold-spiky.pngR2i945R3R14R5R78R6tgoR0y38:assets%2Fimages%2Foriginal%2Fspiky.pngR2i16349R3R14R5R79R6tgoR0y39:assets%2Fimages%2Foriginal%2Fspiky1.pngR2i15661R3R14R5R80R6tgoR0y47:assets%2Fimages%2Foriginal%2Fvirtual-button.pngR2i7318R3R14R5R81R6tgoR0y27:assets%2Fimages%2Fplonk.pngR2i25171R3R14R5R82R6tgoR0y26:assets%2Fimages%2Fpole.pngR2i12936R3R14R5R83R6tgoR0y27:assets%2Fimages%2Fpopup.pngR2i2240R3R14R5R84R6tgoR0y26:assets%2Fimages%2Freed.pngR2i19653R3R14R5R85R6tgoR0y31:assets%2Fimages%2Fspikyball.pngR2i10961R3R14R5R86R6tgoR0y27:assets%2Fimages%2Ftiles.pngR2i43711R3R14R5R87R6tgoR0y28:assets%2Fimages%2Fwater1.pngR2i48014R3R14R5R88R6tgoR0y28:assets%2Fimages%2Fwater2.pngR2i46993R3R14R5R89R6tgoR0y28:assets%2Fimages%2Fwater3.pngR2i45365R3R14R5R90R6tgoR0y28:assets%2Flevels%2Flevel1.tmxR2i4607R3R4R5R91R6tgoR2i2106598R3y5:MUSICR5y45:assets%2Fmusic%2Fasian-mystery-nometadata.oggy9:pathGroupaR93hR6tgoR2i542898R3y5:SOUNDR5y38:assets%2Fmusic%2Ftemple-nometadata.oggR94aR96hR6tgoR2i11689R3R95R5y27:assets%2Fsounds%2Fdeath.oggR94aR97hR6tgoR2i9318R3R95R5y26:assets%2Fsounds%2Fjump.oggR94aR98hR6tgoR2i52494R3R95R5y26:assets%2Fsounds%2Ftree.oggR94aR99hR6tgoR2i28546R3R95R5y33:assets%2Fsounds%2Fwatersplash.oggR94aR100hR6tgoR0y36:assets%2Ftilesets%2FBuddhaBreath.tsxR2i241R3R4R5R101R6tgoR2i2114R3R92R5y26:flixel%2Fsounds%2Fbeep.mp3R94aR102y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R92R5y28:flixel%2Fsounds%2Fflixel.mp3R94aR104y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3R95R5R103R94aR102R103hgoR2i33629R3R95R5R105R94aR104R105hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R106R107y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R14R5R112R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R14R5R113R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
+	var data = "{\"name\":null,\"assets\":\"aoy4:pathy37:assets%2Fcastledb%2Fbuddha-breath.cdby4:sizei9886y4:typey4:TEXTy2:idR1y7:preloadtgoR0y37:assets%2Fcastledb%2Fbuddha-breath.imgR2i3091576R3R4R5R7R6tgoR0y27:assets%2Fcastledb%2Fnew.cdbR2i6342R3R4R5R8R6tgoR0y27:assets%2Fcastledb%2Fnew.imgR2i513616R3R4R5R9R6tgoR0y33:assets%2Fcastledb%2Ftmp%2Fnew.cdbR2i6342R3R4R5R10R6tgoR0y33:assets%2Fcastledb%2Ftmp%2Fnew.imgR2i513616R3R4R5R11R6tgoR0y34:assets%2Fdata%2Fdata-goes-here.txtR2zR3R4R5R12R6tgoR0y37:assets%2Fimages%2F1%2Fbackground3.pngR2i227355R3y5:IMAGER5R13R6tgoR0y30:assets%2Fimages%2F1%2Fball.pngR2i2723R3R14R5R15R6tgoR0y30:assets%2Fimages%2F1%2Fbird.pngR2i640R3R14R5R16R6tgoR0y31:assets%2Fimages%2F1%2Fboat2.pngR2i27167R3R14R5R17R6tgoR0y38:assets%2Fimages%2F1%2FbuttonAction.pngR2i2000R3R14R5R18R6tgoR0y37:assets%2Fimages%2F1%2FbuttonRight.pngR2i2147R3R14R5R19R6tgoR0y34:assets%2Fimages%2F1%2FbuttonUp.pngR2i1748R3R14R5R20R6tgoR0y31:assets%2Fimages%2F1%2Fchain.pngR2i1358R3R14R5R21R6tgoR0y30:assets%2Fimages%2F1%2Ffish.pngR2i925R3R14R5R22R6tgoR0y30:assets%2Fimages%2F1%2Fflag.pngR2i2708R3R14R5R23R6tgoR0y36:assets%2Fimages%2F1%2Ffullscreen.pngR2i1700R3R14R5R24R6tgoR0y33:assets%2Fimages%2F1%2Fisland2.pngR2i49554R3R14R5R25R6tgoR0y32:assets%2Fimages%2F1%2Flitang.pngR2i113360R3R14R5R26R6tgoR0y31:assets%2Fimages%2F1%2Fplonk.pngR2i3982R3R14R5R27R6tgoR0y30:assets%2Fimages%2F1%2Fpole.pngR2i623R3R14R5R28R6tgoR0y31:assets%2Fimages%2F1%2Fpopup.pngR2i2240R3R14R5R29R6tgoR0y30:assets%2Fimages%2F1%2Freed.pngR2i2996R3R14R5R30R6tgoR0y31:assets%2Fimages%2F1%2Ftiles.pngR2i8577R3R14R5R31R6tgoR0y32:assets%2Fimages%2F1%2Fwater1.pngR2i3591R3R14R5R32R6tgoR0y32:assets%2Fimages%2F1%2Fwater2.pngR2i3579R3R14R5R33R6tgoR0y32:assets%2Fimages%2F1%2Fwater3.pngR2i3569R3R14R5R34R6tgoR0y37:assets%2Fimages%2F3%2Fbackground3.pngR2i1835687R3R14R5R35R6tgoR0y30:assets%2Fimages%2F3%2Fball.pngR2i11372R3R14R5R36R6tgoR0y30:assets%2Fimages%2F3%2Fbird.pngR2i3846R3R14R5R37R6tgoR0y31:assets%2Fimages%2F3%2Fboat2.pngR2i276124R3R14R5R38R6tgoR0y38:assets%2Fimages%2F3%2FbuttonAction.pngR2i8141R3R14R5R39R6tgoR0y37:assets%2Fimages%2F3%2FbuttonRight.pngR2i8889R3R14R5R40R6tgoR0y34:assets%2Fimages%2F3%2FbuttonUp.pngR2i6990R3R14R5R41R6tgoR0y31:assets%2Fimages%2F3%2Fchain.pngR2i4449R3R14R5R42R6tgoR0y30:assets%2Fimages%2F3%2Ffish.pngR2i5373R3R14R5R43R6tgoR0y30:assets%2Fimages%2F3%2Fflag.pngR2i63780R3R14R5R44R6tgoR0y36:assets%2Fimages%2F3%2Ffullscreen.pngR2i6259R3R14R5R45R6tgoR0y33:assets%2Fimages%2F3%2Fisland2.pngR2i439004R3R14R5R46R6tgoR0y36:assets%2Fimages%2F3%2Flitang.old.pngR2i381270R3R14R5R47R6tgoR0y32:assets%2Fimages%2F3%2Flitang.pngR2i425756R3R14R5R48R6tgoR0y36:assets%2Fimages%2F3%2Fnew-litang.pngR2i666303R3R14R5R49R6tgoR0y31:assets%2Fimages%2F3%2Fplonk.pngR2i25171R3R14R5R50R6tgoR0y30:assets%2Fimages%2F3%2Fpole.pngR2i12936R3R14R5R51R6tgoR0y31:assets%2Fimages%2F3%2Fpopup.pngR2i2240R3R14R5R52R6tgoR0y30:assets%2Fimages%2F3%2Freed.pngR2i19653R3R14R5R53R6tgoR0y35:assets%2Fimages%2F3%2Fspikyball.pngR2i10961R3R14R5R54R6tgoR0y31:assets%2Fimages%2F3%2Ftiles.pngR2i43711R3R14R5R55R6tgoR0y32:assets%2Fimages%2F3%2Fwater1.pngR2i48014R3R14R5R56R6tgoR0y32:assets%2Fimages%2F3%2Fwater2.pngR2i46993R3R14R5R57R6tgoR0y32:assets%2Fimages%2F3%2Fwater3.pngR2i45365R3R14R5R58R6tgoR0y33:assets%2Fimages%2Fbackground3.pngR2i1835687R3R14R5R59R6tgoR0y26:assets%2Fimages%2Fball.pngR2i11372R3R14R5R60R6tgoR0y26:assets%2Fimages%2Fbird.pngR2i3846R3R14R5R61R6tgoR0y27:assets%2Fimages%2Fboat2.pngR2i276124R3R14R5R62R6tgoR0y34:assets%2Fimages%2FbuttonAction.pngR2i8141R3R14R5R63R6tgoR0y33:assets%2Fimages%2FbuttonRight.pngR2i8889R3R14R5R64R6tgoR0y30:assets%2Fimages%2FbuttonUp.pngR2i6990R3R14R5R65R6tgoR0y27:assets%2Fimages%2Fchain.pngR2i4449R3R14R5R66R6tgoR0y26:assets%2Fimages%2Ffish.pngR2i5373R3R14R5R67R6tgoR0y26:assets%2Fimages%2Fflag.pngR2i63780R3R14R5R68R6tgoR0y32:assets%2Fimages%2Ffullscreen.pngR2i6259R3R14R5R69R6tgoR0y29:assets%2Fimages%2Fisland2.pngR2i439004R3R14R5R70R6tgoR0y32:assets%2Fimages%2FLitang-run.pngR2i2461R3R14R5R71R6tgoR0y28:assets%2Fimages%2Flitang.pngR2i381270R3R14R5R72R6tgoR0y30:assets%2Fimages%2FLitang.pyxelR2i861949R3y6:BINARYR5R73R6tgoR0y43:assets%2Fimages%2Foriginal%2Fbackground.pngR2i843302R3R14R5R75R6tgoR0y44:assets%2Fimages%2Foriginal%2Fbackground1.pngR2i2111368R3R14R5R76R6tgoR0y44:assets%2Fimages%2Foriginal%2Fbackground2.pngR2i1842525R3R14R5R77R6tgoR0y42:assets%2Fimages%2Foriginal%2Fbig-birds.pngR2i641R3R14R5R78R6tgoR0y44:assets%2Fimages%2Foriginal%2Fbtn-128x128.pngR2i1490R3R14R5R79R6tgoR0y40:assets%2Fimages%2Foriginal%2Fisland1.pngR2i432263R3R14R5R80R6tgoR0y46:assets%2Fimages%2Foriginal%2Flitang%2Fpull.pngR2i1065342R3R14R5R81R6tgoR0y46:assets%2Fimages%2Foriginal%2Flitang%2Fpush.pngR2i1267411R3R14R5R82R6tgoR0y45:assets%2Fimages%2Foriginal%2Flitang%2Frun.pngR2i1237376R3R14R5R83R6tgoR0y45:assets%2Fimages%2Foriginal%2Fold-arrow-up.pngR2i2272R3R14R5R84R6tgoR0y42:assets%2Fimages%2Foriginal%2Fold-arrow.pngR2i2850R3R14R5R85R6tgoR0y42:assets%2Fimages%2Foriginal%2Fold-spiky.pngR2i945R3R14R5R86R6tgoR0y38:assets%2Fimages%2Foriginal%2Fspiky.pngR2i16349R3R14R5R87R6tgoR0y39:assets%2Fimages%2Foriginal%2Fspiky1.pngR2i15661R3R14R5R88R6tgoR0y47:assets%2Fimages%2Foriginal%2Fvirtual-button.pngR2i7318R3R14R5R89R6tgoR0y27:assets%2Fimages%2Fplonk.pngR2i25171R3R14R5R90R6tgoR0y26:assets%2Fimages%2Fpole.pngR2i12936R3R14R5R91R6tgoR0y27:assets%2Fimages%2Fpopup.pngR2i2240R3R14R5R92R6tgoR0y26:assets%2Fimages%2Freed.pngR2i19653R3R14R5R93R6tgoR0y31:assets%2Fimages%2Fspikyball.pngR2i10961R3R14R5R94R6tgoR0y27:assets%2Fimages%2Ftiles.pngR2i43711R3R14R5R95R6tgoR0y28:assets%2Fimages%2Fwater1.pngR2i48014R3R14R5R96R6tgoR0y28:assets%2Fimages%2Fwater2.pngR2i46993R3R14R5R97R6tgoR0y28:assets%2Fimages%2Fwater3.pngR2i45365R3R14R5R98R6tgoR0y28:assets%2Flevels%2Flevel1.tmxR2i4607R3R4R5R99R6tgoR2i2106598R3y5:MUSICR5y45:assets%2Fmusic%2Fasian-mystery-nometadata.oggy9:pathGroupaR101hR6tgoR2i542898R3y5:SOUNDR5y38:assets%2Fmusic%2Ftemple-nometadata.oggR102aR104hR6tgoR2i11689R3R103R5y27:assets%2Fsounds%2Fdeath.oggR102aR105hR6tgoR2i9318R3R103R5y26:assets%2Fsounds%2Fjump.oggR102aR106hR6tgoR2i52494R3R103R5y26:assets%2Fsounds%2Ftree.oggR102aR107hR6tgoR2i28546R3R103R5y33:assets%2Fsounds%2Fwatersplash.oggR102aR108hR6tgoR0y36:assets%2Ftilesets%2FBuddhaBreath.tsxR2i241R3R4R5R109R6tgoR2i2114R3R100R5y26:flixel%2Fsounds%2Fbeep.mp3R102aR110y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R100R5y28:flixel%2Fsounds%2Fflixel.mp3R102aR112y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3R103R5R111R102aR110R111hgoR2i33629R3R103R5R113R102aR112R113hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R114R115y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R14R5R120R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R14R5R121R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
 	var manifest = lime_utils_AssetManifest.parse(data,ManifestResources.rootPath);
 	var library = lime_utils_AssetLibrary.fromManifest(manifest);
 	lime_utils_Assets.registerLibrary("default",library);
@@ -8741,20 +8742,20 @@ var Player = function(X,Y) {
 	this.ACCELERATION = 333 * Main.scale;
 	this.JUMP_FORCE = -280 * Main.scale;
 	this.WALK_SPEED = 100 * Main.scale;
-	this.RUN_SPEED = 167 * Main.scale;
+	this.RUN_SPEED = 250 * Main.scale;
 	this.CROUCH_SPEED = 50 * Main.scale;
 	this.FALLING_SPEED = 300 * Main.scale;
-	this.loadGraphic("assets/images/" + Main.scale + "/litang.png",true,68 * Main.scale,80 * Main.scale);
-	this.animation.add("idle",[0,1],6);
-	this.animation.add("walk",[2,3,4,5,6],12);
+	this.loadGraphic("assets/images/3/new-litang.png",true,350,240);
+	this.animation.add("idle",[10,11,12,11,10],12);
+	this.animation.add("walk",[0,1,2,3,4,5,6,7,8,9],12);
 	this.animation.add("crouch",[8,9],6);
 	this.animation.add("crouch-walk",[8,9],12);
 	this.animation.add("skid",[0,1],6);
-	this.animation.add("jump",[17]);
-	this.animation.add("fall",[17]);
-	this.animation.add("hit",[16]);
+	this.animation.add("jump",[2]);
+	this.animation.add("fall",[6]);
+	this.animation.add("hit",[7]);
 	this.setSize(30 * Main.scale,50 * Main.scale);
-	this.offset.set(24 * Main.scale,30 * Main.scale);
+	this.offset.set(54 * Main.scale,30 * Main.scale);
 	this.drag.set_x(800 * Main.scale);
 	this.acceleration.set_y(600 * Main.scale);
 	this.maxVelocity.set(this.RUN_SPEED,this.FALLING_SPEED);
@@ -8800,7 +8801,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 		if(tmp) {
 			this.set_flipX(true);
 			this.setSize(30 * Main.scale,50 * Main.scale);
-			this.offset.set(14 * Main.scale,30 * Main.scale);
+			this.offset.set(44 * Main.scale,30 * Main.scale);
 			this.direction = -1;
 			var _g = this.acceleration;
 			_g.set_x(_g.x - this.ACCELERATION);
@@ -8820,7 +8821,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			if(tmp1) {
 				this.set_flipX(false);
 				this.setSize(30 * Main.scale,50 * Main.scale);
-				this.offset.set(24 * Main.scale,30 * Main.scale);
+				this.offset.set(54 * Main.scale,30 * Main.scale);
 				this.direction = 1;
 				var _g1 = this.acceleration;
 				_g1.set_x(_g1.x + this.ACCELERATION);
@@ -71081,7 +71082,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 186737;
+	this.version = 929840;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
@@ -116244,7 +116245,7 @@ openfl_display_DisplayObject.__tempStack = new lime_utils_ObjectPool(function() 
 	stack.set_length(0);
 });
 Main.level = 1;
-Main.version = "v1.0.0-alpha";
+Main.version = "v1.1.0-alpha";
 flixel_math_FlxRect._pool = new flixel_util_FlxPool_$flixel_$math_$FlxRect(flixel_math_FlxRect);
 flixel_FlxObject.defaultPixelPerfectPosition = false;
 flixel_FlxObject.SEPARATE_BIAS = 4;
