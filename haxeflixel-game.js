@@ -8830,8 +8830,8 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 				_g1.set_x(_g1.x + this.ACCELERATION);
 			}
 		}
-		var _this4 = flixel_FlxG.keys.justReleased;
-		if(_this4.keyManager.checkStatus(38,_this4.status)) {
+		var _this4 = flixel_FlxG.keys.pressed;
+		if(!_this4.keyManager.checkStatus(38,_this4.status)) {
 			this.canJump = true;
 		}
 		if(this.velocity.y == 0) {
@@ -8847,7 +8847,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			} else {
 				tmp2 = true;
 			}
-			if(tmp2 && (this.touching & 4096) > 0 && this.canJump == true) {
+			if(tmp2 && (this.touching & 4096) > 0 && this.canJump) {
 				this.canJump = false;
 				flixel_FlxG.sound.play("assets/sounds/jump.ogg",1);
 				this.velocity.set_y(this.JUMP_FORCE);
@@ -8879,7 +8879,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			}
 		} else {
 			var _this9 = flixel_FlxG.keys.pressed;
-			if((_this9.keyManager.checkStatus(38,_this9.status) || flixel_FlxG.html5.onMobile && Main.pad.buttonUp.input.current == 2) && (this.touching & 4096) > 0 && this.canJump == true) {
+			if((_this9.keyManager.checkStatus(38,_this9.status) || flixel_FlxG.html5.onMobile && Main.pad.buttonUp.input.current == 2) && (this.touching & 4096) > 0 && this.canJump) {
 				this.canJump = false;
 				flixel_FlxG.sound.play("assets/sounds/jump.ogg",1);
 				this.velocity.set_y(this.JUMP_FORCE);
@@ -71099,7 +71099,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 598842;
+	this.version = 485407;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
