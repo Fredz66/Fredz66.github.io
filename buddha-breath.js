@@ -47833,8 +47833,10 @@ gui_MenuState.prototype = $extend(flixel_FlxState.prototype,{
 		platforms += " (" + openfl_Lib.get_current().stage.stageWidth + "x" + openfl_Lib.get_current().stage.stageHeight + ")";
 		this.add(new flixel_text_FlxText(0,338 * Main.scale,flixel_FlxG.width,platforms).setFormat(null,8 * Main.scale));
 		flixel_FlxState.prototype.create.call(this);
-		var _this = flixel_FlxG.sound.music;
-		_this.cleanup(_this.autoDestroy,true);
+		if(flixel_FlxG.sound.music != null) {
+			var _this = flixel_FlxG.sound.music;
+			_this.cleanup(_this.autoDestroy,true);
+		}
 		flixel_FlxG.sound.playMusic("assets/music/temple-nometadata.ogg",1,true);
 	}
 	,update: function(elapsed) {
@@ -71101,7 +71103,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 461472;
+	this.version = 320270;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
