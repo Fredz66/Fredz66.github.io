@@ -894,9 +894,9 @@ ApplicationMain.create = function(config) {
 	ManifestResources.init(config);
 	var _this = app.meta;
 	if(__map_reserved["build"] != null) {
-		_this.setReserved("build","80");
+		_this.setReserved("build","82");
 	} else {
-		_this.h["build"] = "80";
+		_this.h["build"] = "82";
 	}
 	var _this1 = app.meta;
 	if(__map_reserved["company"] != null) {
@@ -6517,6 +6517,25 @@ Bird.prototype = $extend(flixel_FlxSprite.prototype,{
 	}
 	,__class__: Bird
 });
+var Crate = function(X,Y) {
+	this.drown = false;
+	flixel_FlxSprite.call(this);
+	this.loadGraphic("assets/images/" + Main.scale + "/crate.png");
+	this.set_x(X * Main.scale);
+	this.set_y(Y * Main.scale);
+	this.acceleration.set_y(600 * Main.scale);
+	this.drag.set_x(300 * Main.scale);
+};
+$hxClasses["Crate"] = Crate;
+Crate.__name__ = "Crate";
+Crate.__super__ = flixel_FlxSprite;
+Crate.prototype = $extend(flixel_FlxSprite.prototype,{
+	drown: null
+	,update: function(elapsed) {
+		flixel_FlxSprite.prototype.update.call(this,elapsed);
+	}
+	,__class__: Crate
+});
 var EReg = function(r,opt) {
 	this.r = new RegExp(r,opt.split("u").join(""));
 };
@@ -7834,8 +7853,9 @@ flixel_FlxState.prototype = $extend(flixel_group_FlxTypedGroup.prototype,{
 	,__properties__: $extend(flixel_group_FlxTypedGroup.prototype.__properties__,{set_bgColor:"set_bgColor",get_bgColor:"get_bgColor"})
 });
 var Level1State = function(MaxSize) {
-	this.tiles = ["                                                                                                                                  ","                                                                                                                                  ","                                                  |     |     |     |     |                                                       ","                                                  |     |     |     |     |                                                       ","                                                  |     |     |     |     |                                     v                 ","                                                  |     |     |     |     |                                    [-]                ",")                                                 |     |     |     |     |                                     |                (","|                                                 |     |     |     |     |                        [-]    [-]   |                |","|                                                                                        [--]       |      |    |     [-]        L","|                                                                                         ||   ()   |      |    |      |          ","|                =                     [_)                                         [-]    ||   ||   |      |    |      |          ","|  v    ~     =  |    =        [--]      |           ~                         ~    |     ||   ||   |      |    |      |          ","--------------)  |    |         ||       (--------------------------------------------)   ||   ||   |      |    |      |       (--","|||||||||||||||  |    |         ||       ||||||||||||||||||||||||||||||||||||||||||||||   ||   ||   |      |    |      |       |||","|||||||||||||||  |    |         ||       ||||||||||||||||||||||||||||||||||||||||||||||   ||   ||   |      |    |      |       |||","|||||||||||||||  |    |         ||       ||||||||||||||||||||||||||||||||||||||||||||||   ||   ||   |      |    |      |       |||"];
+	this.tiles = ["                                                                                                                                                                            ","                                                                                                                                                                            ","                                                  |     |     |     |     |                                                                                                 ","                                                  |     |     |     |     |                                                                                                 ","                                                  |     |     |     |     |                                     v                                                           ","                                                  |     |     |     |     |                                    [-]                                                          ",")                                                 |     |     |     |     |                                     |                                                          (","|>                                                |     |     |     |     |                        [-]    [-]   |                                                         <|","|                                                                                        [--]       |      |    |     [-]                                                  L","|                                                                                         ||   ()   |      |    |      |                                                    ","|                =                     [_)                                        [-]     ||   ||   |      |    |      |                                                    ","|  v    ~     =  |    =        [--]      |           ~                         ~   |      ||   ||   |      |    |      |                                                    ","-_-_-_-_-_-_-_)  |    |         ||       (_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_)    ||   ||   |      |    |      |       (_-_-_-_)      (_-_-_-_-_)      (_-_-_-_-_-_-","| | | | | | | |  |    |         ||       | | | | | | | | | | | | | | | | | | | | | | |    ||   ||   |      |    |      |       | | | | |      | | | | | |      | | | | | | |","| | | | | | | |  |    |         ||       | | | | | | | | | | | | | | | | | | | | | | |    ||   ||   |      |    |      |       | | | | |      | | | | | |      | | | | | | |","| | | | | | | |  |    |         ||       | | | | | | | | | | | | | | | | | | | | | | |    ||   ||   |      |    |      |       | | | | |      | | | | | |      | | | | | | |"];
 	this.birdsReleased = false;
+	this.crateFalling = false;
 	this.poleFalling = false;
 	this.frames = 0;
 	this.spikies = [];
@@ -7864,6 +7884,7 @@ Level1State.prototype = $extend(flixel_FlxState.prototype,{
 	,foreground4: null
 	,map: null
 	,pole: null
+	,crate: null
 	,plonk: null
 	,spikies: null
 	,flagStart: null
@@ -7873,10 +7894,12 @@ Level1State.prototype = $extend(flixel_FlxState.prototype,{
 	,player: null
 	,frames: null
 	,poleFalling: null
+	,crateFalling: null
 	,birdsReleased: null
 	,tiles: null
 	,StringsToMapData: function(strings) {
 		var mapData = [];
+		var j = 0;
 		var _g = 0;
 		while(_g < strings.length) {
 			var row = strings[_g];
@@ -7898,8 +7921,16 @@ Level1State.prototype = $extend(flixel_FlxState.prototype,{
 				case "-":
 					mapData.push(1);
 					break;
+				case "<":
+					mapData.push(0);
+					this.flagEnd = new Flag(((i - 2) * 32 + 5) * Main.scale,(j - 1) * 32 * Main.scale,true);
+					break;
 				case "=":
 					mapData.push(2);
+					break;
+				case ">":
+					mapData.push(0);
+					this.flagStart = new Flag((i * 32 - 10) * Main.scale,(j - 1) * 32 * Main.scale,false);
 					break;
 				case "L":
 					mapData.push(9);
@@ -7920,6 +7951,7 @@ Level1State.prototype = $extend(flixel_FlxState.prototype,{
 					mapData.push(0);
 				}
 			}
+			++j;
 		}
 		return mapData;
 	}
@@ -7967,15 +7999,15 @@ Level1State.prototype = $extend(flixel_FlxState.prototype,{
 		this.map = new flixel_tile_FlxTilemap();
 		this.map.loadMapFromArray(this.StringsToMapData(this.tiles),this.tiles[0].length,this.tiles.length,"assets/images/" + Main.scale + "/tiles.png",32 * Main.scale,32 * Main.scale);
 		this.add(this.map);
-		this.flagStart = new Flag(22 * Main.scale,this.map.get_height() - 322 * Main.scale,false);
 		this.add(this.flagStart);
-		this.flagEnd = new Flag(4037 * Main.scale,this.map.get_height() - 322 * Main.scale,true);
 		this.add(this.flagEnd);
 		this.releaseBirds(11,0,0,300 * Main.scale,100 * Main.scale);
 		this.player = new Player(this.startx,this.map.get_height() + this.starty | 0);
 		this.add(this.player);
-		this.pole = new Pole();
+		this.pole = new Pole(840,320);
 		this.add(this.pole);
+		this.crate = new Crate(4800,250);
+		this.add(this.crate);
 		this.addSpiky(1600 * Main.scale - 7 * Main.scale,240 * Main.scale,33.5,120);
 		this.addSpiky(1792 * Main.scale - 7 * Main.scale,240 * Main.scale,0,150);
 		this.addSpiky(1984 * Main.scale - 7 * Main.scale,240 * Main.scale,50,102);
@@ -8071,7 +8103,9 @@ Level1State.prototype = $extend(flixel_FlxState.prototype,{
 		}
 		if(this.player.alive) {
 			flixel_FlxG.overlap(this.player,this.pole,$bind(this,this.hitPole));
+			flixel_FlxG.overlap(this.player,this.crate,null,flixel_FlxObject.separate);
 			flixel_FlxG.overlap(this.player,this.map,null,flixel_FlxObject.separate);
+			flixel_FlxG.overlap(this.crate,this.map,null,flixel_FlxObject.separate);
 			if(this.player.alive) {
 				var _g9 = 0;
 				var _g11 = this.spikies;
@@ -8090,7 +8124,14 @@ Level1State.prototype = $extend(flixel_FlxState.prototype,{
 				this.player.set_alive(false);
 				this.player.drown = true;
 				this.player.acceleration.set_x(0);
-				this.drown();
+				this.drown(this.player,this.player.x,this.player.y);
+			}
+		}
+		if(!this.crate.drown) {
+			if(this.crate.y + this.crate.get_height() > this.map.get_height()) {
+				this.crate.drown = true;
+				this.crate.acceleration.set_x(0);
+				this.drown(this.crate,this.crate.x,this.crate.y);
 			}
 		}
 		if(this.player.x > this.map.get_width()) {
@@ -8109,14 +8150,16 @@ Level1State.prototype = $extend(flixel_FlxState.prototype,{
 		this.add(spiky);
 		this.spikies.push(spiky);
 	}
-	,drown: function() {
+	,drown: function(object,x,y) {
 		flixel_FlxG.sound.play("assets/sounds/watersplash.ogg",1);
-		this.plonk.set_x(this.player.x);
-		this.plonk.set_y(this.player.y);
+		this.plonk.set_x(x);
+		this.plonk.set_y(y);
 		this.plonk.set_visible(true);
 		this.plonk.velocity.set_y(-300 * Main.scale);
 		this.plonk.acceleration.set_y(400 * Main.scale);
-		new flixel_util_FlxTimer().start(2,$bind(this,this.hitdeath));
+		if(object == this.player) {
+			new flixel_util_FlxTimer().start(2,$bind(this,this.hitdeath));
+		}
 	}
 	,hit: function() {
 		flixel_FlxG.sound.play("assets/sounds/death.ogg",1);
@@ -8387,7 +8430,7 @@ ManifestResources.init = function(config) {
 	lime_utils_Assets.defaultRootPath = ManifestResources.rootPath;
 	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf);
 	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf);
-	var data = "{\"name\":null,\"assets\":\"aoy4:pathy37:assets%2Fcastledb%2Fbuddha-breath.cdby4:sizei9886y4:typey4:TEXTy2:idR1y7:preloadtgoR0y37:assets%2Fcastledb%2Fbuddha-breath.imgR2i3091576R3R4R5R7R6tgoR0y27:assets%2Fcastledb%2Fnew.cdbR2i6342R3R4R5R8R6tgoR0y27:assets%2Fcastledb%2Fnew.imgR2i513616R3R4R5R9R6tgoR0y33:assets%2Fcastledb%2Ftmp%2Fnew.cdbR2i6342R3R4R5R10R6tgoR0y33:assets%2Fcastledb%2Ftmp%2Fnew.imgR2i513616R3R4R5R11R6tgoR0y34:assets%2Fdata%2Fdata-goes-here.txtR2zR3R4R5R12R6tgoR0y37:assets%2Fimages%2F1%2Fbackground3.pngR2i227355R3y5:IMAGER5R13R6tgoR0y30:assets%2Fimages%2F1%2Fball.pngR2i2723R3R14R5R15R6tgoR0y30:assets%2Fimages%2F1%2Fbird.pngR2i640R3R14R5R16R6tgoR0y31:assets%2Fimages%2F1%2Fboat2.pngR2i27167R3R14R5R17R6tgoR0y38:assets%2Fimages%2F1%2FbuttonAction.pngR2i2000R3R14R5R18R6tgoR0y37:assets%2Fimages%2F1%2FbuttonRight.pngR2i2147R3R14R5R19R6tgoR0y34:assets%2Fimages%2F1%2FbuttonUp.pngR2i1748R3R14R5R20R6tgoR0y31:assets%2Fimages%2F1%2Fchain.pngR2i1358R3R14R5R21R6tgoR0y30:assets%2Fimages%2F1%2Ffish.pngR2i925R3R14R5R22R6tgoR0y30:assets%2Fimages%2F1%2Fflag.pngR2i2708R3R14R5R23R6tgoR0y36:assets%2Fimages%2F1%2Ffullscreen.pngR2i1700R3R14R5R24R6tgoR0y33:assets%2Fimages%2F1%2Fisland2.pngR2i49554R3R14R5R25R6tgoR0y32:assets%2Fimages%2F1%2Flitang.pngR2i138788R3R14R5R26R6tgoR0y31:assets%2Fimages%2F1%2Fplonk.pngR2i3982R3R14R5R27R6tgoR0y30:assets%2Fimages%2F1%2Fpole.pngR2i623R3R14R5R28R6tgoR0y31:assets%2Fimages%2F1%2Fpopup.pngR2i2240R3R14R5R29R6tgoR0y30:assets%2Fimages%2F1%2Freed.pngR2i2996R3R14R5R30R6tgoR0y31:assets%2Fimages%2F1%2Ftiles.pngR2i8577R3R14R5R31R6tgoR0y32:assets%2Fimages%2F1%2Fwater1.pngR2i3591R3R14R5R32R6tgoR0y32:assets%2Fimages%2F1%2Fwater2.pngR2i3579R3R14R5R33R6tgoR0y32:assets%2Fimages%2F1%2Fwater3.pngR2i3569R3R14R5R34R6tgoR0y37:assets%2Fimages%2F3%2Fbackground3.pngR2i1835687R3R14R5R35R6tgoR0y30:assets%2Fimages%2F3%2Fball.pngR2i11372R3R14R5R36R6tgoR0y30:assets%2Fimages%2F3%2Fbird.pngR2i3846R3R14R5R37R6tgoR0y31:assets%2Fimages%2F3%2Fboat2.pngR2i276124R3R14R5R38R6tgoR0y38:assets%2Fimages%2F3%2FbuttonAction.pngR2i8141R3R14R5R39R6tgoR0y37:assets%2Fimages%2F3%2FbuttonRight.pngR2i8889R3R14R5R40R6tgoR0y34:assets%2Fimages%2F3%2FbuttonUp.pngR2i6990R3R14R5R41R6tgoR0y31:assets%2Fimages%2F3%2Fchain.pngR2i4449R3R14R5R42R6tgoR0y30:assets%2Fimages%2F3%2Ffish.pngR2i5373R3R14R5R43R6tgoR0y30:assets%2Fimages%2F3%2Fflag.pngR2i63780R3R14R5R44R6tgoR0y36:assets%2Fimages%2F3%2Ffullscreen.pngR2i6259R3R14R5R45R6tgoR0y33:assets%2Fimages%2F3%2Fisland2.pngR2i439004R3R14R5R46R6tgoR0y36:assets%2Fimages%2F3%2Flitang.old.pngR2i381270R3R14R5R47R6tgoR0y32:assets%2Fimages%2F3%2Flitang.pngR2i1003437R3R14R5R48R6tgoR0y42:assets%2Fimages%2F3%2Fnew-litang-green.pngR2i1171510R3R14R5R49R6tgoR0y36:assets%2Fimages%2F3%2Fnew-litang.pngR2i1012686R3R14R5R50R6tgoR0y31:assets%2Fimages%2F3%2Fplonk.pngR2i25171R3R14R5R51R6tgoR0y30:assets%2Fimages%2F3%2Fpole.pngR2i12936R3R14R5R52R6tgoR0y31:assets%2Fimages%2F3%2Fpopup.pngR2i2240R3R14R5R53R6tgoR0y30:assets%2Fimages%2F3%2Freed.pngR2i19653R3R14R5R54R6tgoR0y35:assets%2Fimages%2F3%2Fspikyball.pngR2i10961R3R14R5R55R6tgoR0y31:assets%2Fimages%2F3%2Ftiles.pngR2i43711R3R14R5R56R6tgoR0y32:assets%2Fimages%2F3%2Fwater1.pngR2i48014R3R14R5R57R6tgoR0y32:assets%2Fimages%2F3%2Fwater2.pngR2i46993R3R14R5R58R6tgoR0y32:assets%2Fimages%2F3%2Fwater3.pngR2i45365R3R14R5R59R6tgoR0y33:assets%2Fimages%2Fbackground3.pngR2i1835687R3R14R5R60R6tgoR0y26:assets%2Fimages%2Fball.pngR2i11372R3R14R5R61R6tgoR0y26:assets%2Fimages%2Fbird.pngR2i3846R3R14R5R62R6tgoR0y27:assets%2Fimages%2Fboat2.pngR2i276124R3R14R5R63R6tgoR0y34:assets%2Fimages%2FbuttonAction.pngR2i8141R3R14R5R64R6tgoR0y33:assets%2Fimages%2FbuttonRight.pngR2i8889R3R14R5R65R6tgoR0y30:assets%2Fimages%2FbuttonUp.pngR2i6990R3R14R5R66R6tgoR0y27:assets%2Fimages%2Fchain.pngR2i4449R3R14R5R67R6tgoR0y26:assets%2Fimages%2Ffish.pngR2i5373R3R14R5R68R6tgoR0y26:assets%2Fimages%2Fflag.pngR2i63780R3R14R5R69R6tgoR0y32:assets%2Fimages%2Ffullscreen.pngR2i6259R3R14R5R70R6tgoR0y29:assets%2Fimages%2Fisland2.pngR2i439004R3R14R5R71R6tgoR0y32:assets%2Fimages%2FLitang-run.pngR2i2461R3R14R5R72R6tgoR0y28:assets%2Fimages%2Flitang.pngR2i381270R3R14R5R73R6tgoR0y30:assets%2Fimages%2FLitang.pyxelR2i861949R3y6:BINARYR5R74R6tgoR0y43:assets%2Fimages%2Foriginal%2Fbackground.pngR2i843302R3R14R5R76R6tgoR0y44:assets%2Fimages%2Foriginal%2Fbackground1.pngR2i2111368R3R14R5R77R6tgoR0y44:assets%2Fimages%2Foriginal%2Fbackground2.pngR2i1842525R3R14R5R78R6tgoR0y42:assets%2Fimages%2Foriginal%2Fbig-birds.pngR2i641R3R14R5R79R6tgoR0y44:assets%2Fimages%2Foriginal%2Fbtn-128x128.pngR2i1490R3R14R5R80R6tgoR0y40:assets%2Fimages%2Foriginal%2Fisland1.pngR2i432263R3R14R5R81R6tgoR0y46:assets%2Fimages%2Foriginal%2Flitang%2Fpull.pngR2i1065342R3R14R5R82R6tgoR0y46:assets%2Fimages%2Foriginal%2Flitang%2Fpush.pngR2i1267411R3R14R5R83R6tgoR0y45:assets%2Fimages%2Foriginal%2Flitang%2Frun.pngR2i1237376R3R14R5R84R6tgoR0y45:assets%2Fimages%2Foriginal%2Fold-arrow-up.pngR2i2272R3R14R5R85R6tgoR0y42:assets%2Fimages%2Foriginal%2Fold-arrow.pngR2i2850R3R14R5R86R6tgoR0y42:assets%2Fimages%2Foriginal%2Fold-spiky.pngR2i945R3R14R5R87R6tgoR0y38:assets%2Fimages%2Foriginal%2Fspiky.pngR2i16349R3R14R5R88R6tgoR0y39:assets%2Fimages%2Foriginal%2Fspiky1.pngR2i15661R3R14R5R89R6tgoR0y47:assets%2Fimages%2Foriginal%2Fvirtual-button.pngR2i7318R3R14R5R90R6tgoR0y27:assets%2Fimages%2Fplonk.pngR2i25171R3R14R5R91R6tgoR0y26:assets%2Fimages%2Fpole.pngR2i12936R3R14R5R92R6tgoR0y27:assets%2Fimages%2Fpopup.pngR2i2240R3R14R5R93R6tgoR0y26:assets%2Fimages%2Freed.pngR2i19653R3R14R5R94R6tgoR0y31:assets%2Fimages%2Fspikyball.pngR2i10961R3R14R5R95R6tgoR0y27:assets%2Fimages%2Ftiles.pngR2i43711R3R14R5R96R6tgoR0y28:assets%2Fimages%2Fwater1.pngR2i48014R3R14R5R97R6tgoR0y28:assets%2Fimages%2Fwater2.pngR2i46993R3R14R5R98R6tgoR0y28:assets%2Fimages%2Fwater3.pngR2i45365R3R14R5R99R6tgoR0y28:assets%2Flevels%2Flevel1.tmxR2i4607R3R4R5R100R6tgoR2i2106598R3y5:MUSICR5y45:assets%2Fmusic%2Fasian-mystery-nometadata.oggy9:pathGroupaR102hR6tgoR2i542898R3y5:SOUNDR5y38:assets%2Fmusic%2Ftemple-nometadata.oggR103aR105hR6tgoR2i11689R3R104R5y27:assets%2Fsounds%2Fdeath.oggR103aR106hR6tgoR2i9318R3R104R5y26:assets%2Fsounds%2Fjump.oggR103aR107hR6tgoR2i52494R3R104R5y26:assets%2Fsounds%2Ftree.oggR103aR108hR6tgoR2i28546R3R104R5y33:assets%2Fsounds%2Fwatersplash.oggR103aR109hR6tgoR0y36:assets%2Ftilesets%2FBuddhaBreath.tsxR2i241R3R4R5R110R6tgoR2i2114R3R101R5y26:flixel%2Fsounds%2Fbeep.mp3R103aR111y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R101R5y28:flixel%2Fsounds%2Fflixel.mp3R103aR113y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3R104R5R112R103aR111R112hgoR2i33629R3R104R5R114R103aR113R114hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R115R116y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R14R5R121R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R14R5R122R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
+	var data = "{\"name\":null,\"assets\":\"aoy4:pathy37:assets%2Fcastledb%2Fbuddha-breath.cdby4:sizei9886y4:typey4:TEXTy2:idR1y7:preloadtgoR0y37:assets%2Fcastledb%2Fbuddha-breath.imgR2i3091576R3R4R5R7R6tgoR0y27:assets%2Fcastledb%2Fnew.cdbR2i6342R3R4R5R8R6tgoR0y27:assets%2Fcastledb%2Fnew.imgR2i513616R3R4R5R9R6tgoR0y33:assets%2Fcastledb%2Ftmp%2Fnew.cdbR2i6342R3R4R5R10R6tgoR0y33:assets%2Fcastledb%2Ftmp%2Fnew.imgR2i513616R3R4R5R11R6tgoR0y34:assets%2Fdata%2Fdata-goes-here.txtR2zR3R4R5R12R6tgoR0y37:assets%2Fimages%2F1%2Fbackground3.pngR2i227355R3y5:IMAGER5R13R6tgoR0y30:assets%2Fimages%2F1%2Fball.pngR2i2723R3R14R5R15R6tgoR0y30:assets%2Fimages%2F1%2Fbird.pngR2i640R3R14R5R16R6tgoR0y31:assets%2Fimages%2F1%2Fboat2.pngR2i27167R3R14R5R17R6tgoR0y38:assets%2Fimages%2F1%2FbuttonAction.pngR2i2000R3R14R5R18R6tgoR0y37:assets%2Fimages%2F1%2FbuttonRight.pngR2i2147R3R14R5R19R6tgoR0y34:assets%2Fimages%2F1%2FbuttonUp.pngR2i1748R3R14R5R20R6tgoR0y31:assets%2Fimages%2F1%2Fchain.pngR2i1358R3R14R5R21R6tgoR0y31:assets%2Fimages%2F1%2Fcrate.pngR2i9431R3R14R5R22R6tgoR0y30:assets%2Fimages%2F1%2Ffish.pngR2i925R3R14R5R23R6tgoR0y30:assets%2Fimages%2F1%2Fflag.pngR2i2708R3R14R5R24R6tgoR0y36:assets%2Fimages%2F1%2Ffullscreen.pngR2i1700R3R14R5R25R6tgoR0y33:assets%2Fimages%2F1%2Fisland2.pngR2i49554R3R14R5R26R6tgoR0y32:assets%2Fimages%2F1%2Flitang.pngR2i138791R3R14R5R27R6tgoR0y31:assets%2Fimages%2F1%2Fplonk.pngR2i3982R3R14R5R28R6tgoR0y30:assets%2Fimages%2F1%2Fpole.pngR2i623R3R14R5R29R6tgoR0y31:assets%2Fimages%2F1%2Fpopup.pngR2i2240R3R14R5R30R6tgoR0y30:assets%2Fimages%2F1%2Freed.pngR2i2996R3R14R5R31R6tgoR0y31:assets%2Fimages%2F1%2Ftiles.pngR2i8536R3R14R5R32R6tgoR0y32:assets%2Fimages%2F1%2Fwater1.pngR2i3591R3R14R5R33R6tgoR0y32:assets%2Fimages%2F1%2Fwater2.pngR2i3579R3R14R5R34R6tgoR0y32:assets%2Fimages%2F1%2Fwater3.pngR2i3569R3R14R5R35R6tgoR0y37:assets%2Fimages%2F3%2Fbackground3.pngR2i1835687R3R14R5R36R6tgoR0y30:assets%2Fimages%2F3%2Fball.pngR2i11372R3R14R5R37R6tgoR0y30:assets%2Fimages%2F3%2Fbird.pngR2i3846R3R14R5R38R6tgoR0y31:assets%2Fimages%2F3%2Fboat2.pngR2i276124R3R14R5R39R6tgoR0y38:assets%2Fimages%2F3%2FbuttonAction.pngR2i8141R3R14R5R40R6tgoR0y37:assets%2Fimages%2F3%2FbuttonRight.pngR2i8889R3R14R5R41R6tgoR0y34:assets%2Fimages%2F3%2FbuttonUp.pngR2i6990R3R14R5R42R6tgoR0y31:assets%2Fimages%2F3%2Fchain.pngR2i4449R3R14R5R43R6tgoR0y31:assets%2Fimages%2F3%2Fcrate.pngR2i39501R3R14R5R44R6tgoR0y30:assets%2Fimages%2F3%2Ffish.pngR2i5373R3R14R5R45R6tgoR0y30:assets%2Fimages%2F3%2Fflag.pngR2i63780R3R14R5R46R6tgoR0y36:assets%2Fimages%2F3%2Ffullscreen.pngR2i6259R3R14R5R47R6tgoR0y33:assets%2Fimages%2F3%2Fisland2.pngR2i439004R3R14R5R48R6tgoR0y32:assets%2Fimages%2F3%2Flitang.pngR2i955645R3R14R5R49R6tgoR0y31:assets%2Fimages%2F3%2Fplonk.pngR2i25171R3R14R5R50R6tgoR0y30:assets%2Fimages%2F3%2Fpole.pngR2i12936R3R14R5R51R6tgoR0y31:assets%2Fimages%2F3%2Fpopup.pngR2i2240R3R14R5R52R6tgoR0y30:assets%2Fimages%2F3%2Freed.pngR2i19653R3R14R5R53R6tgoR0y31:assets%2Fimages%2F3%2Ftiles.pngR2i43704R3R14R5R54R6tgoR0y32:assets%2Fimages%2F3%2Fwater1.pngR2i48014R3R14R5R55R6tgoR0y32:assets%2Fimages%2F3%2Fwater2.pngR2i46993R3R14R5R56R6tgoR0y32:assets%2Fimages%2F3%2Fwater3.pngR2i45365R3R14R5R57R6tgoR0y28:assets%2Flevels%2Flevel1.tmxR2i4607R3R4R5R58R6tgoR2i2106598R3y5:MUSICR5y45:assets%2Fmusic%2Fasian-mystery-nometadata.oggy9:pathGroupaR60hR6tgoR2i542898R3y5:SOUNDR5y38:assets%2Fmusic%2Ftemple-nometadata.oggR61aR63hR6tgoR2i11689R3R62R5y27:assets%2Fsounds%2Fdeath.oggR61aR64hR6tgoR2i9318R3R62R5y26:assets%2Fsounds%2Fjump.oggR61aR65hR6tgoR2i17019R3R62R5y28:assets%2Fsounds%2Fscrape.oggR61aR66hR6tgoR2i52494R3R62R5y26:assets%2Fsounds%2Ftree.oggR61aR67hR6tgoR2i28546R3R62R5y33:assets%2Fsounds%2Fwatersplash.oggR61aR68hR6tgoR0y36:assets%2Ftilesets%2FBuddhaBreath.tsxR2i241R3R4R5R69R6tgoR2i2114R3R59R5y26:flixel%2Fsounds%2Fbeep.mp3R61aR70y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R59R5y28:flixel%2Fsounds%2Fflixel.mp3R61aR72y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3R62R5R71R61aR70R71hgoR2i33629R3R62R5R73R61aR72R73hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R74R75y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R14R5R80R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R14R5R81R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
 	var manifest = lime_utils_AssetManifest.parse(data,ManifestResources.rootPath);
 	var library = lime_utils_AssetLibrary.fromManifest(manifest);
 	lime_utils_Assets.registerLibrary("default",library);
@@ -8748,8 +8791,9 @@ var Player = function(X,Y) {
 	this.RUN_SPEED = 200 * Main.scale;
 	this.CROUCH_SPEED = 50 * Main.scale;
 	this.FALLING_SPEED = 300 * Main.scale;
+	this.soundCrate = flixel_FlxG.sound.load("assets/sounds/scrape.ogg",1,true);
 	this.loadGraphic("assets/images/" + Main.scale + "/litang.png",true,116 * Main.scale,80 * Main.scale);
-	this.animation.add("idle",[10,11,12,11,10],12);
+	this.animation.add("idle",[10,11,12,13,12,11,10],12);
 	this.animation.add("run",[0,1,2,3,4,5,6,7,8,9],12);
 	this.animation.add("crouching",[11,14,15,16],10,false);
 	this.animation.add("standing",[16,15,14,11],12,false);
@@ -8759,8 +8803,9 @@ var Player = function(X,Y) {
 	this.animation.add("jump",[2]);
 	this.animation.add("fall",[6]);
 	this.animation.add("hit",[20,21,22,23],12,false);
-	this.setSize(30 * Main.scale,50 * Main.scale);
-	this.offset.set(64 * Main.scale,30 * Main.scale);
+	this.animation.add("push",[30,31,32,33,34,35,36],12,false);
+	this.setSize(40 * Main.scale,50 * Main.scale);
+	this.offset.set(54 * Main.scale,30 * Main.scale);
 	this.drag.set_x(1000 * Main.scale);
 	this.acceleration.set_y(600 * Main.scale);
 	this.maxVelocity.set(this.RUN_SPEED,this.FALLING_SPEED);
@@ -8781,6 +8826,7 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 	,crouch: null
 	,drown: null
 	,canJump: null
+	,soundCrate: null
 	,startx: null
 	,starty: null
 	,update: function(elapsed) {
@@ -8806,8 +8852,8 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 		}
 		if(tmp) {
 			this.set_flipX(true);
-			this.setSize(30 * Main.scale,50 * Main.scale);
-			this.offset.set(24 * Main.scale,30 * Main.scale);
+			this.setSize(40 * Main.scale,50 * Main.scale);
+			this.offset.set(14 * Main.scale,30 * Main.scale);
 			this.direction = -1;
 			var _g = this.acceleration;
 			_g.set_x(_g.x - this.ACCELERATION);
@@ -8826,8 +8872,8 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			}
 			if(tmp1) {
 				this.set_flipX(false);
-				this.setSize(30 * Main.scale,50 * Main.scale);
-				this.offset.set(64 * Main.scale,30 * Main.scale);
+				this.setSize(40 * Main.scale,50 * Main.scale);
+				this.offset.set(54 * Main.scale,30 * Main.scale);
 				this.direction = 1;
 				var _g1 = this.acceleration;
 				_g1.set_x(_g1.x + this.ACCELERATION);
@@ -8907,7 +8953,28 @@ Player.prototype = $extend(flixel_FlxSprite.prototype,{
 		} else if((this.velocity.x < 0 ? -1 : 1) != (this.direction < 0 ? -1 : 1)) {
 			this.animation.play("skid");
 		} else {
-			this.animation.play("run");
+			var tmp;
+			if((this.touching & 1) > 0 || (this.touching & 16) > 0) {
+				var _this = flixel_FlxG.keys.pressed;
+				if(!_this.keyManager.checkStatus(39,_this.status)) {
+					var _this1 = flixel_FlxG.keys.pressed;
+					tmp = _this1.keyManager.checkStatus(37,_this1.status);
+				} else {
+					tmp = true;
+				}
+			} else {
+				tmp = false;
+			}
+			if(tmp) {
+				this.animation.play("push");
+				if(this.soundCrate._channel == null) {
+					this.soundCrate.play();
+				}
+			} else {
+				var _this2 = this.soundCrate;
+				_this2.cleanup(_this2.autoDestroy,true);
+				this.animation.play("run");
+			}
 		}
 	}
 	,__class__: Player
@@ -8930,21 +8997,17 @@ Plonk.prototype = $extend(flixel_FlxSprite.prototype,{
 	}
 	,__class__: Plonk
 });
-var Pole = function() {
-	this.starty = 320 * Main.scale;
-	this.startx = 840 * Main.scale;
+var Pole = function(X,Y) {
 	flixel_FlxSprite.call(this);
-	this.loadGraphic("assets/images/" + Main.scale + "/pole.png",true,32 * Main.scale,160 * Main.scale);
-	this.set_x(this.startx);
-	this.set_y(this.starty);
+	this.loadGraphic("assets/images/" + Main.scale + "/pole.png");
+	this.set_x(X * Main.scale);
+	this.set_y(Y * Main.scale);
 };
 $hxClasses["Pole"] = Pole;
 Pole.__name__ = "Pole";
 Pole.__super__ = flixel_FlxSprite;
 Pole.prototype = $extend(flixel_FlxSprite.prototype,{
-	startx: null
-	,starty: null
-	,update: function(elapsed) {
+	update: function(elapsed) {
 		flixel_FlxSprite.prototype.update.call(this,elapsed);
 	}
 	,__class__: Pole
@@ -71289,7 +71352,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 953081;
+	this.version = 53036;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
@@ -116495,7 +116558,7 @@ openfl_display_DisplayObject.__tempStack = new lime_utils_ObjectPool(function() 
 	stack.set_length(0);
 });
 Main.level = 1;
-Main.version = "v1.7.0-alpha";
+Main.version = "v1.8.0-alpha";
 flixel_math_FlxRect._pool = new flixel_util_FlxPool_$flixel_$math_$FlxRect(flixel_math_FlxRect);
 flixel_FlxObject.defaultPixelPerfectPosition = false;
 flixel_FlxObject.SEPARATE_BIAS = 4;
